@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yc.us.mapper.UserMapper">
+	<select id="findUser" parameterType="User" resultType="User">
+		select * from profile where id=#{id} and name=#{name}
+	</select>
+	
+	<resultMap type="paginationBean" id="paginationBeanMap">
+		<collection property="rows" column="{pageSize=pageSize ,currPage=currPage}" select="getUsers"/>
+	</resultMap>
+	
+	<select id="getUsersByPagination" parameterType="paginationBean" resultMap="paginationBeanMap">
+		select count(1) total,ceil(count(1)/${pageSize}) totalPage,${pageSize} pageSize,${currPage} currPage from profile
+	</select>
+	
+	<select id="getUsers" resultType="User">
+		select * from
+		(select m.*,rownum rn from
+		(select * from profile order by 1 desc) m where ${currPage}*${pageSize}>=rownum) where rn>(${currPage}-1)*${pageSize}
+	</select>
+	
+	<update id="updateUser" parameterType="User">
+		update profile set name=#{name},birthday=#{birthday},gender=#{gender},
+		career=#{career},address=#{address},mobile=#{mobile},picPath=#{picPath}
+		where id=#{id}
+	</update>
+</mapper>
