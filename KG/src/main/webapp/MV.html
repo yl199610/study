@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://www.kugou.com/mvweb/html/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>网络热播_MV频道_酷狗网</title>
+<link rel="stylesheet" type="text/css" href="./MV_files/style.css">
+
+<!--<script src="http://www2.kugou.com/www/script/NewDefalut5_Combine-min.js?v=20110418" type="text/javascript"></script>
+-->
+<script src="./MV_files/hm.js"></script><script src="./MV_files/hm.js"></script><script>
+function sdnClick($){
+    (new Image()).src = "http://sdn.kugou.com/link.aspx?id=" + $ + "&url=&t=" + Math.random();
+}
+sdnClick(12190);
+sdnClick(12992); //临时MV统计20120820
+
+/*分类统计*/
+function logStat(type, name, p1, p2, p3, p4) {
+    var param = [];
+    type != undefined && param.push("type=" + encodeURIComponent(type));
+    name != undefined && param.push("name=" + encodeURIComponent(name));
+    p1 != undefined && param.push("p1=" + encodeURIComponent(p1));
+    p2 != undefined && param.push("p2=" + encodeURIComponent(p2));
+    p3 != undefined && param.push("p3=" + encodeURIComponent(p3));
+    p4 != undefined && param.push("p4=" + encodeURIComponent(p4));
+    var url = "http://log.stat.kugou.com/statistics/statistics.html?" + param.join("&") + "&t=" + new Date().getTime();
+    setTimeout(function() {
+      new Image().src = url;
+    }, 1);
+  }
+/*-end- 分类统计 -end-*/
+
+</script>
+</head>
+
+<body>
+<link rel="stylesheet" data-embed="" href="./MV_files/header.css">
+<script type="text/javascript" src="./MV_files/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://www.kugou.com/common/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.icon,.logo');
+</script>
+<![endif]-->
+<div class="header">
+    <h1 class="logo">酷狗音乐</h1>
+    <div class="topNav fr">
+        <ul>
+            <li><a target="_blank" href="./emailReg.html">注册</a></li>
+            <li><a href="" class="kuLogin" id="kuLogin">登录</a><a hidefocus="true" href="http://www.kugou.com/newuc/login/outlogin" class="logout" id="logout">退出登录</a></li>
+            <li><a target="_blank" href="./server.html">客服中心</a></li>
+            <li><a target="_blank" href="./join.html">招贤纳士</a></li>
+            <li><a target="_blank" href="http://vip.kugou.com/">会员中心 </a></li>
+        </ul>
+    </div>
+</div>
+<div class="navWrap">
+    <div class="nav">
+        <ul class="homeNav">
+            <li><a class="normal" href="./index.html">首页</a></li>
+            <li><a class="normal" href="./top.html">榜单</a></li>
+            <li><a class="normal" id="productCenter" href="./download.html">下载客户端</a></li>
+            <li class="more" id="moreLi"><a href="http://www.kugou.com/mvweb/html/#" class="icon icon-nav6" id="showMore">更多</a>
+            </li>
+        </ul>
+        <ul class="secondMenu" id="more-subnav">
+            <li><a href="./FM.html">电台</a></li>
+            <li><a href="./MV.html">MV</a></li>
+            <li><a href="./playlist.html">歌单</a></li>
+            <li><a href="./singer.html">歌手</a></li>
+        </ul>
+        <ul class="subNav">
+            <li><a target="_blank" href="http://fanxing.kugou.com/?action=spreadIndex&id=3" class="icon icon-nav1">音乐直播</a></li>
+            <li><a target="_blank" href="http://live.kugou.com/" class="icon icon-nav2">酷狗LIVE</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/imusic/" class="icon icon-nav3">音乐人</a></li>
+            <li><a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/shop" class="icon icon-nav5">商城</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function read(name, key) {
+        var cookieValue = "";
+        var search = name + "=";
+        if (document.cookie.split("").length > 0) {
+            offset = document.cookie.indexOf(search);
+            if (offset != -1) {
+                offset += search.length;
+                end = document.cookie.indexOf(";", offset);
+                if (end == -1) {
+                    end = document.cookie.split("").length;
+                }
+                cookieValue = document.cookie.substring(offset, end);
+            }
+
+        }
+        var a = cookieValue.split("&");
+        var o = {};
+        var haveVal = false; 
+        for (var i = 0, l = a.length; i < l; i++) {
+            var k = a[i].split("=");
+            if(k[0]!=""){
+                o[k[0]] = k[1];
+                haveVal = true; 
+            } 
+        }
+        return haveVal ? o : false;
+    }
+    var jq=$.noConflict();
+    jq(document).ready(function(){
+
+        var loginUtility = {
+            loadScript:function (option) {
+                var url = option.url,
+                    callback = option.callback;
+                var script = document.createElement("script");
+                script.type = 'text/javascript';
+                if (script.readyState) {
+                    script.onreadystatechange = function() {
+                        if (this.readyState == "complete" || this.readyState == "loaded") {
+                            callback && callback();
+                            script.onreadystatechange = script = callback = null;
+                        }
+                    }
+                } else {
+                    script.onload = function() {
+                        callback && callback();
+                        script.onload = script = callback = null;
+                    };
+                }
+
+                script.src = url;
+                document.getElementsByTagName("head")[0].appendChild(script);
+            },
+            initLogin:function(){
+                var _this = this;
+                if (!_this.islogined()) {
+                    loginUtility.loadScript({
+                        url: "http://static.kgimg.com/common/js/min/popuplogin-min.js?" + Math.round(new Date().getTime() / 1000),
+                        callback: function() {
+                            UsLogin();
+                        }
+                    })
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            islogined:function () {
+                var loginInfo = read("KuGoo");
+                return loginInfo == "" || loginInfo.toString() == "undefined" || loginInfo === false ? false : true;
+            },
+            clearEventBubble:function (evt) {
+                try{
+                    if (evt.stopPropagation){
+
+                        evt.stopPropagation();
+                    }else{
+                        evt.cancelBubble = true;
+                    }
+
+                    if (evt.preventDefault){
+                        evt.preventDefault();
+                    }else{
+                        return false;
+                        evt.returnValue = false;
+                    }
+                }catch(ex){
+                    
+                }
+            }
+        }
+        var kuLogin = document.getElementById("kuLogin");
+        var kuLogOut = document.getElementById("logout");
+        var more = document.getElementById("moreLi");
+        var showMore = document.getElementById("showMore");
+        var subUl = document.getElementById("more-subnav");
+        var t = null;
+
+        // 获取登录信息
+        var kugouC = read("KuGoo"),
+            user_name = kugouC.NickName,
+            user;
+            if(user_name){
+                user_name = user_name.replace(/%/g, "\\"),
+                user = eval("'" + user_name + "'");
+                kuLogOut.style.display = "inline-block";
+                kuLogin.href = "http://www.kugou.com/newuc/user/uc/?"+Math.round(new Date().getTime() / 1000);
+                kuLogin.innerHTML = user;
+                kuLogin.parentNode.parentNode.getElementsByTagName("li")[0].style.display = "none";
+            }
+
+       jq("#kuLogin").click(function(e){
+            e.preventDefault();
+            if(jq("#kuLogin").attr("href").length>5){
+                window.open(jq(this).attr("href"))
+            }else{
+                loginUtility.initLogin()
+            }
+     
+        });
+        showMore.onclick=function(e){
+            return false;
+        }
+        more.onmouseover=function(){
+            more.setAttribute("class","more hover")
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        more.onmouseleave=function(){
+            more.setAttribute("class","more")
+            showMore.setAttribute("class","iconMore");
+            t = setTimeout(function(){
+                subUl.style.display = "none"
+            },300)
+        }
+        subUl.onmouseover=function(){
+            clearTimeout(t)
+            more.setAttribute("class","more hover");
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        subUl.onmouseleave=function(){
+            more.setAttribute("class","more");
+            showMore.setAttribute("class","iconMore");
+           subUl.style.cssText = "display:none;";
+        }
+        
+    })
+</script><div class="frame">
+  <div class="picchangebox"><!--<img src="images/mv-index_03.jpg" width="663" height="325">-->
+    
+    <div class="container" id="idTransformView2" style="overflow: hidden; position: relative;">
+      <ul class="slider slider2" id="idSlider2" style="position: absolute; left: -1989px; top: 0px;">
+        <li>
+                                <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590779.html" onclick="logStat(1,this.getElementsByTagName(&quot;img&quot;)[0].title,&quot;web官网&quot;,&quot;MV频道&quot;,&quot;焦点图&quot;,&quot;&quot;)">
+                <img src="./MV_files/20161118183716119790.jpg" title="Britney Spears、Tinashe - Slumber Party">
+                </a>
+                &nbsp;<span><a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590779.html">Britney Spears、Tinashe - Slumber Party<em></em></a></span><span class="bg"></span>
+            </li><li>
+                                <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590334.html" onclick="logStat(1,this.getElementsByTagName(&quot;img&quot;)[0].title,&quot;web官网&quot;,&quot;MV频道&quot;,&quot;焦点图&quot;,&quot;&quot;)">
+                <img src="./MV_files/20161115182046600034.jpg" title="徐佳莹 - 当我找到了你">
+                </a>
+                &nbsp;<span><a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590334.html">徐佳莹 - 当我找到了你<em></em></a></span><span class="bg"></span>
+            </li><li>
+                                <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590060.html" onclick="logStat(1,this.getElementsByTagName(&quot;img&quot;)[0].title,&quot;web官网&quot;,&quot;MV频道&quot;,&quot;焦点图&quot;,&quot;&quot;)">
+                <img src="./MV_files/20161115182018129056.jpg" title="孙燕姿 - 彩虹金刚">
+                </a>
+                &nbsp;<span><a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590060.html">孙燕姿 - 彩虹金刚<em></em></a></span><span class="bg"></span>
+            </li><li>
+                                <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590078.html" onclick="logStat(1,this.getElementsByTagName(&quot;img&quot;)[0].title,&quot;web官网&quot;,&quot;MV频道&quot;,&quot;焦点图&quot;,&quot;&quot;)">
+                <img src="./MV_files/20161114194127400634.jpg" title="唐嫣、罗晋 - 天赋">
+                </a>
+                &nbsp;<span><a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590078.html">唐嫣、罗晋 - 天赋<em></em></a></span><span class="bg"></span>
+            </li><li>
+                                <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590009.html" onclick="logStat(1,this.getElementsByTagName(&quot;img&quot;)[0].title,&quot;web官网&quot;,&quot;MV频道&quot;,&quot;焦点图&quot;,&quot;&quot;)">
+                <img src="./MV_files/20161114170109954764.jpg" title="吉克隽逸 - 海洋之心">
+                </a>
+                &nbsp;<span><a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590009.html">吉克隽逸 - 海洋之心<em></em></a></span><span class="bg"></span>
+            </li><li>
+                                <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590166.html" onclick="logStat(1,this.getElementsByTagName(&quot;img&quot;)[0].title,&quot;web官网&quot;,&quot;MV频道&quot;,&quot;焦点图&quot;,&quot;&quot;)">
+                <img src="./MV_files/20161114141759613278.jpg" title="吴亦凡 - JULY(中国区特别版)">
+                </a>
+                &nbsp;<span><a target="_blank" href="http://www.kugou.com/mvweb/html/mv_590166.html">吴亦凡 - JULY(中国区特别版)<em></em></a></span><span class="bg"></span>
+            </li>      </ul>
+      <ul class="num" id="idNum2">
+        <li class=""></li><li class=""></li><li class=""></li><li class="on"></li><li class=""></li><li class=""></li>      </ul>
+    </div>
+  </div>
+  <div class="mvhotlist">
+    <h3><span>MV热播总排行</span> <a target="_blank" href="http://www.kugou.com/mvweb/html/mvlist.html">更多</a></h3>
+    <ul>
+        <li>
+            <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_135504.html">
+                <span class="one"></span>
+                <span class="name">筷子兄弟 - 小苹果</span>
+                <em></em>
+            </a>
+        </li><li>
+            <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_580186.html">
+                <span class="two"></span>
+                <span class="name">儿童歌曲 - 两只老虎</span>
+                <em></em>
+            </a>
+        </li><li>
+            <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_181492.html">
+                <span class="three"></span>
+                <span class="name">金南玲 - 逆流成河</span>
+                <em></em>
+            </a>
+        </li><li>
+            <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_124472.html">
+                <span class="four"></span>
+                <span class="name">梦然 - 没有你陪伴真的好孤单</span>
+                <em></em>
+            </a>
+        </li><li>
+            <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_580176.html">
+                <span class="five"></span>
+                <span class="name">儿童歌曲 - 数鸭子</span>
+                <em></em>
+            </a>
+        </li><li>
+            <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_108229.html">
+                <span class="six"></span>
+                <span class="name">冷漠 - 伤心城市</span>
+                <em></em>
+            </a>
+        </li><li>
+            <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_186699.html">
+                <span class="seven"></span>
+                <span class="name">儿童歌曲 - Ten Little Indians</span>
+                <em></em>
+            </a>
+        </li><li>
+            <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_566319.html">
+                <span class="eight"></span>
+                <span class="name">赵英俊 - 大王叫我来巡山</span>
+                <em></em>
+            </a>
+        </li><li>
+            <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_168896.html">
+                <span class="nine"></span>
+                <span class="name">儿童歌曲 - 跪羊图</span>
+                <em></em>
+            </a>
+        </li><li>
+            <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_183551.html">
+                <span class="ten"></span>
+                <span class="name">儿童歌曲 - 五只小青蛙</span>
+                <em></em>
+            </a>
+        </li>    </ul>
+  </div>
+  <div class="ClearBoth"></div>
+
+  <div class="radiowrap" id="allcontent" style="width:1000px;">
+    <h4></h4>
+    
+    <div class="leftCon">
+      <h3 class="title">MV分类</h3>
+      <div class="radiolist" id="radioList">
+        <dl>
+         <dd>
+                <a hidefocus="true" href="http://www.kugou.com/mvweb/html/index_12_1.html" class="current">网络热播</a>
+            </dd><dd>
+                <a hidefocus="true" href="http://www.kugou.com/mvweb/html/index_11_1.html">经典流行</a>
+            </dd><dd>
+                <a hidefocus="true" href="http://www.kugou.com/mvweb/html/index_16_1.html">欧美精选</a>
+            </dd><dd>
+                <a hidefocus="true" href="http://www.kugou.com/mvweb/html/index_17_1.html">日韩精选</a>
+            </dd><dd>
+                <a hidefocus="true" href="http://www.kugou.com/mvweb/html/index_13_1.html">华语精选</a>
+            </dd><dd>
+                <a hidefocus="true" href="http://www.kugou.com/mvweb/html/index_9_1.html">新歌推荐</a>
+            </dd><dd>
+                <a hidefocus="true" href="http://www.kugou.com/mvweb/html/index_999_1.html">音乐新锐</a>
+            </dd>        </dl>
+      </div>
+    </div>
+    <div class="rightCon">
+        <h3 class="title"><label id="mvName">网络热播</label> (<label id="mvNum">759</label>个)</h3>
+        <div class="mvlist">
+            <ul class="clearfix">
+                <li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_32875.html" title="兰雨 - 恋千年">
+                            <img src="./MV_files/F54063DD8E56DB8B52016C5F8C49A234.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>兰雨 - 恋千年</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_511.html" title="林俊杰 - 背对背拥抱">
+                            <img src="./MV_files/DAFED6A2BBE7C13818CC679DDBD216DE.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>林俊杰 - 背对背拥抱</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_581475.html" title="高安、姜楠 - 梁祝情">
+                            <img src="./MV_files/4EFBE19419661BD17361C1C2BB58A118.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>高安、姜楠 - 梁祝情</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_580435.html" title="李晓杰、陈星、程巍、牛朝阳 - 美人酒">
+                            <img src="./MV_files/0A977F828F6F41D792022765E197875C.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>李晓杰、陈星、程巍、牛朝阳 - 美人酒</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_579196.html" title="颗粒 - 柔软的光">
+                            <img src="./MV_files/7AB9090E605086B0E138BA675BF1FA16.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>颗粒 - 柔软的光</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_572275.html" title="赵真、百灵 - 好运连连">
+                            <img src="./MV_files/236787E69187144AC1E42FE61FE0AD1B.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>赵真、百灵 - 好运连连</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_571792.html" title="赵真 - 福门开 好运来">
+                            <img src="./MV_files/182BA8E5D6BB8B9D47AF660E3E6940BE.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>赵真 - 福门开 好运来</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_568368.html" title="黑龙、胡铁 - 友情岁月">
+                            <img src="./MV_files/6C2A9EC0DEE7571F6458606BD9A41659.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>黑龙、胡铁 - 友情岁月</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_126115.html" title="徐浩、朱元冰 - 跟着太阳走">
+                            <img src="./MV_files/D668B04CD6CEB283D7D9493F7FDBE56B.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>徐浩、朱元冰 - 跟着太阳走</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_106079.html" title="星弟 - 制造浪漫">
+                            <img src="./MV_files/E876E57168C516E9B0D223A38962BD43.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>星弟 - 制造浪漫</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_108978.html" title="贯诗钦 - 你明知道">
+                            <img src="./MV_files/884E197EE751A15533261FD50722564E.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>贯诗钦 - 你明知道</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_201624.html" title="庄心妍 - 再见只是陌生人">
+                            <img src="./MV_files/71180AAEFA25F6D1547AD94E09816ABE.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>庄心妍 - 再见只是陌生人</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_193735.html" title="星弟 - 如果能够">
+                            <img src="./MV_files/A610D76CA3EBAAF2BA4D2C3DA1CD6323.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>星弟 - 如果能够</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_193725.html" title="徐良、本兮 - 创作者">
+                            <img src="./MV_files/E126E19D3BC147F8A8B85B1F13434824.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>徐良、本兮 - 创作者</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_191596.html" title="本兮 - 一直在等">
+                            <img src="./MV_files/5BC6AD357158F52873824842EC1A1FE6.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>本兮 - 一直在等</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_185910.html" title="回音哥 - 不见不念">
+                            <img src="./MV_files/FA9DCE134D3E71CC329C4045EF9705B2.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>回音哥 - 不见不念</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_183765.html" title="庄心妍 - 还不至于">
+                            <img src="./MV_files/87DFAB213709DF0FBB5E7E6BA6EC60C2.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>庄心妍 - 还不至于</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_103757.html" title="邱永传 - 十一年">
+                            <img src="./MV_files/97D5E75E606A0EA46443AC0E4FF69255.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>邱永传 - 十一年</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_98352.html" title="回音哥 - 巷雨">
+                            <img src="./MV_files/A50D9A3B33DE176A5C3483168D58A592.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>回音哥 - 巷雨</span>
+                    </li><li>
+                        <a target="_blank" href="http://www.kugou.com/mvweb/html/mv_176687.html" title="徐浩 X 朱元冰 - 彩虹物语">
+                            <img src="./MV_files/038E6AE0B29117E57A245E43D276CB92.jpg" width="120" height="80">
+                            <em></em><i></i>
+                        </a>
+                        <span>徐浩 X 朱元冰 - 彩虹物语</span>
+                    </li>            </ul>
+            <style>
+            .page a { margin-left:8px;margin-right:8px }
+            </style>
+            <div class="page"><a class="current" href="http://www.kugou.com/mvweb/html/index_9_1.html">1</a><a href="http://www.kugou.com/mvweb/html/index_9_2.html">2</a><a href="http://www.kugou.com/mvweb/html/index_9_3.html">3</a><a href="http://www.kugou.com/mvweb/html/index_9_4.html">4</a><a href="http://www.kugou.com/mvweb/html/index_9_5.html">5</a>...<a href="http://www.kugou.com/mvweb/html/index_9_38.html">38</a><a href="http://www.kugou.com/mvweb/html/index_9_2.html"><em>下一页</em></a></div>            <div class="ClearBoth"></div>
+        </div>
+    </div>
+    
+    
+    <div class="ClearBoth"></div>
+  </div><!--end radiowrap-->
+<!--s/ public footer -->
+<!--e/ public footer -->
+</div>
+<link rel="stylesheet" data-embed="" href="./MV_files/footer.css">
+<div class="footerWrapper">
+    <div class="footer">
+        <div class="links">
+            <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a>| <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/protocol.html">用户服务协议</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/company/partners.html">推广合作</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/imusic/">酷狗音乐人</a> |<a hidefocus="true" target="_blank" href="http://tui.kugou.com/">酷狗音乐推</a> |<a hidefocus="true" href="http://www.kugou.com/job/hr/html/" target="_blank">招聘信息</a> | <a hidefocus="true" href="http://www.kugou.com/shop/help/serviceCenter" target="_blank">客服中心</a> | <a hidefocus="true" href="http://survey.kugou.com/default/index/i=40CD7B8437008E65E67D82D9044C15C99C2E699859F51338" target="_blank">用户体验提升计划</a>
+        </div>
+        <div class="copyright">
+            <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+            <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+            <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026&nbsp;&nbsp;&nbsp;&nbsp;穗公网监备案证第44010650010167</p>
+            <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2004-2016 KuGou-Inc.All Rights Reserved
+                <a hidefocus="true" class="office-verification" href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209" target="_blank"></a>
+            </p>
+        </div>
+    </div>
+</div>
+<!--百度统计-->
+<script>
+   var _hmt = _hmt || [];
+   (function() {
+     var hm = document.createElement("script");
+     hm.src = "//hm.baidu.com/hm.js?aedee6983d4cfc62f509129360d6bb3d";
+     var s = document.getElementsByTagName("script")[0];
+     s.parentNode.insertBefore(hm, s);
+   })();
+</script>
+<script>
+  setTimeout(function() {
+    var d = document.createElement("script");
+    d.src = "http://static.kgimg.com/common/js/min/hijacked-min.js";
+    document.body.appendChild(d);
+  }, 2000);
+</script><img src="" id="vs" style="width:0;height:0;border:0;margin:0;padding:0;"><img src="" id="va" style="width:0;height:0;border:0;margin:0;padding:0;"><img src="" id="vm" style="width:0;height:0;border:0;margin:0;padding:0;">
+<script src="./MV_files/kugouStat.js"></script>
+<script src="./MV_files/main.js"></script>
+
+
+<script src="./MV_files/hijacked-min.js"></script></body></html>

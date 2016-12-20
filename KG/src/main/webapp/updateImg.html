@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0046)http://www.kugou.com/newuc/user/uc/type=avatar -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="title" content="我的酷狗-修改头像-酷狗音乐">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>我的酷狗-修改头像-酷狗音乐</title>
+<link rel="stylesheet" href="./updateImg_files/base_v.1.css">
+<link rel="stylesheet" href="./updateImg_files/user_center_v.1.css">
+<link rel="shortcut icon" type="image/x-icon" href="http://www.kugou.com/newuc/static/images/favicon.ico">
+</head>
+<body>
+<div class="wrap">   
+   <link rel="stylesheet" data-embed="" href="./updateImg_files/header.css">
+<script src="./updateImg_files/hm.js"></script><script type="text/javascript" src="./updateImg_files/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://www.kugou.com/common/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.icon,.logo');
+</script>
+<![endif]-->
+<div class="header">
+    <h1 class="logo">酷狗音乐</h1>
+    <div class="topNav fr">
+        <ul>
+            <li style="display: none;"><a target="_blank" href="./emailReg.html">注册</a></li>
+            <li><a href="./updateImg.html" class="kuLogin" id="kuLogin">kgopen620082356</a><a hidefocus="true" href="http://www.kugou.com/newuc/login/outlogin" class="logout" id="logout" style="display: inline-block;">退出登录</a></li>
+            <li><a target="_blank" href="./server.html">客服中心</a></li>
+            <li><a target="_blank" href="./join.html">招贤纳士</a></li>
+            <li><a target="_blank" href="./VIP.html">会员中心 </a></li>
+        </ul>
+    </div>
+</div>
+<div class="navWrap">
+    <div class="nav">
+        <ul class="homeNav">
+            <li><a class="normal" href="./index.html">首页</a></li>
+            <li><a class="normal" href="./top.html">榜单</a></li>
+            <li><a class="normal" id="productCenter" href="./download.html">下载客户端</a></li>
+            <li class="more" id="moreLi"><a href="" class="icon icon-nav6" id="showMore">更多</a>
+            </li>
+        </ul>
+        <ul class="secondMenu" id="more-subnav">
+            <li><a href="./FM.html">电台</a></li>
+            <li><a href="./MV.html">MV</a></li>
+            <li><a href="./playlist.html">歌单</a></li>
+            <li><a href="./singer.html">歌手</a></li>
+        </ul>
+        <ul class="subNav">
+            <li><a target="_blank" href="http://fanxing.kugou.com/?action=spreadIndex&id=3" class="icon icon-nav1">音乐直播</a></li>
+            <li><a target="_blank" href="http://live.kugou.com/" class="icon icon-nav2">酷狗LIVE</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/imusic/" class="icon icon-nav3">音乐人</a></li>
+            <li><a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/shop" class="icon icon-nav5">商城</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function read(name, key) {
+        var cookieValue = "";
+        var search = name + "=";
+        if (document.cookie.split("").length > 0) {
+            offset = document.cookie.indexOf(search);
+            if (offset != -1) {
+                offset += search.length;
+                end = document.cookie.indexOf(";", offset);
+                if (end == -1) {
+                    end = document.cookie.split("").length;
+                }
+                cookieValue = document.cookie.substring(offset, end);
+            }
+
+        }
+        var a = cookieValue.split("&");
+        var o = {};
+        var haveVal = false; 
+        for (var i = 0, l = a.length; i < l; i++) {
+            var k = a[i].split("=");
+            if(k[0]!=""){
+                o[k[0]] = k[1];
+                haveVal = true; 
+            } 
+        }
+        return haveVal ? o : false;
+    }
+    var jq=$.noConflict();
+    jq(document).ready(function(){
+
+        var loginUtility = {
+            loadScript:function (option) {
+                var url = option.url,
+                    callback = option.callback;
+                var script = document.createElement("script");
+                script.type = 'text/javascript';
+                if (script.readyState) {
+                    script.onreadystatechange = function() {
+                        if (this.readyState == "complete" || this.readyState == "loaded") {
+                            callback && callback();
+                            script.onreadystatechange = script = callback = null;
+                        }
+                    }
+                } else {
+                    script.onload = function() {
+                        callback && callback();
+                        script.onload = script = callback = null;
+                    };
+                }
+
+                script.src = url;
+                document.getElementsByTagName("head")[0].appendChild(script);
+            },
+            initLogin:function(){
+                var _this = this;
+                if (!_this.islogined()) {
+                    loginUtility.loadScript({
+                        url: "http://static.kgimg.com/common/js/min/popuplogin-min.js?" + Math.round(new Date().getTime() / 1000),
+                        callback: function() {
+                            UsLogin();
+                        }
+                    })
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            islogined:function () {
+                var loginInfo = read("KuGoo");
+                return loginInfo == "" || loginInfo.toString() == "undefined" || loginInfo === false ? false : true;
+            },
+            clearEventBubble:function (evt) {
+                try{
+                    if (evt.stopPropagation){
+
+                        evt.stopPropagation();
+                    }else{
+                        evt.cancelBubble = true;
+                    }
+
+                    if (evt.preventDefault){
+                        evt.preventDefault();
+                    }else{
+                        return false;
+                        evt.returnValue = false;
+                    }
+                }catch(ex){
+                    
+                }
+            }
+        }
+        var kuLogin = document.getElementById("kuLogin");
+        var kuLogOut = document.getElementById("logout");
+        var more = document.getElementById("moreLi");
+        var showMore = document.getElementById("showMore");
+        var subUl = document.getElementById("more-subnav");
+        var t = null;
+
+        // 获取登录信息
+        var kugouC = read("KuGoo"),
+            user_name = kugouC.NickName,
+            user;
+            if(user_name){
+                user_name = user_name.replace(/%/g, "\\"),
+                user = eval("'" + user_name + "'");
+                kuLogOut.style.display = "inline-block";
+                kuLogin.href = "http://www.kugou.com/newuc/user/uc/?"+Math.round(new Date().getTime() / 1000);
+                kuLogin.innerHTML = user;
+                kuLogin.parentNode.parentNode.getElementsByTagName("li")[0].style.display = "none";
+            }
+
+       jq("#kuLogin").click(function(e){
+            e.preventDefault();
+            if(jq("#kuLogin").attr("href").length>5){
+                window.open(jq(this).attr("href"))
+            }else{
+                loginUtility.initLogin()
+            }
+     
+        });
+        showMore.onclick=function(e){
+            return false;
+        }
+        more.onmouseover=function(){
+            more.setAttribute("class","more hover")
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        more.onmouseleave=function(){
+            more.setAttribute("class","more")
+            showMore.setAttribute("class","iconMore");
+            t = setTimeout(function(){
+                subUl.style.display = "none"
+            },300)
+        }
+        subUl.onmouseover=function(){
+            clearTimeout(t)
+            more.setAttribute("class","more hover");
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        subUl.onmouseleave=function(){
+            more.setAttribute("class","more");
+            showMore.setAttribute("class","iconMore");
+           subUl.style.cssText = "display:none;";
+        }
+        
+    })
+</script>
+   
+    
+
+    <!-- body -->
+    <div class="kg_uc_bodyArea">
+        <div class="wing_area_outset">
+            <div class="wing_area">
+                <div class="wing_main">
+                    <div class="wing_main_content">
+                    <!-- 主体 -->
+                        <div class="kg_uc_module01">
+                            <div class="kg_uc_module01_hd">
+                                <h4 class="h_tl">我的酷狗</h4>
+                                <div class="h_l"><span class="kg_uc_module01_notice">Personal information</span></div>
+                            </div>
+                            <div class="kg_uc_module01_bd">
+                                <!-- tab 区域 -->
+                                <div class="kg_uc_module02 kg_uc_module02_v1">
+                                    <div class="kg_uc_module02_hd">
+                                        <div class="kg_uc_module02_tag_list"></div>
+                                        <ul class="kg_uc_module02_tag_list_ct">
+                                            <li class="cur"><a href="./updateImg.html" title="修改头像"><span>修改头像</span></a></li>
+                                            <li><a href="./updateMsg.html" title="编辑资料"><span>编辑资料</span></a></li>
+                                            <li><a href="./updateMsg.html" title="修改密码"><span>修改密码</span></a></li>
+                                            <li><a href="http://www.kugou.com/newuc/user/uc/type=account" title="帐号安全"><span>帐号安全</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="kg_uc_module02_bd">
+                                        <div class="bottom10 clearfix">
+                                            <span class="kg_uc_tri_tabList_txt_fix f14 gray">设置一个您喜爱的头像：</span>
+                                            <!--<ul class="kg_uc_tri_tabList" id="avataruploadTabList">
+                                                <li class="cur"><a href="#">本地上传</a></li>
+                                                <li><a href="http://www.kugou.com/newuc/user/uc/type=recommend">酷狗推荐</a></li>
+                                            </ul>-->
+                                        </div>
+                                        <!--
+                                        <div class="bottom20"><p class="gray9">(请选择图片文件，最佳尺寸165 x 165，支持JPG，JPEG，GIF，PNG)</p></div>
+                                        -->
+                                        <div id="avatarupload_cnt">
+                                            <!-- 本地上传 -->
+                                            <div id="uploader"><object id="" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10.0.32" width="670" height="242"><param name="bgColor" value="#666666"><param name="movie" value="http://www.kugou.com/newuc/static/swf/ImagesUpload.swf?img=http://imge.kugou.com/kugouicon/165/20150413/20150413225621741505.jpg&amp;w=165&amp;h=165&amp;t=201403051544"><param name="flashvars" value="url=http://www.kugou.com/newuc/user/do/type=1"><param name="quality" value="high"><param name="allowScriptAccess" value="always"><param name="WMODE" value="transparent"><param name="allowFullScreen" value="false"><embed id="ImagesUpload" name="ImagesUpload" src="http://www.kugou.com/newuc/static/swf/ImagesUpload.swf?img=http://imge.kugou.com/kugouicon/165/20150413/20150413225621741505.jpg&amp;w=165&amp;h=165&amp;t=201403051544" width="670" height="242" allowscriptaccess="always" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="url=http://www.kugou.com/newuc/user/do/type=1" type="application/x-shockwave-flash" wmode="transparent" allowfullscreen="false"></object></div>
+                                            <!--/本地上传 -->
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/tab 区域 -->
+                            </div>
+                        </div>
+
+                        <div class="kg_uc_module02 kg_uc_module02_v1">
+                            <div class="kg_uc_module02_bd">
+                                <span class="recommand_icon">推荐头像：</span>
+                                <div id="avatar_recommand">
+                                    <!-- 酷狗推荐 -->
+                                    <div>
+                                        <div class="kg_uc_avatarimg_list">
+                                            <ul class="kg_uc_avatarimg_list_ct">
+                                                                                                                                                <li class="kg_uc_avatarimg_item">
+                                                <div class="kg_uc_avatarimg_cover" data-pic="http://imge.kugou.com/kugouicon/20100101/20100101192931478054.jpg">
+                                                                                                        <img width="110" height="110" src="./updateImg_files/20100101192931478054.jpg" alt="头像">
+                                                </div>
+                                                <div class="kg_uc_avatarimg_txt">
+                                                                                                        <a href="javascript:;" title="" class="kg_uc_btn_style01" data-pic="http://imge.kugou.com/kugouicon/20100101/20100101192931478054.jpg">选择</a>
+                                                                                                    </div>
+                                                </li>
+                                                                                                <li class="kg_uc_avatarimg_item">
+                                                <div class="kg_uc_avatarimg_cover" data-pic="">
+                                                                                                        <span class="vip_icon"></span>
+                                                                                                        <img width="110" height="110" src="./updateImg_files/20100101192932231831.jpg" alt="头像">
+                                                </div>
+                                                <div class="kg_uc_avatarimg_txt">
+                                                                                                        <a href="javascript:;" title="" class="kg_uc_btn_style01 disabled" data-pic="">选择</a>
+                                                                                                    </div>
+                                                </li>
+                                                                                                <li class="kg_uc_avatarimg_item">
+                                                <div class="kg_uc_avatarimg_cover" data-pic="">
+                                                                                                        <span class="vip_icon"></span>
+                                                                                                        <img width="110" height="110" src="./updateImg_files/20100101192933418660.jpg" alt="头像">
+                                                </div>
+                                                <div class="kg_uc_avatarimg_txt">
+                                                                                                        <a href="javascript:;" title="" class="kg_uc_btn_style01 disabled" data-pic="">选择</a>
+                                                                                                    </div>
+                                                </li>
+                                                                                                <li class="kg_uc_avatarimg_item">
+                                                <div class="kg_uc_avatarimg_cover" data-pic="">
+                                                                                                        <span class="vip_icon"></span>
+                                                                                                        <img width="110" height="110" src="./updateImg_files/20100101192935882161.jpg" alt="头像">
+                                                </div>
+                                                <div class="kg_uc_avatarimg_txt">
+                                                                                                        <a href="javascript:;" title="" class="kg_uc_btn_style01 disabled" data-pic="">选择</a>
+                                                                                                    </div>
+                                                </li>
+                                                                                            </ul>
+                                        </div>
+
+                                        <!-- 页码 -->
+                                        <div class="kg_page_area" style="display:none">
+                                            <div class="kg_page_area_ct">
+                                                <a href="javascript:;" class="kg_page_area_pn">首页</a>
+                                                <a href="javascript:;" class="kg_page_area_pn kg_page_area_pn_current">1</a>
+                                                <a href="javascript:;" class="kg_page_area_pn">2</a>
+                                                <a href="javascript:;" class="kg_page_area_pn">尾页</a>
+                                            </div>
+                                        </div>
+                                        <!--/页码 -->
+                                    </div>
+                                    <!--/酷狗推荐 -->
+                                </div>
+                            </div>
+                        </div>
+
+                    <!--/主体 -->
+                    </div>
+                </div>
+                <div class="wing_side">
+<!-- 左侧栏 -->
+    <!-- 头像区域 -->
+    <div class="kg_uc_avatar_area">
+        <div class="kg_uc_avatar_cover"><img id="UserImage" width="165" height="165" src="./updateImg_files/20150413225621741505.jpg" alt="kgopen620082356"></div>
+        <div class="kg_uc_avatar_txt">
+            <p align="center"><a href="http://www.kugou.com/newuc/user/uc/" id="myucname" class="kg_uc_avatar_name">kgopen620082356</a>
+                                    </p>
+            <p align="center">(帐号:kgopen620082356)</p>
+            <!--<p align="center">积分：17014</p>-->
+             <!--<p align="center"><a href="http://www.kugou.com/uc/620082356.html" style="text-decoration:underline" >返回旧版</a></p>-->
+        </div>
+        <div class="kg_uc_avatar_vipinfo" id="user_vipinfo">
+                        <p><a target="_blank" href="http://vip.kugou.com/home/recharge" title="开通酷狗VIP">开通酷狗VIP&gt;&gt;</a></p>
+                    </div>
+
+    </div>
+    <!--/头像区域 -->
+<!--/左侧栏 -->
+</div>
+<script>
+var myPic = "http://imge.kugou.com/kugouicon/165/20150413/20150413225621741505.jpg";
+
+
+// document.domain="kugou.com";
+var kugouC = read("KuGoo");
+
+var pic_src = kugouC.Pic;
+if(!pic_src || pic_src == "default.jpg"){
+    pic_src = "http://imge.kugou.com/kugouicon/165/20120724/20120724145917274529.jpg";
+} else if(pic_src.indexOf("http://") != -1){
+    pic_src = pic_src;
+} else {
+    pic_src ="http://imge.kugou.com/kugouicon/165/"+pic_src.substr(0,8)+"/"+pic_src;
+}
+var nickname=kugouC.NickName.replace(/%/g, "\\");;
+nickname=eval("'" + nickname + "'");
+document.getElementById("myucname").innerHTML=nickname;
+document.getElementById("UserImage").src= myPic || pic_src;
+
+
+</script>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!--/body -->
+
+    <link rel="stylesheet" data-embed="" href="./updateImg_files/footer.css">
+<div class="footerWrapper">
+    <div class="footer">
+        <div class="links">
+            <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a>| <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/protocol.html">用户服务协议</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/company/partners.html">推广合作</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/imusic/">酷狗音乐人</a> |<a hidefocus="true" target="_blank" href="http://tui.kugou.com/">酷狗音乐推</a> |<a hidefocus="true" href="http://www.kugou.com/job/hr/html/" target="_blank">招聘信息</a> | <a hidefocus="true" href="http://www.kugou.com/shop/help/serviceCenter" target="_blank">客服中心</a> | <a hidefocus="true" href="http://survey.kugou.com/default/index/i=40CD7B8437008E65E67D82D9044C15C99C2E699859F51338" target="_blank">用户体验提升计划</a>
+        </div>
+        <div class="copyright">
+            <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+            <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+            <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026&nbsp;&nbsp;&nbsp;&nbsp;穗公网监备案证第44010650010167</p>
+            <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2004-2016 KuGou-Inc.All Rights Reserved
+                <a hidefocus="true" class="office-verification" href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209" target="_blank"></a>
+            </p>
+        </div>
+    </div>
+</div>
+<!--百度统计-->
+<script>
+   var _hmt = _hmt || [];
+   (function() {
+     var hm = document.createElement("script");
+     hm.src = "//hm.baidu.com/hm.js?aedee6983d4cfc62f509129360d6bb3d";
+     var s = document.getElementsByTagName("script")[0];
+     s.parentNode.insertBefore(hm, s);
+   })();
+</script>
+<script>
+  setTimeout(function() {
+    var d = document.createElement("script");
+    d.src = "http://static.kgimg.com/common/js/min/hijacked-min.js";
+    document.body.appendChild(d);
+  }, 2000);
+</script>
+
+</div>	
+
+
+<script type="text/javascript">
+var kg_domain = "http://www.kugou.com/newuc/";
+</script>
+<script type="text/javascript" src="./updateImg_files/base.js" charset="utf-8"></script>
+<script type="text/javascript" src="./updateImg_files/user_center_global_v.1-min.js" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+(function(){
+    var uploadFlashElm = document.getElementById("uploader"),
+        userImg = document.getElementById('UserImage'),
+        flashAddr = "http://www.kugou.com/newuc/static/swf/ImagesUpload.swf",
+        flashStr = Kg.flash.getStr("ImagesUpload",flashAddr + '?img='+ userImg.src +'&w=165&h=165&t=201403051544',670,242,{"flashvars":"url=http://www.kugou.com/newuc/user/do/type=1","wmode":"transparent"});
+
+    uploadFlashElm.innerHTML = flashStr;
+})();
+
+/*
+ *页面总入口
+ */
+function initAvatar(){
+    //选择推荐头像
+    var _avatar_recommand = Kg.$("#avatar_recommand");
+    _avatar_recommand.find(".kg_uc_avatarimg_cover").addEvent("click",function(){
+        toSave(this);
+    });
+    _avatar_recommand.find(".kg_uc_btn_style01").addEvent("click",function(){
+        toSave(this);
+    });
+
+}
+
+initAvatar();
+
+function uploadEnd(res){
+    if(res.indexOf("error") == -1){
+        res = res.replace(/[\r]/g,"");
+        res = res.replace(/[\n]/g,"");
+        var imgUrl = "http://imge.kugou.com/kugouicon/165/"+res.substr(0,8)+"/"+res;
+        document.getElementById('UserImage').src = imgUrl;
+        document.getElementById('myheadpic').src = imgUrl;
+        top.Kg.$T("img", "public-header")[0].src = imgUrl;
+        Kg.Cookie.rewriteKey("KuGoo", "Pic", res, 86400, "/", "kugou.com");
+
+        alertTips("mini",{status:"success",innerHTML:"保存成功。"});
+    }else{
+        alertTips("mini",{status:"error",innerHTML:"保存失败。"});
+    }
+}
+
+function toSave(t){
+    var pic = t.getAttribute("data-pic");
+    if(pic!==""){
+        save(pic);
+    }else{
+        notVipSaveErr()
+    }
+}
+
+function save(url){
+   var pic=url.substring(url.lastIndexOf('/')+1,url.length)
+   Kg.post("../do/type=6",{"pic":pic},function(res){
+        if(res=="success"){
+            var imgUrl = "http://imge.kugou.com/kugouicon/165/"+pic.substr(0,8)+"/"+pic;
+            Kg.$('#UserImage')[0].src = imgUrl;
+            Kg.$('#myheadpic')[0].src = imgUrl;
+            
+            Kg.Cookie.rewriteKey("KuGoo", "Pic", pic, 86400, "/", "kugou.com");
+            alertTips("mini",{status:"success",autoHide:3000,innerHTML:"更换头像成功!"})
+        }
+        else{
+            alertTips("mini",{status:"error",autoHide:3000,innerHTML:res})
+        }
+   });
+}
+
+function notVipSaveErr(){
+    alertTips("mini",{status:"error",autoHide:3000,innerHTML:'<span style="color:#007AC1;">你还不是VIP用户，暂不能使用该头像。</span><a target="_blank" href="http://vip.kugou.com/home/recharge" style="color:#CB2121;">开通VIP</a>'});
+}
+
+
+
+</script>
+
+<script src="./updateImg_files/hijacked-min.js"></script></body></html>

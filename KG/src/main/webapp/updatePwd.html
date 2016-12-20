@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://www.kugou.com/newuc/user/uc/type=changepwd -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="title" content="用户中心-修改密码-酷狗音乐">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>用户中心-修改密码-酷狗音乐</title>
+<link rel="stylesheet" href="./updatePwd_files/base_v.1.css">
+<link rel="stylesheet" href="./updatePwd_files/user_center_v.1.css">
+<link rel="shortcut icon" type="image/x-icon" href="http://www.kugou.com/newuc/static/images/favicon.ico">
+</head>
+<body>
+<div class="wrap">
+       
+   <link rel="stylesheet" data-embed="" href="./updatePwd_files/header.css">
+<script src="./updatePwd_files/hm.js"></script><script type="text/javascript" src="./updatePwd_files/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://www.kugou.com/common/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.icon,.logo');
+</script>
+<![endif]-->
+<div class="header">
+    <h1 class="logo">酷狗音乐</h1>
+    <div class="topNav fr">
+        <ul>
+            <li style="display: none;"><a target="_blank" href="http://www.kugou.com/reg/web/">注册</a></li>
+            <li><a href="http://www.kugou.com/newuc/user/uc/?1479987826" class="kuLogin" id="kuLogin">kgopen620082356</a><a hidefocus="true" href="http://www.kugou.com/newuc/login/outlogin" class="logout" id="logout" style="display: inline-block;">退出登录</a></li>
+            <li><a target="_blank" href="./server.html">客服中心</a></li>
+            <li><a target="_blank" href="./join.html">招贤纳士</a></li>
+            <li><a target="_blank" href="./VIP.html">会员中心 </a></li>
+        </ul>
+    </div>
+</div>
+<div class="navWrap">
+    <div class="nav">
+        <ul class="homeNav">
+            <li><a class="normal" href="./index.html">首页</a></li>
+            <li><a class="normal" href="./top.html">榜单</a></li>
+            <li><a class="normal" id="productCenter" href="./download.html">下载客户端</a></li>
+            <li class="more" id="moreLi"><a href="" class="icon icon-nav6" id="showMore">更多</a>
+            </li>
+        </ul>
+        <ul class="secondMenu" id="more-subnav">
+            <li><a href="./FM.html">电台</a></li>
+            <li><a href="./MV.html">MV</a></li>
+            <li><a href="./playlist.html">歌单</a></li>
+            <li><a href="./singer.html">歌手</a></li>
+        </ul>
+        <ul class="subNav">
+            <li><a target="_blank" href="http://fanxing.kugou.com/?action=spreadIndex&id=3" class="icon icon-nav1">音乐直播</a></li>
+            <li><a target="_blank" href="http://live.kugou.com/" class="icon icon-nav2">酷狗LIVE</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/imusic/" class="icon icon-nav3">音乐人</a></li>
+            <li><a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/shop" class="icon icon-nav5">商城</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function read(name, key) {
+        var cookieValue = "";
+        var search = name + "=";
+        if (document.cookie.split("").length > 0) {
+            offset = document.cookie.indexOf(search);
+            if (offset != -1) {
+                offset += search.length;
+                end = document.cookie.indexOf(";", offset);
+                if (end == -1) {
+                    end = document.cookie.split("").length;
+                }
+                cookieValue = document.cookie.substring(offset, end);
+            }
+
+        }
+        var a = cookieValue.split("&");
+        var o = {};
+        var haveVal = false; 
+        for (var i = 0, l = a.length; i < l; i++) {
+            var k = a[i].split("=");
+            if(k[0]!=""){
+                o[k[0]] = k[1];
+                haveVal = true; 
+            } 
+        }
+        return haveVal ? o : false;
+    }
+    var jq=$.noConflict();
+    jq(document).ready(function(){
+
+        var loginUtility = {
+            loadScript:function (option) {
+                var url = option.url,
+                    callback = option.callback;
+                var script = document.createElement("script");
+                script.type = 'text/javascript';
+                if (script.readyState) {
+                    script.onreadystatechange = function() {
+                        if (this.readyState == "complete" || this.readyState == "loaded") {
+                            callback && callback();
+                            script.onreadystatechange = script = callback = null;
+                        }
+                    }
+                } else {
+                    script.onload = function() {
+                        callback && callback();
+                        script.onload = script = callback = null;
+                    };
+                }
+
+                script.src = url;
+                document.getElementsByTagName("head")[0].appendChild(script);
+            },
+            initLogin:function(){
+                var _this = this;
+                if (!_this.islogined()) {
+                    loginUtility.loadScript({
+                        url: "http://static.kgimg.com/common/js/min/popuplogin-min.js?" + Math.round(new Date().getTime() / 1000),
+                        callback: function() {
+                            UsLogin();
+                        }
+                    })
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            islogined:function () {
+                var loginInfo = read("KuGoo");
+                return loginInfo == "" || loginInfo.toString() == "undefined" || loginInfo === false ? false : true;
+            },
+            clearEventBubble:function (evt) {
+                try{
+                    if (evt.stopPropagation){
+
+                        evt.stopPropagation();
+                    }else{
+                        evt.cancelBubble = true;
+                    }
+
+                    if (evt.preventDefault){
+                        evt.preventDefault();
+                    }else{
+                        return false;
+                        evt.returnValue = false;
+                    }
+                }catch(ex){
+                    
+                }
+            }
+        }
+        var kuLogin = document.getElementById("kuLogin");
+        var kuLogOut = document.getElementById("logout");
+        var more = document.getElementById("moreLi");
+        var showMore = document.getElementById("showMore");
+        var subUl = document.getElementById("more-subnav");
+        var t = null;
+
+        // 获取登录信息
+        var kugouC = read("KuGoo"),
+            user_name = kugouC.NickName,
+            user;
+            if(user_name){
+                user_name = user_name.replace(/%/g, "\\"),
+                user = eval("'" + user_name + "'");
+                kuLogOut.style.display = "inline-block";
+                kuLogin.href = "http://www.kugou.com/newuc/user/uc/?"+Math.round(new Date().getTime() / 1000);
+                kuLogin.innerHTML = user;
+                kuLogin.parentNode.parentNode.getElementsByTagName("li")[0].style.display = "none";
+            }
+
+       jq("#kuLogin").click(function(e){
+            e.preventDefault();
+            if(jq("#kuLogin").attr("href").length>5){
+                window.open(jq(this).attr("href"))
+            }else{
+                loginUtility.initLogin()
+            }
+     
+        });
+        showMore.onclick=function(e){
+            return false;
+        }
+        more.onmouseover=function(){
+            more.setAttribute("class","more hover")
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        more.onmouseleave=function(){
+            more.setAttribute("class","more")
+            showMore.setAttribute("class","iconMore");
+            t = setTimeout(function(){
+                subUl.style.display = "none"
+            },300)
+        }
+        subUl.onmouseover=function(){
+            clearTimeout(t)
+            more.setAttribute("class","more hover");
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        subUl.onmouseleave=function(){
+            more.setAttribute("class","more");
+            showMore.setAttribute("class","iconMore");
+           subUl.style.cssText = "display:none;";
+        }
+        
+    })
+</script>
+   
+    
+
+    <!-- body -->
+    <div class="kg_uc_bodyArea">
+        <div class="wing_area_outset">
+            <div class="wing_area">
+                <div class="wing_main">
+                    <div class="wing_main_content">
+                    <!-- 主体 -->
+                        <div class="kg_uc_module01">
+                            <div class="kg_uc_module01_hd">
+                                <h4 class="h_tl">我的酷狗</h4>
+                                <div class="h_l"><span class="kg_uc_module01_notice">Personal information</span></div>
+                            </div>
+                            <div class="kg_uc_module01_bd">
+                                <!-- tab 区域 -->
+                                <div class="kg_uc_module02">
+                                    <div class="kg_uc_module02_hd">
+                                        <div class="kg_uc_module02_tag_list"></div>
+                                        <ul class="kg_uc_module02_tag_list_ct">
+                                            <li><a href="./updateImg.html" title="修改头像"><span>修改头像</span></a></li>
+                                            <li><a href="./updateMsg.html" title="编辑资料"><span>编辑资料</span></a></li>
+                                            <li class="cur"><a href="./updatePwd.html" title="修改密码"><span>修改密码</span></a></li>
+                                            <li><a href="http://www.kugou.com/newuc/user/uc/type=account" title="帐号安全"><span>帐号安全</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="kg_uc_module02_bd">
+                                        <form>
+                                            <table class="kg_uc_gen_tb" width="100%">
+                                                                                          <tbody><tr id="tr_intro">
+                                                    <td align="left" valign="top" colspan="2"><label>这是您第一次设置酷狗密码，设置成功后，就可以直接用帐号或ID登陆酷狗了哦！</label></td>
+                                                    
+                                                </tr>
+                                                                                            <tr>
+                                                    <td align="right" valign="top"><label for="newPassword" class="kg_uc_gen_tb_tl"><span class="red">*</span> 新密码：</label></td>
+                                                    <td>
+                                                        <div class="kg_uc_textbox_area kg_uc_textbox_password">
+                                                            <div class="kg_uc_textbox"><input id="newPassword" name="newPassword" type="password" maxlength="16" class="kg_uc_textbox_ipt"></div>
+                                                            <div class="kg_uc_tips"><i class="kg_uc_tips_icon"></i><span class="kg_uc_tips_txt">请输入6-16位的数字、字母或符号。</span></div>
+                                                            <div class="kg_uc_psw_strong" id="ePasswordStrong">
+                                                                <div class="kg_uc_psw_txt">密码强度:弱</div>
+                                                                <div class="kg_uc_psw_strong_cnt"><span class="bg"></span><span class="line1"></span><span class="line2"></span></div>
+                                                                <div class="kg_uc_psw_txt">强</div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right" valign="top"><label for="repassword" class="kg_uc_gen_tb_tl"><span class="red">*</span> 确认密码：</label></td>
+                                                    <td>
+                                                        <div class="kg_uc_textbox_area kg_uc_textbox_repassword">
+                                                            <div class="kg_uc_textbox"><input id="repassword" name="repassword" type="password" maxlength="16" class="kg_uc_textbox_ipt"></div>
+                                                            <div class="kg_uc_tips"><i class="kg_uc_tips_icon"></i><span class="kg_uc_tips_txt">再次输入密码</span></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td align="right" valign="top"><label for="code" class="kg_uc_gen_tb_tl"><span class="red">*</span> 验证码：</label></td>
+                                                    <td>
+                                                        <div class="kg_uc_textbox_area kg_uc_textbox_code">
+                                                            <div class="kg_uc_textbox"><input id="uccode" name="code" type="text" class="kg_uc_textbox_ipt"></div>
+                                                            <div class="kg_uc_tips"><i class="kg_uc_tips_icon"></i><span class="kg_uc_tips_txt"></span></div>
+                                                            <div class="kg_uc_code_area"><img id="uccheckimg" title="看不清，换一张" style="cursor: hand;padding-top:3px;" onclick="getCodeImg(&#39;uccheckimg&#39;)" src="./updatePwd_files/t=1479987826062"></div>
+                                                            <a href="javascript:;" onclick="getCodeImg(&#39;uccheckimg&#39;)" class="kg_uc_changeone">换一张</a>
+                                                            
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td></td>
+                                                    <td><input type="button" id="button" class="kg_uc_btn_style02" value="保存修改"></td>
+                                                </tr>
+                                            </tbody></table>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--/tab 区域 -->
+                            </div>
+                        </div>
+                    <!--/主体 -->
+                    </div>
+                </div>
+                 <div class="wing_side">
+<!-- 左侧栏 -->
+    <!-- 头像区域 -->
+    <div class="kg_uc_avatar_area">
+        <div class="kg_uc_avatar_cover"><img id="UserImage" width="165" height="165" src="./updatePwd_files/20150413225621741505.jpg" alt="kgopen620082356"></div>
+        <div class="kg_uc_avatar_txt">
+            <p align="center"><a href="http://www.kugou.com/newuc/user/uc/" id="myucname" class="kg_uc_avatar_name">kgopen620082356</a>
+                                    </p>
+            <p align="center">(帐号:kgopen620082356)</p>
+            <!--<p align="center">积分：17014</p>-->
+             <!--<p align="center"><a href="http://www.kugou.com/uc/620082356.html" style="text-decoration:underline" >返回旧版</a></p>-->
+        </div>
+        <div class="kg_uc_avatar_vipinfo" id="user_vipinfo">
+                        <p><a target="_blank" href="http://vip.kugou.com/home/recharge" title="开通酷狗VIP">开通酷狗VIP&gt;&gt;</a></p>
+                    </div>
+
+    </div>
+    <!--/头像区域 -->
+<!--/左侧栏 -->
+</div>
+<script>
+var myPic = "http://imge.kugou.com/kugouicon/165/20150413/20150413225621741505.jpg";
+
+
+// document.domain="kugou.com";
+var kugouC = read("KuGoo");
+
+var pic_src = kugouC.Pic;
+if(!pic_src || pic_src == "default.jpg"){
+    pic_src = "http://imge.kugou.com/kugouicon/165/20120724/20120724145917274529.jpg";
+} else if(pic_src.indexOf("http://") != -1){
+    pic_src = pic_src;
+} else {
+    pic_src ="http://imge.kugou.com/kugouicon/165/"+pic_src.substr(0,8)+"/"+pic_src;
+}
+var nickname=kugouC.NickName.replace(/%/g, "\\");;
+nickname=eval("'" + nickname + "'");
+document.getElementById("myucname").innerHTML=nickname;
+document.getElementById("UserImage").src= myPic || pic_src;
+
+
+</script>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!--/body -->
+    <link rel="stylesheet" data-embed="" href="./updatePwd_files/footer.css">
+<div class="footerWrapper">
+    <div class="footer">
+        <div class="links">
+            <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a>| <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/protocol.html">用户服务协议</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/company/partners.html">推广合作</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/imusic/">酷狗音乐人</a> |<a hidefocus="true" target="_blank" href="http://tui.kugou.com/">酷狗音乐推</a> |<a hidefocus="true" href="http://www.kugou.com/job/hr/html/" target="_blank">招聘信息</a> | <a hidefocus="true" href="http://www.kugou.com/shop/help/serviceCenter" target="_blank">客服中心</a> | <a hidefocus="true" href="http://survey.kugou.com/default/index/i=40CD7B8437008E65E67D82D9044C15C99C2E699859F51338" target="_blank">用户体验提升计划</a>
+        </div>
+        <div class="copyright">
+            <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+            <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+            <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026&nbsp;&nbsp;&nbsp;&nbsp;穗公网监备案证第44010650010167</p>
+            <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2004-2016 KuGou-Inc.All Rights Reserved
+                <a hidefocus="true" class="office-verification" href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209" target="_blank"></a>
+            </p>
+        </div>
+    </div>
+</div>
+<!--百度统计-->
+<script>
+   var _hmt = _hmt || [];
+   (function() {
+     var hm = document.createElement("script");
+     hm.src = "//hm.baidu.com/hm.js?aedee6983d4cfc62f509129360d6bb3d";
+     var s = document.getElementsByTagName("script")[0];
+     s.parentNode.insertBefore(hm, s);
+   })();
+</script>
+<script>
+  setTimeout(function() {
+    var d = document.createElement("script");
+    d.src = "http://static.kgimg.com/common/js/min/hijacked-min.js";
+    document.body.appendChild(d);
+  }, 2000);
+</script>
+
+    
+</div>	
+
+
+<script type="text/javascript">
+var kg_domain = "http://www.kugou.com/newuc/";
+</script>
+<script type="text/javascript" src="./updatePwd_files/base-min.js" charset="utf-8"></script>
+<script type="text/javascript" src="./updatePwd_files/user_center_global_v.1-min.js" charset="utf-8"></script>
+<script type="text/javascript" src="./updatePwd_files/uc-min.js" charset="utf-8"></script>
+<script type="text/javascript">
+initUcpwd(); 
+function getCodeImg(id) {
+    document.getElementById(id).src = kg_domain+'user/verifycode/t=' + new Date().getTime();
+}
+getCodeImg('uccheckimg')
+</script>
+<script src="./updatePwd_files/hijacked-min.js"></script></body></html>

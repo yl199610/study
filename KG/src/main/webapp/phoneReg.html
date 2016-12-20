@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://www.kugou.com/reg/web/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="title" content="用户注册-酷狗音乐">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>用户注册-酷狗音乐</title>
+<link rel="stylesheet" href="./phoneReg_files/web_reg.css">
+</head>
+<body>
+<div class="wrap">
+    <link rel="stylesheet" href="./phoneReg_files/shopmain.css" type="text/css">
+<div class="topBanner">
+	<a href="http://www.kugou.com/shop/product/kugouproduct/index.html" target="_blank"></a>
+</div>
+<div class="public-header-wrapper">
+<div id="public-header">
+    <a href="http://www.kugou.com/" class="gb_logo"></a>
+    <div class="login public_nav_bd" id="lng">
+    	<ul class="nav_m_l_r clear_fix">
+    		<li class="nav_r noborder"><a class="regLink" href="./phoneReg_files/phoneReg.html" title="新用户注册" hidefocus="true" target="_blank">注册</a></li>
+			<li class="nav_r nav_handle not_login">
+				<div class="liubai"></div>
+				<a href="javascript:;" hidefocus="true" class="t_ico loginbtn">登录</a>
+				<a href="javascript:;" hidefocus="true" class="t_ico perhome" style="display:none;">登录</a><i class="sum_ico" id="myMsgSum">0</i>
+				<div class="user_info">
+					<div class="user_img clear_fix">
+						<a href="http://www.kugou.com/shop/user/home" target="_blank" hidefocus="true" class="user_img"><img id="userImg" width="71" height="71" src="" alt="歌手头像"><i class="layer"></i></a>
+						<div class="txt">
+							<a hidefocus="true" class="nick_name" href="http://www.kugou.com/shop/user/home" target="_blank" id="userName">hi!XXXX</a>
+							<a hidefocus="true" class="vipIcon vip_false" href="http://vip.kugou.com/" target="_blank"></a>
+							<a hidefocus="true" class="vipIcon vip_true" href="http://vip.kugou.com/" target="_blank"></a>
+						</div>
+					</div>
+					<div class="login_links">
+						<a class="" href="http://www.kugou.com/shop/user/home" target="_blank" hidefocus="true"><!-- <i class="u_ico ico_1"></i> -->个人中心</a>
+						<a class="" href="http://www.kugou.com/shop/user/myOrder" target="_blank" hidefocus="true"><!-- <i class="u_ico ico_2"></i> -->我的订单</a>
+						<a class="" href="http://www.kugou.com/newuc/user/uc/type=edit" target="_blank" hidefocus="true"><!-- <i class="u_ico ico_3"></i> -->账户设置<em id="userMsg"></em></a>
+						<a class="" href="http://www.kugou.com/shop/help/expressPay/index.html" target="_blank" hidefocus="true">购物指南<em></em></a>
+					</div>
+					<a href="http://www.kugou.com/shop/user/logout" class="out_login" hidefocus="true">退出登录</a>
+				</div>
+			</li>
+			<li class="nav_r w_space noborder"></li>
+			<li class="nav_r nav_handle"><a href="http://www.kugou.com/shop/shoppingCart/cartinfo" target="_blank" hidefocus="true" class="g_ico">我的购物车</a><i class="sum_ico" id="myGoodsSum" style="display: none;">0</i>
+				<div class="liubai"></div>
+				<div class="shop_cart">
+					<ul class="goods_list" id="cartInfoList"><li class="empty_cart">购物车中还没有商品，赶紧选购吧！</li></ul>
+					<div class="count_cart clear_fix" style="display: none;">
+						<span class="goods_sum">共计<i id="goodsNum"></i>件商品</span>
+						<span class="pay_sum">合计：<i id="totalSum"> </i></span>
+						<a href="http://www.kugou.com/shop/shoppingCart/cartinfo" target="_blank" hidefocus="true" class="goto_checkout">去购物车结算</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+    </div>
+</div>
+</div>
+<div class="public-nav-wrapper">
+	<div id="public-nav" class="clear_fix">
+	  <h1 class="logo"><a href="http://www.kugou.com/"><img src="./phoneReg_files/herder_logo.jpg" width="170" height="40" alt="酷狗音乐"></a></h1>
+	  <ul class="n1" id="ulHeader">
+		<li class="home"><a href="http://www.kugou.com/shop" hidefocus="true" title="酷狗商城" onclick="sdnClick(12224)">酷狗商城</a><span></span></li>
+		<li class="downloadLink" id="downloadLink"><a href="http://download.kugou.com/" hidefocus="true" title="下载客户端" onclick="sdnClick(12224)" target="_blank">下载客户端</a><span></span></li>
+<!-- 		<li class="newsLink " id="newsLink"><a href="http://yule.kugou.com/" hidefocus="true" onclick="sdnClick(12227)" title="娱乐资讯" target="_self">娱乐资讯</a><span></span></li> -->
+		<li><a href="http://fanxing.kugou.com/?action=spreadIndex&id=3" onclick="sdnClick(16804)" hidefocus="true" title="音乐直播" target="_blank">音乐直播</a><span></span></li>
+		<li><a href="http://www.kugou.com/imusic/" hidefocus="true" title="酷狗音乐人" target="_self">酷狗音乐人</a><span></span></li>
+	  </ul>
+	  <ul class="n2 n2_new">
+		<li><a href="http://download.kugou.com/" target="_blank" hidefocus="true" onclick="sdnClick(12232)" title="酷狗音乐盒2015官方免费下载">产品中心</a><span></span></li>
+		<li><a href="http://vip.kugou.com/" target="_blank" onclick="sdnClick(12230)" hidefocus="true" title="VIP中心">VIP中心</a><span></span></li>
+		<li class="serverhome"><a href="http://www.kugou.com/shop/help/serviceCenter" target="_blank" hidefocus="true" onclick="sdnClick(12231)" title="客服中心">客服中心</a><span></span></li>
+	  </ul>
+	</div>
+	<div class="second-wrapper" id="second-wrapper">
+		<div class="second-bg"></div>
+		<div class="second-nav">
+        		<div class="download-software" id="downloadSoftware">
+        			<a class="pc" href="http://download.kugou.com/download/kugou_pc">下载电脑版</a>
+        			<a class="android" href="http://download.kugou.com/android.html" target="_blank">下载安卓版</a>
+        			<a class="iphone" href="http://download.kugou.com/iphone.html" target="_blank">下载iPhone版</a>
+        			<a class="ipad" href="http://download.kugou.com/ipad.html" target="_blank">下载iPad版</a>
+        		</div>
+        		<div class="news" id="news">
+        			<a class="pc" href="./index.html">首页 </a>
+					<a class="android" href="http://yule.kugou.com/pic/">明星图库</a>
+					<a class="iphone" href="http://www.kugou.com/yule/actsub/sub/p=1&type=0">最热专题</a>
+					<a class="ipad" href="http://www.kugou.com/yule/actsub/act/p=1&type=0">官方活动</a>
+        		</div>
+        </div>
+	</div>
+</div>
+
+<div class="scroll" id="scroll" style="display: none; top: 60%; left: 1179px;"><img src="./phoneReg_files/scrolltop.png" alt="返回顶部"></div>
+
+<script src="./phoneReg_files/hm.js"></script><script type="text/javascript" async="" src="./phoneReg_files/popuplogin-min.js"></script><script type="text/javascript" src="./phoneReg_files/base-min.js"></script>
+<script src="./phoneReg_files/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="./phoneReg_files/header.js" charset="utf-8"></script>
+<script type="text/javascript">
+(function(){
+	//初始化
+	publicFun.headEventInit();
+	//回到顶部
+	Kg.$(window).addEvent("scroll",function(){
+		publicFun.scrollTop();
+	})
+	 // 鼠标放上去显示二级菜单的 dom 对象
+	var downloadLink_btn = document.getElementById("downloadLink"),
+		newsLink_btn = document.getElementById("newsLink"),
+		secondWrapper = document.getElementById("second-wrapper"),
+		downloadSoftware = document.getElementById("downloadSoftware"),
+		news = document.getElementById("news"),
+		isIE=!!window.ActiveXObject,
+		isIE6=isIE&&!window.XMLHttpRequest,
+		isIE8=isIE&&!!document.documentMode,
+ 		isIE7=isIE&&!isIE6&&!isIE8,
+		timer1=null,
+		timer2=null,
+		Elespan = downloadLink_btn.getElementsByTagName("span")[0];
+
+	//下载按钮
+	downloadLink_btn.onmouseover = function(){
+
+		newsLink_btn.setAttribute("class","")
+		downloadLink_btn.setAttribute("class","hover");
+		news.style.display="none";
+		if(isIE6 || isIE7){
+			Elespan.style.visibility="visible";
+		}
+		
+		secondWrapper.style.display="block";
+		downloadSoftware.style.display="block";
+		clearTimeout(timer1);
+		if(timer2){
+			clearTimeout(timer2);
+		}
+
+	}
+	downloadLink_btn.onmouseout = function(){
+		timer1 = setTimeout(function(){
+			if(isIE6 || isIE7){
+
+				Elespan.style.visibility="hidden";
+			}
+			downloadLink_btn.setAttribute("class","");
+			secondWrapper.style.display="none";
+			downloadSoftware.style.display="none";
+		},300)
+	}
+
+	downloadSoftware.onmouseover = function(){
+		downloadLink_btn.setAttribute("class","hover")
+		if(isIE6 || isIE7){
+				Elespan.style.visibility="visible";
+		}
+		news.style.display="none";
+		secondWrapper.style.display="block";
+		downloadSoftware.style.display="block";
+		clearTimeout(timer1);
+	}
+	downloadSoftware.onmouseout=function(){
+		timer1 = setTimeout(function(){
+			if(isIE6 || isIE7){
+				Elespan.style.visibility="hidden";
+			}
+			downloadLink_btn.setAttribute("class","");
+			secondWrapper.style.display="none";
+			downloadSoftware.style.display="none";
+		},300)
+	}
+})()
+/**
+ * 通用统计 sdnClickNew
+ * @name sdnClickNew
+ * @function
+ * @param key
+ * @param type
+ */
+function sdnClickNew(num,type){
+    if(!num){
+        return;
+    }
+    var src = (new Date()).getTime();
+
+    switch(type){
+        case "aspx":
+            src = 'http://sdn.kugou.com/link.aspx?id=' + num + '&url=&t=' + src;
+            break;
+        case "php":
+        default:
+            src = 'http://tj.kugou.com/front/link.php?id=' + num + '&url=&t=' + src;
+            break;
+    }
+    (new Image()).src = src;
+}
+
+function sdnClick(num) {
+	(new Image()).src = "http://sdn.kugou.com/link.aspx?id=" + num + "&url=&t=" + Math.random();
+};
+/*分类统计*/
+function logStat(type, name, p1, p2, p3, p4) {
+		var param = [];
+		type != undefined && param.push("type=" + encodeURIComponent(type));
+		name != undefined && param.push("name=" + encodeURIComponent(name));
+		p1 != undefined && param.push("p1=" + encodeURIComponent(p1));
+		p2 != undefined && param.push("p2=" + encodeURIComponent(p2));
+		p3 != undefined && param.push("p3=" + encodeURIComponent(p3));
+		p4 != undefined && param.push("p4=" + encodeURIComponent(p4));
+		var url = "http://log.stat.kugou.com/statistics/statistics.html?" + param.join("&") + "&t=" + new Date().getTime();
+		setTimeout(function() {
+			new Image().src = url;
+		}, 1);
+	}
+/*-end- 分类统计 -end-*/
+</script>
+
+        
+    <style type="text/css">
+        .topBanner{display: none;}
+    </style>
+    
+    <!-- body -->
+    <div class="kg_reg_body_area">
+        <!-- 注册主体 -->
+        <div class="kg_lgn_reg_box" id="regBox">
+            <div class="kg_lgn_reg_hd">
+                <ul class="kg_lgn_reg_tag_list" id="regTagList">
+                    
+                    <li class=" "><a href="javascript:;" class="s1"><span>邮箱注册</span></a></li>
+                    <li class=" cur"><a href="javascript:;" class="s2"><span>手机注册</span></a></li>
+                    <li class="last_child"><a href="javascript:;" class="s3"><span>用户名</span></a></li>
+                </ul>
+            </div>
+            <div class="kg_lgn_reg_ct" id="regCntList">
+                <!-- 邮箱注册 -->
+                <div class="kg_lgn_reg_ct_item" style="display: none;">
+                    <form id="t01Form">
+                        <table class="kg_lgn_reg_tb" width="100%">
+                            <tbody><tr>
+                                <td width="300" align="right" valign="top"><label for="t01Email" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 邮箱：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_email">
+                                        <div class="kg_lgn_textbox"><input id="t01Email" maxlength="30" name="email" type="text" class="kg_lgn_textbox_ipt" autocomplete="off"></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"></span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td align="right" valign="top"><label for="t01Psw" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 密码：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_password">
+                                        <div class="kg_lgn_textbox"><input maxlength="16" id="t01Psw" name="password" type="password" class="kg_lgn_textbox_ipt"></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"></span></div>
+                                        <div class="kg_lgn_psw_strong" id="t01PswStrong">
+                                            <div class="kg_lgn_psw_txt">密码强度:弱</div>
+                                            <div class="kg_lgn_psw_strong_cnt"><span class="bg"></span><span class="line1"></span><span class="line2"></span></div>
+                                            <div class="kg_lgn_psw_txt">强</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top"><label for="t01Psw2" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 确认密码：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_repassword">
+                                        <div class="kg_lgn_textbox"><input maxlength="16" id="t01Psw2" name="repassword" type="password" class="kg_lgn_textbox_ipt"></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"></span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="300" align="right"><label for="t01Sex" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 性别：</label></td>
+                                <td id="t01Sex">
+                                    <input type="radio" name="UM_Sex" value="1"> 男　
+                                    <input type="radio" name="UM_Sex" value="0"> 女
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top"><label for="t01Code" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 验证码：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_code">
+                                        <div class="kg_lgn_textbox" style="display:none;">
+                                            <input id="t01Code" maxlength="6" name="code" type="text" class="kg_lgn_textbox_ipt">
+                                        </div>
+                                        <div class="kg_lgn_tips">
+                                            <i class="kg_lgn_tips_icon"></i>
+                                            <span class="kg_lgn_tips_txt"> </span>
+                                        </div>
+                                        <div class="kg_lgn_code_area" style="display:none;"><img id="t01CodeImg" title="看不清，换一张" style="cursor: hand;padding-top:3px;" src="./phoneReg_files/t=1479653819123"></div>
+                                        <a id="t01CodeChange" class="kg_lgn_changeone" style="display:none;">换一张</a>
+                                    </div>
+
+
+                                    <span class="pcr_iptbox pcr_codebox">
+                                        <label class="txt" for="emailt01Code"></label>
+                                        <input id="emailt01Code" type="text" class="ipt kg_lgn_textbox_ipt" style="width:120px;" onblur="checkCode()">
+                                        <span class="sts"></span>
+                                        <span class="nts"></span>
+                                        <span class="pcr_codeimg" id="p_email_code"><img id="KgPopupVerifyCode" src="./phoneReg_files/get_img_code" onclick="KgUser.ChangeVerifyCode(this,1014,&#39;RegCheckCode&#39;)" title="看不清，换一张" alt="看不清，换一张" style="cursor:pointer;width:90px;height:40px;"></span>
+                                        <a id="emailt01CodeChange" class="kg_lgn_changeone">换一张</a>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><label class="gray"><input type="checkbox" name="readed" id="t01Agree" class="kg_lgn_checkbox" checked="">我已经认真阅读并同意 <a href="http://www.kugou.com/newuc/reg/protocol" target="_blank" class="a_link">《酷狗服务条款》</a></label></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span class="reg_btn_s01" id="t01Submit"><input type="button" name="" value="注册"></span>
+                                    <span id="t01Msg" class="reg_inset_msg" style="display: none;"></span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </form>
+                </div>
+                <!--/邮箱注册 -->
+                <!-- 手机注册 -->
+                <div class="kg_lgn_reg_ct_item">
+                    <form id="t02Form">
+                        <table class="kg_lgn_reg_tb" width="100%">
+                            <tbody><tr>
+                                <td width="300" align="right" valign="top"><label for="t02Mobile" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 手机号码：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_mobile">
+                                        <div class="kg_lgn_textbox"><input id="t02Mobile" maxlength="30" name="email" type="text" class="kg_lgn_textbox_ipt"></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"></span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top"><label for="t02Code" class="kg_lgn_reg_tb_tl"><span class="red">*</span>短信验证：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_code">
+                                        <div class="kg_lgn_textbox"><input id="t02Code" maxlength="6" name="code" type="text" class="kg_lgn_textbox_ipt"></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"> </span></div>
+                                        <a class="reg_btn_s02 reg_btn_s02_disable" id="t02GetCode" href="javascript:;"><span>获取短信</span></a>
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top"><label for="t02Psw" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 密码：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_password">
+                                        <div class="kg_lgn_textbox"><input maxlength="16" id="t02Psw" name="password" type="password" class="kg_lgn_textbox_ipt"></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"></span></div>
+                                        <div class="kg_lgn_psw_strong" id="t02PswStrong">
+                                            <div class="kg_lgn_psw_txt">密码强度:弱</div>
+                                            <div class="kg_lgn_psw_strong_cnt"><span class="bg"></span><span class="line1"></span><span class="line2"></span></div>
+                                            <div class="kg_lgn_psw_txt">强</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top"><label for="t02Psw2" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 确认密码：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_repassword">
+                                        <div class="kg_lgn_textbox"><input maxlength="16" id="t02Psw2" name="repassword" type="password" class="kg_lgn_textbox_ipt"></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"></span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="300" align="right"><label for="t01Sex" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 性别：</label></td>
+                                <td id="t02Sex">
+                                    <input type="radio" name="UM_Sex" value="1"> 男　
+                                    <input type="radio" name="UM_Sex" value="0"> 女
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><label class="gray"><input type="checkbox" name="readed" id="t02Agree" class="kg_lgn_checkbox" checked="">我已经认真阅读并同意 <a href="http://www.kugou.com/newuc/reg/protocol" target="_blank" class="a_link">《酷狗服务条款》</a></label></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span class="reg_btn_s01" id="t02Submit"><input type="button" name="" value="注册"></span>
+                                    <span id="t02Msg" class="reg_inset_msg" style="display: none;"></span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </form>
+                </div>
+                <!--/手机注册 -->
+                <!-- 用户名 -->
+                <div class="kg_lgn_reg_ct_item" style="display:none;">
+                
+                    <form id="t03Form" 　onsubmit="return false;">
+                        <table class="kg_lgn_general_tb kg_lgn_reg_tb" width="100%">
+                            
+                            <tbody><tr>
+                                <td width="300" align="right"><label for="t03User" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 用户名：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_username">
+                                        <div class="kg_lgn_textbox"><input id="t03User" name="username" maxlength="20" type="text" class="kg_lgn_textbox_ipt"></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"></span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td align="right" valign="top"><label for="t03Psw" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 密码：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_password">
+                                        <div class="kg_lgn_textbox"><input maxlength="16" id="t03Psw" name="password" type="password" class="kg_lgn_textbox_ipt"></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"></span></div>
+                                        <div class="kg_lgn_psw_strong" id="t03PswStrong">
+                                            <div class="kg_lgn_psw_txt">密码强度:弱</div>
+                                            <div class="kg_lgn_psw_strong_cnt"><span class="bg"></span><span class="line1"></span><span class="line2"></span></div>
+                                            <div class="kg_lgn_psw_txt">强</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top"><label for="t03Psw2" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 确认密码：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_repassword">
+                                        <div class="kg_lgn_textbox"><input maxlength="16" id="t03Psw2" name="repassword" type="password" class="kg_lgn_textbox_ipt"></div>
+                                        <div class="kg_lgn_tips"><i class="kg_lgn_tips_icon"></i><span class="kg_lgn_tips_txt"></span></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="300" align="right"><label for="t03Sex" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 性别：</label></td>
+                                <td id="t03Sex">
+                                    <input type="radio" name="UM_Sex" value="1"> 男　
+                                    <input type="radio" name="UM_Sex" value="0"> 女
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="top"><label for="t03Code" class="kg_lgn_reg_tb_tl"><span class="red">*</span> 验证码：</label></td>
+                                <td>
+                                    <div class="kg_lgn_textbox_area kg_lgn_textbox_code">
+                                        <div class="kg_lgn_textbox" style="display:none;">
+                                            <input id="t03Code" maxlength="6" name="code" type="text" class="kg_lgn_textbox_ipt">
+                                        </div>
+                                        <div class="kg_lgn_tips">
+                                            <i class="kg_lgn_tips_icon"></i>
+                                            <span class="kg_lgn_tips_txt"></span>
+                                        </div>
+                                        <div class="kg_lgn_code_area" style="display:none;"><img id="t03CodeImg" title="看不清，换一张" style="cursor: hand;padding-top:3px;"></div>
+                                        <a id="t03CodeChange" class="kg_lgn_changeone" style="display:none;">换一张</a>
+                                        
+                                    </div>
+
+                                    <!-- <span class="pcr_iptbox pcr_codebox">
+                                        <label for="t03User" class="txt"></label>
+                                        <input id="t03Code" type="text" class="ipt" style="display: none;"/>
+                                        <span class="sts"></span>
+                                        <span class="nts"></span>
+                                        <span class="pcr_codeimg" id="p_user_code"></span>
+                                    </span> -->
+
+                                    <span class="pcr_iptbox pcr_codebox">
+                                        <label class="txt" for="usernamet03Code"></label>
+                                        <input id="usernamet03Code" type="text" class="ipt kg_lgn_textbox_ipt" style="width:120px;" onblur="checkCode()">
+                                        <span class="sts"></span>
+                                        <span class="nts"></span>
+                                        <span class="pcr_codeimg" id="p_user_code"></span>
+                                        <a id="usernamet03CodeChange" class="kg_lgn_changeone">换一张</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><label class="gray"><input type="checkbox" name="readed" id="t03Agree" class="kg_lgn_checkbox" checked="">我已经认真阅读并同意 <a href="http://www.kugou.com/newuc/reg/protocol" target="_blank" class="a_link">《酷狗服务条款》</a></label></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <span class="reg_btn_s01" id="t03Submit"><input type="button" name="" value="注册"></span>
+                                    <span id="t03Msg" class="reg_inset_msg" style="display: none;"></span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </form>
+                </div>
+                <!--/用户名 -->
+            </div>
+        </div>
+        <!--/注册主体 -->
+
+        <!-- 状态层 -->
+        <div class="kg_lgn_reg_box kg_lgn_reg_message" id="regMessage" style="display:none;">
+            <div class="kg_lgn_reg_hd">
+                <div class="h_tl"></div>
+            </div>
+            <div class="kg_lgn_reg_ct">
+                <h4 class="kg_lgn_reg_ct_tl" id="regMessageTl"></h4>
+                <div class="kg_lgn_reg_ct_item" id="regMessageCnt"></div>
+            </div>
+        </div>
+        <!--/状态层 -->
+    </div>
+    <!--/body -->
+    <link rel="stylesheet" data-embed="" href="./phoneReg_files/footer.css">
+<div class="footerWrapper">
+    <div class="footer">
+        <div class="links">
+            <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a>| <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/protocol.html">用户服务协议</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/company/partners.html">推广合作</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/imusic/">酷狗音乐人</a> |<a hidefocus="true" target="_blank" href="http://tui.kugou.com/">酷狗音乐推</a> |<a hidefocus="true" href="http://www.kugou.com/job/hr/html/" target="_blank">招聘信息</a> | <a hidefocus="true" href="http://www.kugou.com/shop/help/serviceCenter" target="_blank">客服中心</a> | <a hidefocus="true" href="http://survey.kugou.com/default/index/i=40CD7B8437008E65E67D82D9044C15C99C2E699859F51338" target="_blank">用户体验提升计划</a>
+        </div>
+        <div class="copyright">
+            <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+            <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+            <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026&nbsp;&nbsp;&nbsp;&nbsp;穗公网监备案证第44010650010167</p>
+            <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2004-2016 KuGou-Inc.All Rights Reserved
+                <a hidefocus="true" class="office-verification" href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209" target="_blank"></a>
+            </p>
+        </div>
+    </div>
+</div>
+<!--百度统计-->
+<script>
+   var _hmt = _hmt || [];
+   (function() {
+     var hm = document.createElement("script");
+     hm.src = "//hm.baidu.com/hm.js?aedee6983d4cfc62f509129360d6bb3d";
+     var s = document.getElementsByTagName("script")[0];
+     s.parentNode.insertBefore(hm, s);
+   })();
+</script>
+<script>
+  setTimeout(function() {
+    var d = document.createElement("script");
+    d.src = "http://static.kgimg.com/common/js/min/hijacked-min.js";
+    document.body.appendChild(d);
+  }, 2000);
+</script>
+</div>	
+
+
+
+
+<script type="text/javascript" src="./phoneReg_files/base-min(1).js" charset="utf-8"></script>
+<script type="text/javascript" src="./phoneReg_files/kguser_min.js" charset="utf-8"> </script><script src="./phoneReg_files/hijacked-min.js"></script>
+<script type="text/javascript" src="./phoneReg_files/web_reg_v3.js" charset="utf-8"></script>
+<script>
+var globalParam = {
+    reg_domain : "http://www.kugou.com/reg/web/",
+    ref : ""
+};
+regInit();
+
+</script><div class="kg_lgn_drawbox" style="display: none;"><span>请选择或继续输入…</span><div></div></div>
+</body></html>

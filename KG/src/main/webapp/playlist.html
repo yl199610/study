@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://www.kugou.com/yy/special/index/2-0-1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>最近七天精选集_精选集_乐库频道_酷狗网</title>
+<meta name="keywords" content="酷狗2013正式版,精选集,精选集歌曲下载,歌手,明星,音乐,在线音乐,在线听歌,听歌,新专辑,港台,日本,韩国,欧美,英国">
+<meta name="description" content="酷狗官方网站是中国最新最全的在线正版音乐网站,提供最新的在线音乐服务、免费音乐下载、最新的音乐播放器下载。">
+<link rel="stylesheet" href="./playlist_files/main.css" type="text/css">
+<link rel="stylesheet" href="./playlist_files/main(1).css" type="text/css">
+<link href="http://www.kugou.com/yy/static/images/favicon.ico" rel="shortcut icon">
+<script src="./playlist_files/hm.js"></script><script type="text/javascript" src="./playlist_files/base-min.js"></script>
+<script type="text/javascript">
+    sdnClick(12128);
+</script>
+<script src="./playlist_files/share.js"></script><link rel="stylesheet" href="./playlist_files/share_style0_16.css"><link rel="stylesheet" href="./playlist_files/slide_share.css"></head>
+
+<body>
+<link rel="stylesheet" data-embed="" href="./playlist_files/header.css">
+<script type="text/javascript" src="./playlist_files/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://www.kugou.com/common/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.icon,.logo');
+</script>
+<![endif]-->
+<div class="header">
+    <h1 class="logo">酷狗音乐</h1>
+    <div class="topNav fr">
+        <ul>
+            <li><a target="_blank" href="./emailReg.html">注册</a></li>
+            <li><a href="" class="kuLogin" id="kuLogin">登录</a><a hidefocus="true" href="http://www.kugou.com/newuc/login/outlogin" class="logout" id="logout">退出登录</a></li>
+            <li><a target="_blank" href="./server.html">客服中心</a></li>
+            <li><a target="_blank" href="./join.html">招贤纳士</a></li>
+            <li><a target="_blank" href="http://vip.kugou.com/">会员中心 </a></li>
+        </ul>
+    </div>
+</div>
+<div class="navWrap">
+    <div class="nav">
+        <ul class="homeNav">
+            <li><a class="normal" href="./index.html">首页</a></li>
+            <li><a class="normal" href="./top.html">榜单</a></li>
+            <li><a class="normal" id="productCenter" href="./download.html">下载客户端</a></li>
+            <li class="more" id="moreLi"><a href="http://www.kugou.com/yy/special/index/2-0-1.html#" class="icon icon-nav6" id="showMore">更多</a>
+            </li>
+        </ul>
+        <ul class="secondMenu" id="more-subnav">
+            <li><a href="./FM.html">电台</a></li>
+            <li><a href="./MV.html">MV</a></li>
+            <li><a href="./playlist.html">歌单</a></li>
+            <li><a href="./singer.html">歌手</a></li>
+        </ul>
+        <ul class="subNav">
+            <li><a target="_blank" href="http://fanxing.kugou.com/?action=spreadIndex&id=3" class="icon icon-nav1">音乐直播</a></li>
+            <li><a target="_blank" href="http://live.kugou.com/" class="icon icon-nav2">酷狗LIVE</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/imusic/" class="icon icon-nav3">音乐人</a></li>
+            <li><a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/shop" class="icon icon-nav5">商城</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function read(name, key) {
+        var cookieValue = "";
+        var search = name + "=";
+        if (document.cookie.split("").length > 0) {
+            offset = document.cookie.indexOf(search);
+            if (offset != -1) {
+                offset += search.length;
+                end = document.cookie.indexOf(";", offset);
+                if (end == -1) {
+                    end = document.cookie.split("").length;
+                }
+                cookieValue = document.cookie.substring(offset, end);
+            }
+
+        }
+        var a = cookieValue.split("&");
+        var o = {};
+        var haveVal = false; 
+        for (var i = 0, l = a.length; i < l; i++) {
+            var k = a[i].split("=");
+            if(k[0]!=""){
+                o[k[0]] = k[1];
+                haveVal = true; 
+            } 
+        }
+        return haveVal ? o : false;
+    }
+    var jq=$.noConflict();
+    jq(document).ready(function(){
+
+        var loginUtility = {
+            loadScript:function (option) {
+                var url = option.url,
+                    callback = option.callback;
+                var script = document.createElement("script");
+                script.type = 'text/javascript';
+                if (script.readyState) {
+                    script.onreadystatechange = function() {
+                        if (this.readyState == "complete" || this.readyState == "loaded") {
+                            callback && callback();
+                            script.onreadystatechange = script = callback = null;
+                        }
+                    }
+                } else {
+                    script.onload = function() {
+                        callback && callback();
+                        script.onload = script = callback = null;
+                    };
+                }
+
+                script.src = url;
+                document.getElementsByTagName("head")[0].appendChild(script);
+            },
+            initLogin:function(){
+                var _this = this;
+                if (!_this.islogined()) {
+                    loginUtility.loadScript({
+                        url: "http://static.kgimg.com/common/js/min/popuplogin-min.js?" + Math.round(new Date().getTime() / 1000),
+                        callback: function() {
+                            UsLogin();
+                        }
+                    })
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            islogined:function () {
+                var loginInfo = read("KuGoo");
+                return loginInfo == "" || loginInfo.toString() == "undefined" || loginInfo === false ? false : true;
+            },
+            clearEventBubble:function (evt) {
+                try{
+                    if (evt.stopPropagation){
+
+                        evt.stopPropagation();
+                    }else{
+                        evt.cancelBubble = true;
+                    }
+
+                    if (evt.preventDefault){
+                        evt.preventDefault();
+                    }else{
+                        return false;
+                        evt.returnValue = false;
+                    }
+                }catch(ex){
+                    
+                }
+            }
+        }
+        var kuLogin = document.getElementById("kuLogin");
+        var kuLogOut = document.getElementById("logout");
+        var more = document.getElementById("moreLi");
+        var showMore = document.getElementById("showMore");
+        var subUl = document.getElementById("more-subnav");
+        var t = null;
+
+        // 获取登录信息
+        var kugouC = read("KuGoo"),
+            user_name = kugouC.NickName,
+            user;
+            if(user_name){
+                user_name = user_name.replace(/%/g, "\\"),
+                user = eval("'" + user_name + "'");
+                kuLogOut.style.display = "inline-block";
+                kuLogin.href = "http://www.kugou.com/newuc/user/uc/?"+Math.round(new Date().getTime() / 1000);
+                kuLogin.innerHTML = user;
+                kuLogin.parentNode.parentNode.getElementsByTagName("li")[0].style.display = "none";
+            }
+
+       jq("#kuLogin").click(function(e){
+            e.preventDefault();
+            if(jq("#kuLogin").attr("href").length>5){
+                window.open(jq(this).attr("href"))
+            }else{
+                loginUtility.initLogin()
+            }
+     
+        });
+        showMore.onclick=function(e){
+            return false;
+        }
+        more.onmouseover=function(){
+            more.setAttribute("class","more hover")
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        more.onmouseleave=function(){
+            more.setAttribute("class","more")
+            showMore.setAttribute("class","iconMore");
+            t = setTimeout(function(){
+                subUl.style.display = "none"
+            },300)
+        }
+        subUl.onmouseover=function(){
+            clearTimeout(t)
+            more.setAttribute("class","more hover");
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        subUl.onmouseleave=function(){
+            more.setAttribute("class","more");
+            showMore.setAttribute("class","iconMore");
+           subUl.style.cssText = "display:none;";
+        }
+        
+    })
+</script>
+<!--精选集-->
+<div class="wrap album spe clear_fix">
+    <div class="l">
+        <strong>按时间</strong>
+        <dl id="dl">
+            <dt><a title="全部精选集" onclick="sdnClick(12129)" href="http://www.kugou.com/yy/special/index/1-0-0.html" hidefocus="true">全部</a></dt>
+            <dt><a title="最近七天精选集" class="current" onclick="sdnClick(12130)" href="http://www.kugou.com/yy/special/index/1-0-1.html" hidefocus="true">最近七天</a></dt>
+            <dt><a title="最近一月精选集" onclick="sdnClick(12131)" href="http://www.kugou.com/yy/special/index/1-0-2.html" hidefocus="true">最近一月</a></dt>
+            <dt><a title="最近一季精选集" onclick="sdnClick(12132)" href="http://www.kugou.com/yy/special/index/1-0-3.html" hidefocus="true">最近一季</a></dt>
+        </dl>
+    </div>
+
+    <div class="r">
+        <div class="head">
+            <strong id="album_title">最近七天精选集</strong>
+            <div class="sort">排序：
+                <select id="px" onchange="selectChange()">
+                    <option value="0" selected="">按时间</option>
+                    <option value="1">按浏览</option>
+                </select>
+            </div>
+        </div>
+
+        <ul id="ulAlbums">
+             
+            <li class="s_120332">
+            <div class="pic">
+                <a hidefocus="ture" title="格莱美历届最佳乡村音乐精选" href="http://www.kugou.com/yy/special/single/120332.html" onclick="sdnClick(12133)"><img alt="格莱美历届最佳乡村音乐精选" src="./playlist_files/20161115165401862787.jpg" _src="http://imge.kugou.com/soft/collection/150/20161115/20161115165401862787.jpg" _def="http://www.kugou.com/yy/static/images/default2.jpg" width="100" height="100"></a>
+            </div>
+            <div class="detail">
+                <div class="top"><em>制作人：天涯明月</em><strong><a title="格莱美历届最佳乡村音乐精选" href="http://www.kugou.com/yy/special/single/120332.html">格莱美历届最佳乡村音乐精选</a>
+                <!--<span>(0)</span>-->
+                </strong></div>
+                <div class="text">典藏版。</div>
+                <div class="btn">
+                    <a href="javascript:void(0)" title="全部播放" onclick="play(120332,this);" class="playall" hidefocus="true">全部播放</a>
+                   <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_1" data-bd-bind="1479698472767">
+                        <em>分享到：</em>
+                        <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <!-- <a class="bds_tqq" data-cmd="tqq"></a> -->
+                        <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                    </div>
+                </div>
+            </div>
+            </li>
+             
+            <li class="s_120333">
+            <div class="pic">
+                <a hidefocus="ture" title="谢谢你，曾经带给我的美好" href="http://www.kugou.com/yy/special/single/120333.html" onclick="sdnClick(12133)"><img alt="谢谢你，曾经带给我的美好" src="./playlist_files/20161115160638620042.jpg" _src="http://imge.kugou.com/soft/collection/150/20161115/20161115160638620042.jpg" _def="http://www.kugou.com/yy/static/images/default2.jpg" width="100" height="100"></a>
+            </div>
+            <div class="detail">
+                <div class="top"><em>制作人：名字41404337</em><strong><a title="谢谢你，曾经带给我的美好" href="http://www.kugou.com/yy/special/single/120333.html">谢谢你，曾经带给我的美好</a>
+                <!--<span>(0)</span>-->
+                </strong></div>
+                <div class="text">所有经历过那些错误时光的人，都会在未来的日子里，得到真实而满足的幸福。都会再遇见另一个人，别灰心，我们都会找到属于自己的幸福。向过去 say goodbye ，向美好say hello，谢谢曾经的他/她 ，感谢那段时光的美好......</div>
+                <div class="btn">
+                    <a href="javascript:void(0)" title="全部播放" onclick="play(120333,this);" class="playall" hidefocus="true">全部播放</a>
+                   <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_2" data-bd-bind="1479698472773">
+                        <em>分享到：</em>
+                        <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <!-- <a class="bds_tqq" data-cmd="tqq"></a> -->
+                        <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                    </div>
+                </div>
+            </div>
+            </li>
+             
+            <li class="s_120334">
+            <div class="pic">
+                <a hidefocus="ture" title="前任也曾是对的人" href="http://www.kugou.com/yy/special/single/120334.html" onclick="sdnClick(12133)"><img alt="前任也曾是对的人" src="./playlist_files/20161115160639401132.jpg" _src="http://imge.kugou.com/soft/collection/150/20161115/20161115160639401132.jpg" _def="http://www.kugou.com/yy/static/images/default2.jpg" width="100" height="100"></a>
+            </div>
+            <div class="detail">
+                <div class="top"><em>制作人：刀狂杨志</em><strong><a title="前任也曾是对的人" href="http://www.kugou.com/yy/special/single/120334.html">前任也曾是对的人</a>
+                <!--<span>(0)</span>-->
+                </strong></div>
+                <div class="text">前任也曾是对的人。</div>
+                <div class="btn">
+                    <a href="javascript:void(0)" title="全部播放" onclick="play(120334,this);" class="playall" hidefocus="true">全部播放</a>
+                   <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_3" data-bd-bind="1479698472778">
+                        <em>分享到：</em>
+                        <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <!-- <a class="bds_tqq" data-cmd="tqq"></a> -->
+                        <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                    </div>
+                </div>
+            </div>
+            </li>
+             
+            <li class="s_120335">
+            <div class="pic">
+                <a hidefocus="ture" title="开口就高潮的欧美音乐" href="http://www.kugou.com/yy/special/single/120335.html" onclick="sdnClick(12133)"><img alt="开口就高潮的欧美音乐" src="./playlist_files/20161115160640937637.jpg" _src="http://imge.kugou.com/soft/collection/150/20161115/20161115160640937637.jpg" _def="http://www.kugou.com/yy/static/images/default2.jpg" width="100" height="100"></a>
+            </div>
+            <div class="detail">
+                <div class="top"><em>制作人：冥河</em><strong><a title="开口就高潮的欧美音乐" href="http://www.kugou.com/yy/special/single/120335.html">开口就高潮的欧美音乐</a>
+                <!--<span>(0)</span>-->
+                </strong></div>
+                <div class="text">喜欢就收藏，爱就分享！</div>
+                <div class="btn">
+                    <a href="javascript:void(0)" title="全部播放" onclick="play(120335,this);" class="playall" hidefocus="true">全部播放</a>
+                   <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_4" data-bd-bind="1479698472782">
+                        <em>分享到：</em>
+                        <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <!-- <a class="bds_tqq" data-cmd="tqq"></a> -->
+                        <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                    </div>
+                </div>
+            </div>
+            </li>
+             
+            <li class="s_120336">
+            <div class="pic">
+                <a hidefocus="ture" title="让耳朵邂逅唯美女声" href="http://www.kugou.com/yy/special/single/120336.html" onclick="sdnClick(12133)"><img alt="让耳朵邂逅唯美女声" src="./playlist_files/20161115160656462383.jpg" _src="http://imge.kugou.com/soft/collection/150/20161115/20161115160656462383.jpg" _def="http://www.kugou.com/yy/static/images/default2.jpg" width="100" height="100"></a>
+            </div>
+            <div class="detail">
+                <div class="top"><em>制作人：温柔公子</em><strong><a title="让耳朵邂逅唯美女声" href="http://www.kugou.com/yy/special/single/120336.html">让耳朵邂逅唯美女声</a>
+                <!--<span>(0)</span>-->
+                </strong></div>
+                <div class="text">让耳朵邂逅唯美女声吧~</div>
+                <div class="btn">
+                    <a href="javascript:void(0)" title="全部播放" onclick="play(120336,this);" class="playall" hidefocus="true">全部播放</a>
+                   <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_5" data-bd-bind="1479698472785">
+                        <em>分享到：</em>
+                        <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <!-- <a class="bds_tqq" data-cmd="tqq"></a> -->
+                        <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                    </div>
+                </div>
+            </div>
+            </li>
+             
+            <li class="s_120337">
+            <div class="pic">
+                <a hidefocus="ture" title="这个冬天的思念有点冷" href="http://www.kugou.com/yy/special/single/120337.html" onclick="sdnClick(12133)"><img alt="这个冬天的思念有点冷" src="./playlist_files/20161115160658265897.jpg" _src="http://imge.kugou.com/soft/collection/150/20161115/20161115160658265897.jpg" _def="http://www.kugou.com/yy/static/images/default2.jpg" width="100" height="100"></a>
+            </div>
+            <div class="detail">
+                <div class="top"><em>制作人：「肥·猫」</em><strong><a title="这个冬天的思念有点冷" href="http://www.kugou.com/yy/special/single/120337.html">这个冬天的思念有点冷</a>
+                <!--<span>(0)</span>-->
+                </strong></div>
+                <div class="text">最终你会一个人拖着行李箱，离开没人相送，终点也没有人等待，一个人带着清冷的空气，走过泥泞穿过小巷，路上走着的人来来往往，下雨了没人撑伞就只能狼狈躲雨，天冷了没人叮嘱那自己要裹好大衣，别总等着别人来疼你，边走边爱反正人山人海。</div>
+                <div class="btn">
+                    <a href="javascript:void(0)" title="全部播放" onclick="play(120337,this);" class="playall" hidefocus="true">全部播放</a>
+                   <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_6" data-bd-bind="1479698472788">
+                        <em>分享到：</em>
+                        <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <!-- <a class="bds_tqq" data-cmd="tqq"></a> -->
+                        <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                    </div>
+                </div>
+            </div>
+            </li>
+             
+            <li class="s_120338">
+            <div class="pic">
+                <a hidefocus="ture" title="这些歌唱尽爱情的滋味" href="http://www.kugou.com/yy/special/single/120338.html" onclick="sdnClick(12133)"><img alt="这些歌唱尽爱情的滋味" src="./playlist_files/20161115171129846307.jpg" _src="http://imge.kugou.com/soft/collection/150/20161115/20161115171129846307.jpg" _def="http://www.kugou.com/yy/static/images/default2.jpg" width="100" height="100"></a>
+            </div>
+            <div class="detail">
+                <div class="top"><em>制作人：我若成风</em><strong><a title="这些歌唱尽爱情的滋味" href="http://www.kugou.com/yy/special/single/120338.html">这些歌唱尽爱情的滋味</a>
+                <!--<span>(0)</span>-->
+                </strong></div>
+                <div class="text">从相识、相恋、相离……爱情的滋味，你尝过吗？</div>
+                <div class="btn">
+                    <a href="javascript:void(0)" title="全部播放" onclick="play(120338,this);" class="playall" hidefocus="true">全部播放</a>
+                   <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_7" data-bd-bind="1479698472792">
+                        <em>分享到：</em>
+                        <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <!-- <a class="bds_tqq" data-cmd="tqq"></a> -->
+                        <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                    </div>
+                </div>
+            </div>
+            </li>
+             
+            <li class="s_120341">
+            <div class="pic">
+                <a hidefocus="ture" title="强劲低音 震撼你的耳膜" href="http://www.kugou.com/yy/special/single/120341.html" onclick="sdnClick(12133)"><img alt="强劲低音 震撼你的耳膜" src="./playlist_files/20161116105043624736.jpg" _src="http://imge.kugou.com/soft/collection/150/20161116/20161116105043624736.jpg" _def="http://www.kugou.com/yy/static/images/default2.jpg" width="100" height="100"></a>
+            </div>
+            <div class="detail">
+                <div class="top"><em>制作人：〃小暖</em><strong><a title="强劲低音 震撼你的耳膜" href="http://www.kugou.com/yy/special/single/120341.html">强劲低音 震撼你的耳膜</a>
+                <!--<span>(0)</span>-->
+                </strong></div>
+                <div class="text">重低音一直是很多电音爱好者的心头好，特地整理了一张超赞的让你头皮发麻的超重低音歌单，赶紧收藏吧！</div>
+                <div class="btn">
+                    <a href="javascript:void(0)" title="全部播放" onclick="play(120341,this);" class="playall" hidefocus="true">全部播放</a>
+                   <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_8" data-bd-bind="1479698472796">
+                        <em>分享到：</em>
+                        <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <!-- <a class="bds_tqq" data-cmd="tqq"></a> -->
+                        <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                    </div>
+                </div>
+            </div>
+            </li>
+             
+            <li class="s_120342">
+            <div class="pic">
+                <a hidefocus="ture" title="GOT7中文歌曲合辑" href="http://www.kugou.com/yy/special/single/120342.html" onclick="sdnClick(12133)"><img alt="GOT7中文歌曲合辑" src="./playlist_files/20161115182454748372.jpg" _src="http://imge.kugou.com/soft/collection/150/20161115/20161115182454748372.jpg" _def="http://www.kugou.com/yy/static/images/default2.jpg" width="100" height="100"></a>
+            </div>
+            <div class="detail">
+                <div class="top"><em>制作人：我我</em><strong><a title="GOT7中文歌曲合辑" href="http://www.kugou.com/yy/special/single/120342.html">GOT7中文歌曲合辑</a>
+                <!--<span>(0)</span>-->
+                </strong></div>
+                <div class="text">诚意满满的GOT7总是会在演唱会上翻唱各种中文歌曲来感恩鸟宝宝。</div>
+                <div class="btn">
+                    <a href="javascript:void(0)" title="全部播放" onclick="play(120342,this);" class="playall" hidefocus="true">全部播放</a>
+                   <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_9" data-bd-bind="1479698472798">
+                        <em>分享到：</em>
+                        <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <!-- <a class="bds_tqq" data-cmd="tqq"></a> -->
+                        <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                    </div>
+                </div>
+            </div>
+            </li>
+             
+            <li class="s_120343">
+            <div class="pic">
+                <a hidefocus="ture" title="科学超电磁炮 - 动漫角色歌V.10" href="http://www.kugou.com/yy/special/single/120343.html" onclick="sdnClick(12133)"><img alt="科学超电磁炮 - 动漫角色歌V.10" src="./playlist_files/20161115193433663771.jpg" _src="http://imge.kugou.com/soft/collection/150/20161115/20161115193433663771.jpg" _def="http://www.kugou.com/yy/static/images/default2.jpg" width="100" height="100"></a>
+            </div>
+            <div class="detail">
+                <div class="top"><em>制作人：夜小茶</em><strong><a title="科学超电磁炮 - 动漫角色歌V.10" href="http://www.kugou.com/yy/special/single/120343.html">科学超电磁炮 - 动漫角色歌V.10</a>
+                <!--<span>(0)</span>-->
+                </strong></div>
+                <div class="text">天国的魔禁3，你还记得那个被炮姐屠杀业界的年头吗？</div>
+                <div class="btn">
+                    <a href="javascript:void(0)" title="全部播放" onclick="play(120343,this);" class="playall" hidefocus="true">全部播放</a>
+                   <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_10" data-bd-bind="1479698472802">
+                        <em>分享到：</em>
+                        <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <!-- <a class="bds_tqq" data-cmd="tqq"></a> -->
+                        <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+                    </div>
+                </div>
+            </div>
+            </li>
+                    </ul>
+
+        <div class="nvg" id="nvg">
+            <span id="mypage"><a id="page_first" href="http://www.kugou.com/yy/special/index/1-0-1.html" title="首页" class="direct btnPage">首页</a><span class="PrePageSpan"><a id="page_pre_1" href="http://www.kugou.com/yy/special/index/1-0-1.html" title="上一页" class="direct btnPage back">上一页</a></span><a id="page_1" href="http://www.kugou.com/yy/special/index/1-0-1.html">1</a><span id="page_2" class="current">2</span><a id="page_3" href="http://www.kugou.com/yy/special/index/3-0-1.html">3</a><a id="page_4" href="http://www.kugou.com/yy/special/index/4-0-1.html">4</a><a id="page_5" href="http://www.kugou.com/yy/special/index/5-0-1.html">5</a><span class="NextPageSpan"><a id="page_next_3" href="http://www.kugou.com/yy/special/index/3-0-1.html" title="下一页" class="direct btnPage">下一页</a></span><a id="page_last_5" href="http://www.kugou.com/yy/special/index/5-0-1.html" title="尾页" class="direct btnPage">尾页</a></span>
+        </div>
+    </div>
+</div>
+
+<!--脚步-->
+<link rel="stylesheet" data-embed="" href="./playlist_files/footer.css">
+<div class="footerWrapper">
+    <div class="footer">
+        <div class="links">
+            <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a>| <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/protocol.html">用户服务协议</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/company/partners.html">推广合作</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/imusic/">酷狗音乐人</a> |<a hidefocus="true" target="_blank" href="http://tui.kugou.com/">酷狗音乐推</a> |<a hidefocus="true" href="http://www.kugou.com/job/hr/html/" target="_blank">招聘信息</a> | <a hidefocus="true" href="http://www.kugou.com/shop/help/serviceCenter" target="_blank">客服中心</a> | <a hidefocus="true" href="http://survey.kugou.com/default/index/i=40CD7B8437008E65E67D82D9044C15C99C2E699859F51338" target="_blank">用户体验提升计划</a>
+        </div>
+        <div class="copyright">
+            <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+            <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+            <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026&nbsp;&nbsp;&nbsp;&nbsp;穗公网监备案证第44010650010167</p>
+            <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2004-2016 KuGou-Inc.All Rights Reserved
+                <a hidefocus="true" class="office-verification" href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209" target="_blank"></a>
+            </p>
+        </div>
+    </div>
+</div>
+<!--百度统计-->
+<script>
+   var _hmt = _hmt || [];
+   (function() {
+     var hm = document.createElement("script");
+     hm.src = "//hm.baidu.com/hm.js?aedee6983d4cfc62f509129360d6bb3d";
+     var s = document.getElementsByTagName("script")[0];
+     s.parentNode.insertBefore(hm, s);
+   })();
+</script>
+<script>
+  setTimeout(function() {
+    var d = document.createElement("script");
+    d.src = "http://static.kgimg.com/common/js/min/hijacked-min.js";
+    document.body.appendChild(d);
+  }, 2000);
+</script>
+
+
+<script type="text/javascript" src="./playlist_files/playsong-min.js"></script>
+<script type="text/javascript" src="./playlist_files/lazyload-min.js"></script>
+<script type="text/javascript">
+//定义域
+var kg_special_domain = "http://www.kugou.com/yy";
+//当前类别
+var currentType = "1";
+
+/**
+ * 切换浏览方式
+ * @name selectChange
+ */
+
+function selectChange(){
+    var sort = document.getElementById("px").value;
+    location.href = kg_special_domain+"/special/index/1-"+sort+"-"+currentType+".html";
+}
+
+/**
+ * 分享
+ * @name shareAlbum
+ * @param { String } 分享渠道
+ * @param { Number } 精选辑id
+ */
+function shareAlbum(chl, id){
+    var el = Kg.$C("s_" + id)[0];
+    var name = Kg.$T("a", el)[0].title;
+    var img = Kg.$T("img", el)[0].getAttribute("_src");
+    var intro = Kg.$C("text",el)[0].innerHTML;
+    img = img.match(/\b\d+\.\w+$/);
+    openShareAlbum(chl, name, id, img, "special", intro);
+}
+
+
+/**
+ * 播放专辑
+ * @name play
+ * @param { Number} 精选辑ID
+ * @param { Object } 当前专辑DOM对象
+ */
+function play(cid, obj){
+    sdnClick(12134);
+    Kg.postJSON(kg_special_domain+"/special/song/sid=" + cid, "", function(res){
+        if(res.status == 1){
+            var files = [];
+            for(var i = 0; i < res.data.length;i++){
+                var fn = res["data"][i].singername + " - " + res["data"][i].songname;
+                if(fn.indexOf("】") > -1 && fn.trim().indexOf("】") != fn.trim().length-1){
+                    fn = fn.substring(fn.indexOf("】")+1);
+                }
+                var json = {
+                    Hash:res["data"][i].hash, 
+                    FileName:fn,
+                    timeLen:res["data"][i].duration/1000
+                };
+                files.push(json);
+            }
+            if(files.length > 0){
+                KgWebSuperCall.playSongs(Kg.JSON.stringify(files), 'yueku_omnibus');
+            }
+        }
+    },null,false);
+}
+
+/**
+ * 页面初始化入口
+ */
+function init(){
+	new Lazyload();
+}
+
+init();
+</script>
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript">
+
+    var data = [{"specialname":"\u683c\u83b1\u7f8e\u5386\u5c4a\u6700\u4f73\u4e61\u6751\u97f3\u4e50\u7cbe\u9009","nickname":"\u5929\u6daf\u660e\u6708","grade_int":"6","intro":"\u5178\u85cf\u7248\u3002","grade":6,"publish_time":"2016-11-15","song_count":0,"version":0,"specialid":120332,"img":"http:\/\/imge.kugou.com\/soft\/collection\/150\/20161115\/20161115165401862787.jpg","quality":0,"author":""},{"specialname":"\u8c22\u8c22\u4f60\uff0c\u66fe\u7ecf\u5e26\u7ed9\u6211\u7684\u7f8e\u597d","nickname":"\u540d\u5b5741404337","grade_int":"10","intro":"\u6240\u6709\u7ecf\u5386\u8fc7\u90a3\u4e9b\u9519\u8bef\u65f6\u5149\u7684\u4eba\uff0c\u90fd\u4f1a\u5728\u672a\u6765\u7684\u65e5\u5b50\u91cc\uff0c\u5f97\u5230\u771f\u5b9e\u800c\u6ee1\u8db3\u7684\u5e78\u798f\u3002\u90fd\u4f1a\u518d\u9047\u89c1\u53e6\u4e00\u4e2a\u4eba\uff0c\u522b\u7070\u5fc3\uff0c\u6211\u4eec\u90fd\u4f1a\u627e\u5230\u5c5e\u4e8e\u81ea\u5df1\u7684\u5e78\u798f\u3002\u5411\u8fc7\u53bb say goodbye \uff0c\u5411\u7f8e\u597dsay hello\uff0c\u8c22\u8c22\u66fe\u7ecf\u7684\u4ed6\/\u5979 \uff0c\u611f\u8c22\u90a3\u6bb5\u65f6\u5149\u7684\u7f8e\u597d......","grade":10,"publish_time":"2016-11-15","song_count":0,"version":0,"specialid":120333,"img":"http:\/\/imge.kugou.com\/soft\/collection\/150\/20161115\/20161115160638620042.jpg","quality":0,"author":""},{"specialname":"\u524d\u4efb\u4e5f\u66fe\u662f\u5bf9\u7684\u4eba","nickname":"\u5200\u72c2\u6768\u5fd7","grade_int":"5","intro":"\u524d\u4efb\u4e5f\u66fe\u662f\u5bf9\u7684\u4eba\u3002","grade_float":"9","grade":5.9,"publish_time":"2016-11-15","song_count":0,"version":0,"specialid":120334,"img":"http:\/\/imge.kugou.com\/soft\/collection\/150\/20161115\/20161115160639401132.jpg","quality":0,"author":""},{"specialname":"\u5f00\u53e3\u5c31\u9ad8\u6f6e\u7684\u6b27\u7f8e\u97f3\u4e50","nickname":"\u51a5\u6cb3","grade_int":"4","intro":"\u559c\u6b22\u5c31\u6536\u85cf\uff0c\u7231\u5c31\u5206\u4eab\uff01","grade_float":"6","grade":4.6,"publish_time":"2016-11-15","song_count":0,"version":0,"specialid":120335,"img":"http:\/\/imge.kugou.com\/soft\/collection\/150\/20161115\/20161115160640937637.jpg","quality":0,"author":""},{"specialname":"\u8ba9\u8033\u6735\u9082\u9005\u552f\u7f8e\u5973\u58f0","nickname":"\u6e29\u67d4\u516c\u5b50","grade_int":"8","intro":"\u8ba9\u8033\u6735\u9082\u9005\u552f\u7f8e\u5973\u58f0\u5427~","grade_float":"5","grade":8.5,"publish_time":"2016-11-15","song_count":0,"version":0,"specialid":120336,"img":"http:\/\/imge.kugou.com\/soft\/collection\/150\/20161115\/20161115160656462383.jpg","quality":0,"author":""},{"specialname":"\u8fd9\u4e2a\u51ac\u5929\u7684\u601d\u5ff5\u6709\u70b9\u51b7","nickname":"\u300c\u80a5\u00b7\u732b\u300d","grade_int":"7","intro":"\u6700\u7ec8\u4f60\u4f1a\u4e00\u4e2a\u4eba\u62d6\u7740\u884c\u674e\u7bb1\uff0c\u79bb\u5f00\u6ca1\u4eba\u76f8\u9001\uff0c\u7ec8\u70b9\u4e5f\u6ca1\u6709\u4eba\u7b49\u5f85\uff0c\u4e00\u4e2a\u4eba\u5e26\u7740\u6e05\u51b7\u7684\u7a7a\u6c14\uff0c\u8d70\u8fc7\u6ce5\u6cde\u7a7f\u8fc7\u5c0f\u5df7\uff0c\u8def\u4e0a\u8d70\u7740\u7684\u4eba\u6765\u6765\u5f80\u5f80\uff0c\u4e0b\u96e8\u4e86\u6ca1\u4eba\u6491\u4f1e\u5c31\u53ea\u80fd\u72fc\u72c8\u8eb2\u96e8\uff0c\u5929\u51b7\u4e86\u6ca1\u4eba\u53ee\u5631\u90a3\u81ea\u5df1\u8981\u88f9\u597d\u5927\u8863\uff0c\u522b\u603b\u7b49\u7740\u522b\u4eba\u6765\u75bc\u4f60\uff0c\u8fb9\u8d70\u8fb9\u7231\u53cd\u6b63\u4eba\u5c71\u4eba\u6d77\u3002","grade":7,"publish_time":"2016-11-15","song_count":0,"version":0,"specialid":120337,"img":"http:\/\/imge.kugou.com\/soft\/collection\/150\/20161115\/20161115160658265897.jpg","quality":0,"author":""},{"specialname":"\u8fd9\u4e9b\u6b4c\u5531\u5c3d\u7231\u60c5\u7684\u6ecb\u5473","nickname":"\u6211\u82e5\u6210\u98ce","grade_int":"5","intro":"\u4ece\u76f8\u8bc6\u3001\u76f8\u604b\u3001\u76f8\u79bb\u2026\u2026\u7231\u60c5\u7684\u6ecb\u5473\uff0c\u4f60\u5c1d\u8fc7\u5417\uff1f","grade_float":"8","grade":5.8,"publish_time":"2016-11-15","song_count":0,"version":0,"specialid":120338,"img":"http:\/\/imge.kugou.com\/soft\/collection\/150\/20161115\/20161115171129846307.jpg","quality":0,"author":""},{"specialname":"\u5f3a\u52b2\u4f4e\u97f3 \u9707\u64bc\u4f60\u7684\u8033\u819c","nickname":"\u3003\u5c0f\u6696","grade_int":"6","intro":"\u91cd\u4f4e\u97f3\u4e00\u76f4\u662f\u5f88\u591a\u7535\u97f3\u7231\u597d\u8005\u7684\u5fc3\u5934\u597d\uff0c\u7279\u5730\u6574\u7406\u4e86\u4e00\u5f20\u8d85\u8d5e\u7684\u8ba9\u4f60\u5934\u76ae\u53d1\u9ebb\u7684\u8d85\u91cd\u4f4e\u97f3\u6b4c\u5355\uff0c\u8d76\u7d27\u6536\u85cf\u5427\uff01","grade_float":"4","grade":6.4,"publish_time":"2016-11-15","song_count":0,"version":0,"specialid":120341,"img":"http:\/\/imge.kugou.com\/soft\/collection\/150\/20161116\/20161116105043624736.jpg","quality":0,"author":""},{"specialname":"GOT7\u4e2d\u6587\u6b4c\u66f2\u5408\u8f91","nickname":"\u6211\u6211","grade_int":"9","intro":"\u8bda\u610f\u6ee1\u6ee1\u7684GOT7\u603b\u662f\u4f1a\u5728\u6f14\u5531\u4f1a\u4e0a\u7ffb\u5531\u5404\u79cd\u4e2d\u6587\u6b4c\u66f2\u6765\u611f\u6069\u9e1f\u5b9d\u5b9d\u3002","grade_float":"7","grade":9.7,"publish_time":"2016-11-15","song_count":0,"version":0,"specialid":120342,"img":"http:\/\/imge.kugou.com\/soft\/collection\/150\/20161115\/20161115182454748372.jpg","quality":0,"author":""},{"specialname":"\u79d1\u5b66\u8d85\u7535\u78c1\u70ae - \u52a8\u6f2b\u89d2\u8272\u6b4cV.10","nickname":"\u591c\u5c0f\u8336","grade_int":"10","intro":"\u5929\u56fd\u7684\u9b54\u79813\uff0c\u4f60\u8fd8\u8bb0\u5f97\u90a3\u4e2a\u88ab\u70ae\u59d0\u5c60\u6740\u4e1a\u754c\u7684\u5e74\u5934\u5417\uff1f","grade":10,"publish_time":"2016-11-15","song_count":0,"version":0,"specialid":120343,"img":"http:\/\/imge.kugou.com\/soft\/collection\/150\/20161115\/20161115193433663771.jpg","quality":0,"author":""}];
+
+    var share_data = [];
+    share_data[0] = {
+        tag : "",
+        dbSize : 16,
+        dbText : 
+
+        "最近七天精选集酷狗精选集频道",
+
+        dbUrl: ""
+    };
+for(var i = 0,l = data.length; i < l;i ++){
+        share_data[i + 1] = {
+                tag : 'share_' + (i + 1),
+                dbSize : 16,
+                bdText : '分享一张来自酷狗音乐的专辑:'+data[i]['specialname']+'(分享自@酷狗音乐)', 
+                bdDes : '分享一张来自酷狗音乐的专辑:'+data[i]['specialname']+'(分享自@酷狗音乐)', 
+                bdPic : data[i]['img'],
+                bdUrl : encodeURI('http://web.kugou.com/index.html?action=single&name='+data[i]['specialname']+'&id='+data[i]["specialid"]+'&microblog=2&share_type=special&isnew=1&chl='),
+                onBeforeClick : function(cmd,config){
+                        config['bdUrl'] += cmd;
+                        return config;
+                },
+                onAfterClick:function(cmd){
+                        switch(cmd){
+                            case "tsina":
+                                            sdnClick(12598);
+                                            break;
+                            case "qzone":
+                                            sdnClick(12599);
+                                            break;
+                            case "tqq":
+                                            sdnClick(12600);
+                                            break;
+                            case "renren":
+                                            sdnClick(12601);
+                                            break;
+                            case "douban":
+                                            sdnClick(12602);
+                                            break;
+                        }
+                }
+    }
+}
+window._bd_share_config={
+    share : share_data,
+    slide : {
+        "type":"slide",
+        "bdImg":"2",
+        "bdPos":"right",
+        "bdTop":"250"
+    }
+};
+with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<!-- Baidu Button END -->
+
+<div class="bdshare-slide-button-box bdshare-slide-style-r2" style="top: 250px; width: 0px; z-index: 99999; right: 0px;" data-bd-bind="1479698472805"><a href="http://www.kugou.com/yy/special/index/2-0-1.html#" onclick="return false;" class="bdshare-slide-button" style="left: -24px;"></a><div class="bdshare-slide-list-box" style="width: 0px; display: none;"><div class="bdshare-slide-top">分享到</div><div class="bdshare-slide-list"><ul class="bdshare-slide-list-ul" style="width: 226px;"></ul></div><div class="bdshare-slide-bottom" style="width: 226px;"><a href="http://www.kugou.com/yy/special/index/2-0-1.html#" onclick="return false;" class="slide-more" data-cmd="more">更多...</a></div></div></div><script src="./playlist_files/hijacked-min.js"></script></body></html>

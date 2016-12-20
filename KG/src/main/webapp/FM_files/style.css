@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document By Brainy*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin:0; padding:0; }
+table { border-collapse:collapse; border-spacing:0; }
+fieldset, iframe, img { border:0; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal; }
+ol, ul { list-style:none; }
+caption, th { text-align:left; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; color:#000; }
+body, button, input, select, textarea {  font: 13px/1.5 \5FAE\8F6F\96C5\9ED1, simsun, sans-serif; }
+/*clear float*/
+.ClearBoth { clear:both; font-size:1px; line-height:1px; height:1px; }
+/* Clear Fix */ 
+.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+.clearfix { display:inline-block; }
+/* Hide from IE Mac \*/ 
+.clearfix { display:block; }
+/* End hide from IE Mac */ 
+/* end of clearfix */ 
+
+body {background:#ffffff; color:#000;}
+a {text-decoration:none; color:#666666;}
+a:hover{color:#FF6600;}
+/*frame*/
+.frame { width: 1000px; margin:0 auto;}
+/*logo*/
+/*.logo{height:112px; background:url(../images/bg.png) no-repeat 0 -45px; position:relative;}
+.logolink{ position:absolute; z-index:10;width:345px;height:108px;left:0;top:0; }
+.logo a{color:#999;}
+.logo a:hover{color:#FF6600;}*/
+.reg_login{ position:absolute;height:14px;right:0;top:18px; padding:0 18px 0 0; z-index:10;background:url(../images/bg.png) no-repeat -64px -169px;}
+.reg_aflogin{ padding:0; background:none;}
+.reg_login a{display:inline-block;width:60px;}
+.game_client{ position:absolute; height:15px;right:0;top:95px;color:#33ccff;}
+.game_client a{color:#33ccff; padding:0 0 0 26px;}
+.game_client .game{background:url(../images/bg.png) no-repeat -6px -195px;}
+.game_client .download{background:url(../images/bg.png) no-repeat 0px -222px;}
+/*nav*/
+/*.nav{height:35px; line-height:35px; font-family:Microsoft YaHei;font-size:14px;color:#fff; background:url(../images/bg.png) 0 0 repeat-x; margin:12px 0 0 0;}
+.nav a{color:#fff;display:inline-block;width:102px; text-align:center;height:35px; position:relative;top:-1px; position:relative;}
+.nav a:hover,.nav a.current{ background:#80dbff;color:#fff; font-weight:bold;}
+.nav a.current span{border-style:dashed dashed solid dashed; border-color:transparent transparent #fff transparent; border-width:5px; position:absolute; bottom:-1px; left:50%; margin-left:-5px; font-size:0; line-height:0}
+.nav em{display:inline-block;height:19px;border-left:1px dotted #a7e6ff; position:relative;top:3px;*top:-8px;_top:7px;_line-height:1px;}*/
+/*searchbox*/
+.searchbox{ margin: 22px 0 0 0;width: 332px;float:left; position:relative;}
+.searchbox input{width:218px; padding:0 5px;float:left; border:1px solid #bdbdbd;color:#c4c4c4;height:27px; line-height:27px; margin:0 5px 0 0;}
+.searchbox a.searchbutton{width:76px;height:29px;float:left;background:url(../images/bg.png) no-repeat -96px -241px;}
+.searchbox a.searchbutton:hover{background:url(../images/bg.png) no-repeat -7px -242px;}
+.searchbox dl{ line-height:26px;  } 
+.searchbox dl dt{color:#333;border-bottom: 1px solid #c2c2c2; font-size: 16px;line-height: 1;padding-bottom: 10px;}
+.searchbox dl dt a{color:#969696;display:inline-block;width:156px; text-align:center;}
+.searchbox dl dt a.hover,.searchbox dl dt a:hover{color:#85d4f3;border-bottom:3px solid #85d4f3; margin-bottom:-3px;}
+.searchbox dl dd{ padding:0 0 0 24px;height: 26px; position:relative; background:#ffffff;}
+.searchbox dl dd.gray{ background:#efefef;}
+.searchbox dl dd a.shut{position:absolute;right:5px;top:8px;background:url(../images/bg.png) no-repeat -8px -284px;width:11px;height:12px;display:none;}
+.searchbox dl dd.gray a.shut{background:url(../images/bg.png) no-repeat -25px -284px;}
+.searchbox div.hisbox{height: 182px; overflow-y:scroll; position:relative;font-size: 14px;color: #555;}
+.searchbox div.schide{ overflow:hidden;}
+/*隐藏搜索框*/
+.searchbox #inputSong,.searchbox #searchbutton{display: none;}
+.searchtips{ position:absolute;width:309px; z-index:10;}
+.tipscon{width:309px; position:absolute;left:0;top:0; z-index:15; border:1px solid #747474; background:#FFF;-moz-box-shadow:2px 2px 4px #e2e2e2;-webkit-box-shadow:2px 2px 4px #e2e2e2;box-shadow:2px 2px 4px #e2e2e2;}
+#ieshadow{position:absolute; background:#e2e2e2; z-index:12; left:0;top:0;width:309px;height:100%;
+filter:progid:DXImageTransform.Microsoft.Blur(pixelradius=4);
+-ms-filter:"progid:DXImageTransform.Microsoft.Blur(pixelradius=4)"}
+.triangle{width:18px;height:8px;background:url(../images/triangle.png) no-repeat; position:absolute;top:-7px;left:87px; z-index:18;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/triangle.png" ,sizingMethod="crop");}
+.searchtips h3{ text-align:center;color:#999;border-bottom:1px dotted #d6d6d6; margin:20px; padding:0 0 20px 0;}
+.searchtips .tips{width:245px;height:82px;background:url(../images/bg.png) no-repeat -3px -760px; margin:0 auto 15px auto;}
+.searchtips h4{text-align:center;color:#999;margin:15px; font-weight:normal;}
+.tipscon ul{}
+.tipscon div{height:63px; clear:both;}
+.tipscon div img{width:48px;height:48px; margin:2px 0 0 2px;}
+.tipscon div .img{width:52px;height:56px;float:left; margin:6px 10px;display:inline;background:url(../images/bg.png) no-repeat -135px -407px;}
+.tipscon div.gray{ background:#efefef;}
+.tipscon div.gray .img{background:url(../images/bg.png) no-repeat -228px -407px;}
+.tipscon div p{width:160px;float:left; overflow:hidden; color:#333;text-overflow:ellipsis; white-space:nowrap; _white-space:normal; _word-wrap:break-word; _word-break: normal; line-height:63px; }
+.tipscon div a{float:left;width:26px;height:26px; margin:18px 0 0 16px;display:inline;background:url(../images/bg.png) no-repeat -8px -549px;}
+.tipscon div.gray a{background:url(../images/bg.png) no-repeat -21px -690px;}
+#tipresult{height:340px; overflow:hidden;}
+
+.flashbox{width: 654px;height: 205px;float:right;margin:22px 0 0 0;}
+/*radiobox*/
+.radiowrap{ margin: 20px 0 0 0;}
+.radiowrap h2{height: 30px; line-height: 30px;color:#fff;font-size: 16px; text-align:center; background:#cfcfcf;font-weight: normal;}
+.radiowrap .left{width: 210px;float:left;}
+.radiowrap .right{width: 780px;float:right;}
+.radiowrap h4{border-top:2px solid #cfcfcf;}
+
+.leftCon { width: 210px; float:left;}
+.rightCon { width:765px; float:left; position:relative; z-index:1;}
+.title { height:60px; width:128px; overflow:hidden; background:url(../images/bg.png) 0 -28px no-repeat; }
+.radiolist{margin: 10px 0 0px 0px; position:relative;overflow:hidden;  width: 210px;  } 
+.radiolist dd{font-size:12px;width: 210px;height: 36px; line-height: 36px; font-family:Microsoft YaHei;}
+.radiolist dd a{display:block; height: 36px;color: #555;text-align: center;font-size: 14px;}
+.radiolist dd a:hover{ background: url(../images/bg.png) 0 -854px no-repeat;color: #fff;}
+.radiolist dd a.current,.radiolist dd a.current:hover{ background: url(../images/bg.png) 0 -854px no-repeat; color:#FFF;}
+
+.radioBox { font-size:12px;margin: 20px 0 20px 10px;border-left:1px solid #e2e2e2; position:relative; z-index:90;}
+.radioBox dd { width: 185px; float:left; margin: 0 0 8px 56px; display:inline; }
+.radioBox dd a {  height:42px; display:block; overflow:hidden; cursor:pointer; _position:relative; }
+.radioBox dd a i { width:40px; height:40px; float:left; margin:0 10px 0 0; background:url(../images/bg.png) -55px -501px no-repeat; position:relative;}
+.radioBox dd a i strong.pic{ position:absolute;width:14px;height:13px;background:url(../images/playing.gif) no-repeat; left:13px;top:16px; z-index:90;}
+.radioBox dd a i strong.shadow{ position:absolute;width:32px;height:32px;background:#000; left:4px;top:4px; z-index:80; opacity:0.3;filter:alpha(opacity=30);}
+.radioBox dd a i div{width:32px; height:32px; margin:4px;}
+.radioBox dd a:hover{zoom:1;}
+.radioBox dd a:hover i{background:url(../images/bg.png) -5px -501px no-repeat; } 
+.radioBox dd a em { color: #555;  font-style:normal; line-height: 1; margin: -4px 0 4px 0px; cursor:pointer; font-size: 14px;display: inline-block;}
+.radioBox dd a em.popu4 { background:url(../images/bg.png) -10px -336px no-repeat; }
+.radioBox dd a em.popu3 { background:url(../images/bg.png) -10px -336px no-repeat; }
+.radioBox dd a em.popu2 { background:url(../images/bg.png) -10px -336px no-repeat; }
+.radioBox dd a em.popu1 { background:url(../images/bg.png) -10px -336px no-repeat; }
+.radioBox dd a:hover { zoom:1; }
+.radioBox dd a:hover em{ position:relative;} 
+.radioBox dd a em b{/*background:url(../images/bg.png) -8px -331px no-repeat;*/ width:18px; height:19px;display:inline-block; position:relative;top:3px; left:3px;}
+.radioBox dd a em b.stop{background:url(../images/bg.png) no-repeat -33px -331px;}
+.radioBox dd a:hover em b.stop{background:url(../images/bg.png) no-repeat -33px -303px;}
+.radioBox dd a:hover em b{background:url(../images/bg.png) -8px -302px no-repeat; }
+.radioBox dd a:hover em { color:#009bd8;  }
+.radioBox span { display:block; height:18px;_height:14px; overflow:hidden; color:#999999; margin:2px 3px 0 0px; cursor:pointer; text-overflow:ellipsis; white-space:nowrap; _white-space:normal; _word-wrap:break-word; _word-break: normal; }
+.songs { height:18px; overflow:hidden; }
+/*foot*/
+.foot{ margin:60px 0 0 0;color:#999;}
+.foot a{color:#999;font-size: 12px;}
+.foot .links strong{font-weight: bold!important;}
+/*.copyright{ margin:0 0 0 20px;}*/
+.links{font-size:14px; margin:25px 0 0 0; position:relative; border-top:1px solid #c2c2c2; padding:22px 0 10px 20px; line-height:24px;}
+.links span{font-size:12px;}
+.links .kugou{background:url(../images/bg.png) -202px -579px no-repeat; position:absolute; z-index:10;width:153px;height:44px;right:0;top:20px;}
+/*顶部固定*/
+/*html{background-image:url(about:blank);background-attachment:fixed;}
+#topfixed{ position:fixed;left:0;top:0; z-index:999999999; background:#FFF;width:960px; _position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop));}
+*/

@@ -1,0 +1,107 @@
+/*
+* Copyright 2012, kugou.com
+* Creator: jackNEss Lau
+* $Author: zhanghailong $
+* $Date: 2013-07-26 10:27:17 +0800 (周五, 2013-07-26) $
+*/
+
+@charset "utf-8";
+
+/* reset
+--------------------------------------------*/
+html{ -webkit-text-size-adjust:none;}
+body{font:12px/1.5 Tahoma,Arial,'\5b8b\4f53',sans-serif; /*word-break:break-all; word-wrap:break-word;*/}
+body,table,tr,td,ul,li,div,span,h1,h2,h3,h4,h5,h6,p,pre,form,fieldset,input,ol,dl,dd,dt,th,thead,tbody,tfoot,blockquote,iframe{margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6,p,a{font-size:100%;}
+ul,ol,li{list-style:none;}
+table{border-collapse:collapse; border-style:none;}
+
+article,aside,footer,header,nav,section{ display:block;}
+details,dialog,output,time{ display:inline;}
+
+a img{border:0;}
+input,select,img{vertical-align:middle;}
+.clear{clear:both;height:0;visibility:hidden;width:0;overflow:hidden;}
+.clearfix:after { display:block; content:".";clear:both;height:0;visibility:hidden;width:0;overflow:hidden; }
+.clearfix {zoom:1; }
+
+a{ text-decoration:none;}
+a:hover{}
+body{color:#474747;}
+* html,* html body /* 修正IE6振动bug */{background-image:url(about:blank);background-attachment:fixed;}
+
+textarea{resize: vertical;}
+
+/* skin
+--------------------------------------------*/
+
+/* global
+--------------------------------------------*/
+.top-1{ margin-top:-1px}
+.top5{ margin-top:5px}
+.top10{ margin-top:10px}
+.top20{ margin-top:20px}
+.bottom5{ margin-bottom:5px}
+.bottom10{ margin-bottom:10px}
+.bottom20{ margin-bottom:20px}
+.left5{ margin-left:5px}
+.left10{ margin-left:10px}
+.left20{ margin-left:20px}
+.right5{ margin-right:5px}
+.right10{ margin-right:10px}
+.right20{ margin-right:20px}
+
+.f12{font-size:12px}
+.f14{font-size:14px}
+.f18{font-size:18px}
+.f21{font-size:21px}
+.indent2{text-indent:2em}
+.fl{float:left}
+.fr{float:right}
+.yahei{ font-family:Microsoft YaHei,'\5b8b\4f53', sans-serif}
+
+.red{color:#f00;}
+.gray{color:#7b7b7b;}
+.gray3{color:#333;}
+.gray6{color:#666;}
+.gray9{color:#999;}
+.orange{color:#F60;}
+
+/* 通用布局 */
+.wing_area{ width:100%;}
+	.wing_main{ float:left; width:100%;}
+	.wing_main_content{}
+	.wing_side{ float:left; margin-left:-100%;}
+	.wing_extra{ float:left;}
+
+/* 通用居左布局 */
+.left_layout{ zoom:1;}
+	.left_layout:after{ content:"."; display:block; height:0; overflow:hidden; clear:both;}
+	.left_layout_side{ float:left; margin-right:10px; _margin-right:7px;}
+	.left_layout_main{ overflow:hidden;}
+
+/* 通用居右布局 */
+.right_layout{ zoom:1;}
+	.right_layout:after{ content:"."; display:block; height:0; overflow:hidden; clear:both;}
+	.right_layout_side{ float:right; margin-left:10px; _margin-left:7px;}
+	.right_layout_main{ overflow:hidden;}
+
+/* 通用文字列表 */
+.kg_txt_list{}
+	.kg_txt_list_ct{}
+	.kg_txt_list_ct li{ height:22px; line-height:22px;}
+	.kg_txt_list_extra{ float:right;}
+	.kg_txt_list_dot{ float:left; display:inline; width:3px; height:3px; overflow:hidden; background:#7b7b7b; margin-top:9px; margin-right:5px;}
+	.kg_txt_list_hr{}
+		.kg_txt_list_hr .kg_txt_list_ct{ overflow:hidden; zoom:1;}
+		.kg_txt_list_hr li{ padding:5px 0; border-bottom:1px dotted #ccc; margin-bottom:-1px;}
+
+/* 文章样式 */
+.kg_article_area{}
+	.kg_article_area_autoIndent{}
+		.kg_article_area_autoIndent p{ text-indent:2em;}
+	.kg_article_area p{ margin-bottom:1.2em;}
+	.kg_article_area h4{ font-size:14px; margin-bottom:10px;}
+
+/* page 
+-------------------------------------------- */

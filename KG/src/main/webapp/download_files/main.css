@@ -1,0 +1,667 @@
+/* 测试 */
+@charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin:0; padding:0; }
+body{ font:12px/1.5 Microsoft YaHei,\5b8b\4f53, Arial, Verdana; color:#333;background: #fff;}
+ul{ list-style:none;}
+button{ border:0 none; padding:0; cursor:pointer;}
+img{ border:0;}
+a{ text-decoration:underline; color:#4f6066;outline: 0;}
+.wrap{ width:960px; margin:0 auto;}
+.clear {clear:both;}
+.clear_fix {zoom:1;}
+.clear_fix:after {display:block;clear:both;content:".";visibility:hidden;height:0;font-size:0;}
+.fl{ float:left}
+/**/
+
+.fr{ float:right;}
+a{ cursor:pointer;}
+.mr_40{ margin-right:40px;}
+.mr_45{ margin-right:45px;}
+.mr_65{ margin-right:68px;}
+.w_288{ width:288px;}
+html,body{
+	height: 993px; 
+}
+/* 导航栏 */
+#public-nav ul.n2{ float:right;}
+#public-nav span.nav-line{ float:right; margin:0;}
+#public-nav em{border-style: solid dashed dashed  dashed; border-color: #fff transparent transparent transparent; border-width: 2px; position: absolute; top: 50%; left: 74px; font-size: 0; line-height: 0;}
+
+/* 二级导航 */
+.second_navi{ height:41px; width:960px; margin:0 auto;}
+.second_navi .public_navi_windows{ margin-left:23px; display:inline;}
+.second_navi .public_navi_android{ margin-left:100px; display:inline;}
+.second_navi .public_navi_fanxing{ margin-left:444px; display:inline;}
+.second_navi .public_navi_ipad{ margin-left:204px; display:inline;}
+.second_navi .public_navi_radio{margin-left: 278px;display: inline;}
+.second_navi .public_navi_other{margin-left: 619px;display: inline;}
+
+
+.second_navi a{ width:109px; height:37px; line-height:37px; text-align:center; display:block; color:#919191; font-size:16px; text-decoration:none; font-family:Arial;}
+.second_navi a.selected{ color:#41bbec; border-bottom:4px #3ebbeb solid;}
+
+/* 推荐 头部 */
+.tuijian_head{ width:1000px; height:373px; background:url('../images/tuijian_header_new.jpg?20140926043633') no-repeat 0 0; margin:40px auto 0;}
+.tuijian_head h1{ text-indent:-9999px;}
+.tuijian_head h2{ color:#517581; font-size:20px; margin:116px 0 0 60px;}
+.tuijian_head_download{ display:block; margin:25px 0 0 60px; width:146px; height:51px; background:url('../images/tuijian_sprite.png?20140212') no-repeat 0 0; text-indent:-9999px;}
+.tuijian_head_download:hover{ background-position: -153px 0;}
+p.tuijian_version_info{ font-size:14px; color:#35332a; margin:12px 0 0 60px;}
+.tuijian_head_download_paid{ display:inline-block; margin:10px 0 0 40px;line-height: 23px; text-decoration:none; font-size:14px; color:#63582c;}
+.tuijian_head_download_paid:hover{ text-decoration:underline;}
+.tuijian_head_download_paid span{ width:9px; height:11px;line-height: 23px; display:inline-block; background:url('../images/pc_down_ico.png') no-repeat center top;_background:none;
+ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/pc_down_ico.png', sizingMethod='crop');}
+
+.tuijian_products_wrap{ width:1000px; margin:30px auto 50px auto;}/* 要改 height:453px; */
+.tuijian_products{ width:288px; margin-left:5px; display:inline;}
+div.tuijian_products_other{ width:1000px; margin-left:0px;}
+.tuijian_products h3{ color:#7c7c7c; font-size:18px; font-weight:normal;}
+.tuijian_product_item{ margin:32px 0 45px 0;}
+.tuijian_product_other_item{ width:288px; height:70px; margin-top:18px; /*margin-right:45px;*/}
+.tuijian_products_hr{ margin-top:4px; width:288px; height:3px; background:url('../images/tuijian_sprite.png?20140212') no-repeat 0 -180px; font-size:0px;}
+.tuijian_products_other_hr{ margin-top:4px; width:1000px; height:3px; border-bottom:1px solid #ddd;/*background:url('../images/tuijian_sprite.png?20140212') no-repeat 0 -193px; */font-size:0px;}
+.tuijian_products_other_hr span{ position: relative; display: block; width:65px; bottom: -3px;  border-bottom: 2px solid #40bdef; border-right:15px solid #fff; }
+.tuijian_product_description{ margin:-14px 0 0 6px;}
+.tuijian_product_other_description{ margin-left:6px;}
+.tuijian_product_title{ text-decoration:none; color:#4c4c4c; font-size:15px; margin-bottom: 3px; display: inline-block;}
+.tuijian_product_title:hover{ text-decoration:underline;}
+.tuijian_product_version{ color:#909090; font-size:12px;}
+.tuijian_product_download{ margin-left:205px; display:block; width:75px; height:27px; background:url('../images/tuijian_sprite.png?20140212') no-repeat -306px 0; text-indent:-9999px;}
+.tuijian_product_download:hover{ background-position:-386px 0;}
+.tuijian_product_other_download{ padding-top:14px;}
+.tuijian_product_bottom{ margin:32px 0 0 4px; font-size:0px; height:1px; width:280px; background:url('../images/tuijian_sprite.png?20140212') no-repeat 0 -187px;}
+.tuijian_windows{ display:inline; margin:-3px 20px 0 8px; width:34px; height:45px; background:url('../images/tuijian_sprite.png?20140212') no-repeat 0 -57px; text-indent:-9999px;}
+.tuijian_mac{ display:inline; margin:-3px 6px 0 3px; width:53px; height:43px; background:url('../images/tuijian_sprite.png?20140212') no-repeat -160px -57px; text-indent:-9999px;}
+.tuijian_android{ display:inline; margin:-7px 8px 0 4px; width:50px; height:53px; background:url('../images/tuijian_sprite.png?20140212') no-repeat -39px -57px; text-indent:-9999px;}
+.tuijian_iphone{ display:inline; margin:-7px 8px 0 7px; width:47px; height:50px; background:url('../images/tuijian_sprite.png?20140212') no-repeat -218px -57px; text-indent:-9999px;}
+.tuijian_ipad{ display:inline; margin:-5px 1px 0 0; width:61px; height:42px; background:url('../images/tuijian_sprite.png?20140212') no-repeat -94px -57px; text-indent:-9999px;}
+.tuijian_apad{ display:inline; margin:-5px 0 0 0; width:62px; height:43px; background:url('../images/tuijian_sprite.png?20140212') no-repeat -270px -57px; text-indent:-9999px;}
+.tuijian_radio{ display:inline; margin:6px 3px 0 7px; width:52px; height:44px; /*background:url('../images/tuijian_sprite.png?20140212') no-repeat -337px -57px;*/ text-indent:-9999px;}
+.tuijian_android_radio{ display:inline; margin:6px 6px 0 6px; width:50px; height:50px; /*background:url('../images/tuijian_sprite.png?20140212') no-repeat -390px -115px;*/ text-indent:-9999px;}
+.tuijian_ios_radio{ display:inline; margin:6px 6px 0 6px; width:50px; height:50px; /*background:url('../images/tuijian_sprite.png?20140212') no-repeat -440px -115px;*/ text-indent:-9999px;}
+.tuijian_ringtone{ display:inline; margin:6px 6px 0 6px; width:50px; height:50px;/* background:url('../images/tuijian_sprite.png?20140212') no-repeat -335px -115px;*/ text-indent:-9999px;}
+.tuijian_game{ display:inline; margin:6px 7px 0 7px; width:48px; height:49px; /*background:url('../images/tuijian_sprite.png?20140212') no-repeat -394px -57px;*/ text-indent:-9999px;}
+.tuijian_puppy{ display:inline; margin:5px 7px 0 7px; width:48px; height:51px; background:url('../images/tuijian_sprite.png?20140212') no-repeat -500px -57px; text-indent:-9999px;}
+.tuijian_fanxing{ display:inline; margin:6px 6px 0 6px; width:50px; height:50px; /*background:url('../images/tuijian_sprite.png?20140212') no-repeat -555px -58px;*/ text-indent:-9999px;}
+.tuijian_fanxing_iphone{ display:inline; margin:6px 6px 0 6px; width:50px; height:50px; /*background:url('../images/tuijian_sprite.png?20140212') no-repeat -555px -108px;*/ text-indent:-9999px;}
+.tuijian_shuoba{ display:inline; margin:6px 6px 0 6px; width:50px; height:50px; background:url('../images/tuijian_sprite.png?20140212') no-repeat -280px -115px; text-indent:-9999px;}
+.icon_img{ width: 50px; height:50px; text-indent: -9999px; }
+.tuijian_footer_wrap{ width:1000px; margin:40px auto 0 auto;}
+.tuijian_friendly_link{color:#7c7c7c; font-size:13px;}
+.tuijian_links{ margin:0 0 20px 80px;}
+.tuijian_links a{ color:#7c7c7c; font-size:13px; text-decoration:none; margin-right:15px; display:inline-block;}
+.tuijian_links a:hover{ text-decoration:underline;}
+
+.recommend_products{/* display:inline; */margin: 0 20px 45px 0;width:233px; height: 208px;border: 1px solid #e6e6e6;}
+.recommend_products:hover{border: 1px solid #cde9ff;}
+.recommend_products .tuijian_product_item{margin: 0;}
+.recommend_products .tuijian_windows{float: none;position: absolute;margin: 17px 0 0 100.5px;}
+.recommend_products .tuijian_mac{float: none;position: absolute;margin: 17px 0 0 85px;}
+.recommend_products .tuijian_android{float: none;position: absolute;margin: 17px 0 0 94.5px;}
+.recommend_products .tuijian_iphone{float: none;position: absolute;margin: 17px 0 0 95px;}
+.recommend_products .tuijian_ipad{float: none;position: absolute;margin: 17px 0 0 85px;}
+.recommend_products .tuijian_apad{float: none;position: absolute;margin: 17px 0 0 80.5px;}
+.recommend_products .tuijian_product_description{position: absolute;float: none;margin: 81px 0 0 0;text-align: center;width: 233px;height: 68px;}
+.recommend_products .tuijian_product_title{color: #333333;font-size: 16px;margin-bottom: 7px;}
+.recommend_products .tuijian_product_version{}
+.recommend_products .tuijian_product_download{position: absolute;color: #3195f6;font-size: 16px;text-indent: 0px;margin: 172px 0 0 76px;height: 36px;width: 71px;text-align: center;line-height: 36px;background-image: none;text-decoration: none;z-index: 1;}
+.recommend_products .tuijian_product_bottom{position: absolute;margin: 172px 0 0 0;width: 233px;height: 36px;background-image: none;background-color: #dceffd;}
+.recommend_products:hover .tuijian_product_bottom{background-color: #cde9ff;}
+.recommend_products .tuijian_product_bottom:hover{background-color: #cde9ff;}
+.end_products{margin-right:0;}
+/* 推荐 页 结束 */
+
+
+/* WINDOWS版 / Mac版 */
+.windows_bg{ background:url('../images/windows_bg.jpg') no-repeat center; height:395px; margin:40px auto 0;}
+.windows_head{ width:960px; height:395px; background:url('../images/windows_header_bg.jpg?2015115160455') no-repeat 0 0;}
+.mac_bg{ background:url('../images/mac_bg.jpg') no-repeat center; height:395px;}
+.mac_head{ width:960px; height:395px; background:url('../images/mac_header_bg.jpg') no-repeat 0 0;}
+.windows_head h1, .mac_head h1{ color:#323232; font-size:32px;}
+.windows_head b, .mac_head b{ font-size:35px; margin:0 4px;}
+.windows_head a, .mac_head a{ text-decoration:none;}
+.windows_head_content{ position:relative; margin-left:485px; padding-top:50px;}
+.mac_head_content{ position:relative; margin-left:568px; padding-top:50px;}
+.windows_head_download{ margin-top:19px; text-indent:-9999px; width:169px; height:56px; background:url('../images/windows_sprite.png?v=2014_01_10_11_56_31') no-repeat 0 0; display:block;}
+.windows_head_download:hover{ background-position:-174px 0;}
+.windows_qqsoft_download{ margin-top:5px; text-align:center; width:169px; height:46px;line-height: 46px;font-size:18px;color:#fff;background:url('../images/windows_sprite.png?v=2014_01_10_11_56_31') no-repeat -174px -360px; display:block;}
+.windows_qqsoft_download:hover{ background-position:-174px -410px;}
+.mac_head_download{ margin-top:5px; text-indent:-9999px; width:169px; height:46px; background:url('../images/windows_sprite.png?v=2014_01_10_11_56_31') no-repeat 0 -196px; display:block;}
+.mac_head_download:hover{ background-position:-174px -196px;}
+.mac_head_download_appstore{ margin-top:15px; text-indent:-9999px; width:169px; height:55px; background:url('../images/windows_sprite.png?v=2014_01_10_11_56_31') no-repeat 0 -245px; display:block;}
+.mac_head_download_appstore:hover{ background-position:-174px -245px;}
+.windows_head_download_vip{ margin:34px 210px 0 0; padding-left:13px; font-size:14px; line-height:21px; background:url('../images/windows_sprite.png?v=2014_01_10_11_56_31') no-repeat 0 -168px;}
+.windows_head_download_vip:hover{ text-decoration:underline;}
+.windows_head_version{ color:#838383; margin:10px 0;}
+
+.windows_changlog_box{ position:absolute; top:248px; left:76px; z-index:10; display:none;}
+.mac_changelog_box{ position:absolute; top:290px; left:76px; z-index:10; display:none;}
+.windows_changelog_box_top{ font-size:0px; width:275px; height:17px; background:url('../images/windows_sprite.png?v=2014_01_10_11_56_31') no-repeat 0 -141px; display:block;}
+.windows_changelog_box_bottom{ font-size:0px; width:275px; height:6px; background:url('../images/windows_sprite.png?v=2014_01_10_11_56_31') no-repeat 0 -158px; display:block;}
+.windows_changelog_box_content{ padding-left:20px; width:275px; background:url('../images/windows_changelog_box.png') repeat-y 0 0;}
+.windows_changelog_version{ color:#5b5b5b;}
+.windows_changelog{ color:#484848; font-size:14px;}
+.windows_changelog_detail{ color:#6b6b6b; line-height:20px; padding-bottom:8px; width:240px;}
+
+.windows_feature_wrap{ width:960px; margin:0 auto; padding-top:35px; padding-bottom:35px;}
+.windows_feature{ width:401px; margin-left:23px;}
+.windows_feature_right{ margin:0 0 45px 523px; height:69px;}
+.windows_feature_left{ display:inline;}
+.windows_feature span{ margin-right:20px; display:block; width:69px; height:69px; background-image:url('../images/windows_sprite.png?v=2015_11_03_11_56_31'); background-repeat:no-repeat;}
+.windows_feature h3{ font-size:18px; color:#484848; font-weight:normal;}
+.windows_feature p{color:#828282; line-height:20px;}
+.windows_feature_radio{ background-position:0 -468px;}
+.windows_feature_lyric{ background-position:-148px -468px;}
+.windows_feature_favorite{ background-position:-74px -468px;}
+.windows_feature_skin{ background-position:-222px -468px;}
+.windows_feature_around{background-position:-69px -356px;}   
+/*.windows_feature_sound{background-position:0px -358px;}*/
+/* WINDOWS版 / Mac版 end */
+
+
+/* android / iphone */
+.android_bg{ background:url('../images/android_bg.jpg') no-repeat center; height:395px; margin:40px auto 0;}
+.android_head{ position:relative; width:960px; height:395px; background:url('../images/android_header_bg_two.jpg?20160520') no-repeat 0 0;}
+.iphone_bg{ background:url('../images/iphone_bg.jpg') no-repeat center; height:395px;margin:40px auto 0;}
+.iphone_head{ position:relative; width:960px; height:395px; background:url('../images/iphone_header_bg.jpg') no-repeat 0 0;}
+.android_head h1, .iphone_head h1{ color:#323232; font-size:32px;}
+.android_head a, .iphone_head a{ color:#3cb9eb; text-decoration:none;}
+.android_head_content{ position:relative; margin-left:485px; padding-top:50px;}
+.fanxing_head_qrcode_block{font-weight:bold; margin-top:40px; font-family:\5b8b\4f53; color:#323232; width:101px; text-align:center;}
+.fanxing_head_qrcode_block img{ border:1px solid #d6d6d6;}
+.iphone_head_qrcode_block{font-weight: bold;margin-top: 40px;font-family: \5b8b\4f53;color: #323232;width: 101px;text-align: center;}
+.iphone_head_version{color: #a7a7a7;margin: 10px 0;}
+.iphone_head_download{ margin-top:5px; text-indent:-9999px; width:169px; height:46px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat 0 -345px; display:block;}
+.iphone_head_download:hover{ background-position:-174px -345px;}
+.iphone_head_download_appstore{ margin-top:19px; text-indent:-9999px; width:169px; height:55px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat 0 -395px; display:block;}
+.iphone_head_download_appstore:hover{ background-position:-174px -395px;}
+.iphone_head_download_vip{margin: 91px 109px 0 0;padding-left: 13px;font-size: 14px;line-height: 21px;background: url('../images/android_iphone_sprite.png') no-repeat 0 -168px;}
+.iphone_head_download_vip:hover{ text-decoration:underline;}
+
+/* 2014年8月25日 10:27:15 添加; android 改版*/
+.android_head_qrcode_block{margin-top: 18px;width: 125px;height:125px;display: inline-block;*display: inline;*zoom: 1;margin-right: 18px;}
+.android_head_qrcode_block img{width: 125px;height: 125px;}
+.android_head_version{color:#a7a7a7; margin:45px 0 10px 0px;width: 230px;display: inline-block;*display: inline;*zoom: 1;vertical-align: top;}
+.android_head_download{ margin:19px 15px 0px 7px; text-indent:-9999px; width:119px; height:43px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat -469px -395px;display: inline-block;*display: inline;*zoom: 1;}
+.android_head_download:hover{ background-position:-469px -438px;}
+.android_head_download_vip{ margin:0px 109px 0 0;height:20px;line-height: 20px; padding-left:13px; font-size:14px;background:url('../images/android_iphone_sprite.png?201408260234') no-repeat 0 -168px;vertical-align:middle;display: inline-block;*display: inline;*zoom: 1;}
+.android_head_download_vip:hover{ text-decoration:underline;}
+.android_download_link{height: 40px;line-height: 40px;vertical-align: middle;}
+.android_head_title{color: #7b7b7b;font-size: 14px;height: 20px;line-height:20px;vertical-align:middle;display: inline-block;*display: inline;*zoom: 1;}
+
+/* 2014年8月11日 10:32:51 添加; */
+.android_head_qrcode_block_new{font-weight:bold; margin-top:15px; font-family:\5b8b\4f53; color:#323232; width:127px; text-align:center;overflow: hidden;display: inline-block;*display: inline;*zoom: 1;}
+.android_head_version_new{width:200px;color:#a7a7a7; margin:45px 0px 10px 10px;display: inline-block;*display: inline;*zoom: 1;vertical-align: top;}
+.live_app_down{height: 64px;width: 400px;}
+.live_app_down a{display: inline-block;*display: inline;*zoom: 1;vertical-align: top;}
+.live_app_down span{color:#7b7b7b;width: 100px;height: 20px;display: inline-block;*display: inline;*zoom: 1;margin: 32px 0px 0px 0px;font-size: 14px;}
+.iphone_head_download_vip_new{ padding-left:13px;margin-top: 30px; font-size:14px; line-height:21px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat 0 -168px;}
+.iphone_head_download_new{margin:5px 0 0 8px; text-indent:-9999px; width:95px; height:33px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat -362px -269px; display:block;}
+.iphone_head_download_new:hover{ background-position:-362px -302px;}
+.iphone_head_download_appstore_new{ margin:19px 5px 0 0; text-indent:-9999px; width:119px; height:42px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat -347px -395px; display:block;}
+.iphone_head_download_appstore_new:hover{ background-position:-347px -438px;}
+.android_head_install_ways_new{margin-top:6px;color:#7b7b7b; font-size:14px; line-height:33px;}
+.android_head_install_ways_new a{ display:inline-block; text-indent:-9999px; background-image:url('../images/android_iphone_sprite.png?201408260234'); background-repeat:no-repeat;}
+
+/* 2014_01_03_03_11_50添加android浏览器词图匹配 */
+.android_other{width: 960px;margin: 0 auto; margin:40px auto 0;}
+.android_other .other_bg{width: 100%;height: 585px;background: url('../images/android_other_bg.jpg') no-repeat center top;}
+.android_other .down_btn{width: 262px;height: 55px;display: block;margin: 0 auto;background:  url('../images/other_down.png?v=png8') no-repeat 0 0;margin-bottom: 65px;}
+.android_other .down_btn:hover{background-position: 0 -55px;}
+
+
+.android_head_focus{ position:absolute; overflow:hidden; width:142px; height:251px; top:50px; left:150px;}
+.iphone_head_focus{ position:absolute; overflow:hidden; width:146px; height:218px; top:70px; left:160px;}
+.android_head_focus img, .iphone_head_focus img{ float:left;}
+.android_head_focus_controll{ width:454px; text-align:center; font-size:0px; position:absolute; top:348px; left:0px;}
+.iphone_head_focus_controll{ width:467px; text-align:center; font-size:0px; position:absolute; top:362px; left:0px;}
+.android_head_focus_controll span, .iphone_head_focus_controll span{ display:inline-block; width:9px; height:9px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat -362px 0; margin:0 3px;}
+.android_head_focus_controll span.current, .iphone_head_focus_controll span.current{ background-position:-348px 0;}
+
+.android_head_install_ways{margin-top:35px; color:#7b7b7b; font-size:14px; line-height:33px;}
+.android_head_install_ways a{ display:inline-block; text-indent:-9999px; background-image:url('../images/android_iphone_sprite.png?201408260234'); background-repeat:no-repeat;}
+.android_install_wandoujia{ width:118px; height:33px; background-position:0 -197px;}
+.android_install_wandoujia:hover{ background-position:0 -230px;}
+.android_install_360{ width:102px; height:33px; background-position:-123px -197px;}
+.android_install_360:hover{ background-position:-123px -230px;}
+.android_install_qq{ width:122px; height:33px; background-position:-230px -197px;}
+.android_install_qq:hover{ background-position:-230px -230px;}
+.iphone_install_appstore{ width:132px; height:33px; background-position:0 -269px;}
+.iphone_install_appstore:hover{ background-position:0 -302px;}
+.iphone_install_sync{ margin-left:5px; width:123px; height:33px; background-position:-137px -269px;}
+.iphone_install_sync:hover{ background-position:-137px -302px;}
+.iphone_install_pp{ margin-left:8px; width:95px; height:33px; background-position:-265px -269px;}
+.iphone_install_pp:hover{ background-position:-265px -302px;}
+
+.android_changelog_box{ position:absolute; top:194px; left:218px; z-index:10; display:none;}
+.iphone_changelog_box{ position:absolute; top:295px; left:76px; z-index:10; display:none;}
+.iphone_Special{top: 194px;left: 210px;}
+.android_changelog_box_top{ font-size:0px; width:275px; height:17px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat 0 -141px; display:block;}
+.android_changelog_box_bottom{ font-size:0px; width:275px; height:6px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat 0 -158px; display:block;}
+.android_changelog_box_content{ padding-left:20px; width:275px; background:url('../images/android_changelog_box.png') repeat-y 0 0;}
+.android_changelog_version{ color:#5b5b5b;}
+.android_changelog{ color:#484848; font-size:14px;}
+.android_changelog_detail{ color:#6b6b6b; line-height:20px; padding-bottom:8px; width:240px;}
+/* 特性介绍引用部分WINDOWS页样式 */
+.android_feature{ width:401px; margin-left:23px;}
+.android_feature span{ margin-right:20px; display:block; width:71px; height:71px; }
+.android_feature h3{ font-size:18px; color:#484848; font-weight:normal;}
+.android_feature p{color:#828282; line-height:20px;}
+.android_feature_right{ margin:0 0 45px 523px; height:69px;}
+.android_feature_left{ display:inline;}
+.android_feature_partner{ background-position:-296px -70px;}
+.android_feature_music{ background-position:-371px -69px;}
+.android_feature_lib{ background-position:-446px -68px;}
+.android_feature_interface{ background-position:-521px -68px;}
+/* android / iphone end */
+
+
+/* ipad / androidpad */
+.ipad_bg{ background:url('../images/ipad_bg.jpg') no-repeat center; height:395px;margin:40px auto 0;}
+.ipad_head{ position:relative; width:960px; height:395px; background:url('../images/ipad_header_bg.jpg') no-repeat 0 0;}
+.androidpad_bg{ background:url('../images/androidpad_bg.jpg') no-repeat center; height:395px;}
+.androidpad_head{ position:relative; width:960px; height:395px; background:url('../images/androidpad_header_bg.jpg') no-repeat 0 0;}
+
+.ipad_head h1, .androidpad_head h1{ color:#323232; font-size:32px;}
+.ipad_head a, .androidpad_head a{ color:#3cb9eb; text-decoration:none;}
+.ipad_head_content{ position:relative; margin-left:485px; padding-top:50px;}
+.ipad_head_qrcode_block{ font-weight:bold; margin-top:40px; font-family:\5b8b\4f53; color:#323232; width:101px; text-align:center;}
+.ipad_head_qrcode_block img{ border:1px solid #d6d6d6;}
+.ipad_head_download{ margin-top:5px; text-indent:-9999px; width:169px; height:46px; background:url('../images/androidpad_ipad_sprite.png') no-repeat 0 -417px; display:block;}
+.ipad_head_download:hover{ background-position:-174px -417px;}
+.androidpad_head_download{ margin-top:19px; text-indent:-9999px; width:169px; height:56px; background:url('../images/androidpad_ipad_sprite.png') no-repeat 0 0; display:block;}
+.androidpad_head_download:hover{ background-position:-174px 0;}
+.ipad_head_download_appstore{ margin-top:19px; text-indent:-9999px; width:169px; height:55px; background:url('../images/androidpad_ipad_sprite.png') no-repeat 0 -468px; display:block;}
+.ipad_head_download_appstore:hover{ background-position:-174px -468px;}
+.ipad_head_version{ color:#a7a7a7; margin:10px 0;}
+.ipad_head_download_vip{ margin:91px 109px 0 0; padding-left:13px; font-size:14px; line-height:21px; background:url('../images/androidpad_ipad_sprite.png') no-repeat 0 -168px;}
+.ipad_head_download_vip:hover{ text-decoration:underline;}
+.androidpad_head_download_vip{ margin:34px 109px 0 0; padding-left:13px; font-size:14px; line-height:21px; background:url('../images/androidpad_ipad_sprite.png') no-repeat 0 -168px;}
+.androidpad_head_download_vip:hover{ text-decoration:underline;}
+
+.ipad_head_install_ways{ margin-top:35px; color:#7b7b7b; font-size:14px; line-height:33px;}
+.ipad_head_install_ways a{ display:inline-block; text-indent:-9999px; background-image:url('../images/androidpad_ipad_sprite.png'); background-repeat:no-repeat;}
+.ipad_install_appstore{ width:132px; height:33px; background-position:0 -269px;}
+.ipad_install_appstore:hover{ background-position:0 -302px;}
+.ipad_install_sync{ margin-left:5px; width:123px; height:33px; background-position:-137px -269px;}
+.ipad_install_sync:hover{ background-position:-137px -302px;}
+.ipad_install_pp{ margin-left:8px; width:95px; height:33px; background-position:-265px -269px;}
+.ipad_install_pp:hover{ background-position:-265px -302px;}
+.androidpad_install_wandoujia{ width:118px; height:33px; background-position:0 -197px;}
+.androidpad_install_wandoujia:hover{ background-position:0 -230px;}
+.androidpad_install_360{ width:102px; height:33px; background-position:-123px -197px;}
+.androidpad_install_360:hover{ background-position:-123px -230px;}
+.androidpad_install_qq{ width:122px; height:33px; background-position:-230px -197px;}
+.androidpad_install_qq:hover{ background-position:-230px -230px;}
+
+.ipad_changelog_box{ position:absolute; top:295px; left:76px; z-index:10; display:none;}
+.androidpad_changelog_box{ position:absolute; top:244px; left:76px; z-index:10; display:none;}
+.ipad_changelog_box_top{ font-size:0px; width:275px; height:17px; background:url('../images/androidpad_ipad_sprite.png') no-repeat 0 -141px; display:block;}
+.ipad_changelog_box_bottom{ font-size:0px; width:275px; height:6px; background:url('../images/androidpad_ipad_sprite.png') no-repeat 0 -158px; display:block;}
+.ipad_changelog_box_content{ padding-left:20px; width:275px; background:url('../images/ipad_changelog_box.png') repeat-y 0 0;}
+.ipad_changelog_version{ color:#5b5b5b;}
+.ipad_changelog{ color:#484848; font-size:14px;}
+.ipad_changelog_detail{ color:#6b6b6b; line-height:20px; padding-bottom:8px; width:240px;}
+
+.ipad_head_focus{ position:absolute; overflow:hidden; width:246px; height:185px; top:82px; left:107px;}
+.androidpad_head_focus{ position:absolute; overflow:hidden; width:267px; height:172px; top:89px; left:99px;}
+.ipad_head_focus img, .androidpad_head_focus img{ float:left;}
+.ipad_head_focus_controll{ width:463px; text-align:center; font-size:0px; position:absolute; top:330px; left:0px;}
+.androidpad_head_focus_controll{ width:463px; text-align:center; font-size:0px; position:absolute; top:310px; left:0px;}
+.ipad_head_focus_controll span, .androidpad_head_focus_controll span{ display:inline-block; width:9px; height:9px; background:url('../images/androidpad_ipad_sprite.png') no-repeat -362px 0; margin:0 3px;}
+.ipad_head_focus_controll span.current, .androidpad_head_focus_controll span.current{ background-position:-348px 0;}
+
+.ipad_feature_wrap{ width:960px; margin:0 auto; padding-top:35px; padding-bottom:35px;}
+.ipad_feature{ width:401px; margin-left:23px;}
+.ipad_feature span{ margin-right:20px; display:block; width:69px; height:69px; background-image:url('../images/androidpad_ipad_sprite.png'); background-repeat:no-repeat;}
+.ipad_feature h3{ font-size:18px; color:#484848; font-weight:normal;}
+.ipad_feature p{color:#828282; line-height:20px;}
+.ipad_feature_right{ margin:0 0 45px 523px; height:69px;}
+.ipad_feature_left{ display:inline;}
+.ipad_feature_hd{ background-position:0 -61px;}
+.ipad_feature_list{ background-position:-74px -61px;}
+.ipad_feature_cloud{ background-position:-148px -61px;}
+.ipad_feature_mv{ background-position:-222px -61px;}
+.androidpad_feature_archive{ background-position:0 -342px;}
+.androidpad_feature_list{ background-position:-74px -342px;}
+.androidpad_feature_cloud{ background-position:-148px -342px;}
+.androidpad_feature_footprint{ background-position:-222px -342px;}
+/* ipad / androidpad end */
+
+
+/* error 404 */
+.error_404_content{ padding:155px 0; text-align:center; /*position:relative;*/}
+.error_404_content h1{ width:151px; height:81px; background:url('../images/error_404.png') no-repeat 0 0; text-indent:-9999px; margin:0 auto;}
+.error_404_content h2{ color:#3ebbeb; font-size:18px; line-height:25px; position:relative; top:-61px; left:8px; font-weight:normal;}
+.error_404_content p{ color:#5d5d5d; font-size:16px;}
+.error_404_content a{ color:#01a3e1; text-decoration:none;}
+.error_404_content a:hover{ text-decoration:underline;}
+.error_404_links{ margin:45px 0 0 204px;}
+.error_404_links li{ float:left; width:230px; text-align:left; font-size:14px; margin-top:10px;}
+.error_404_links a{ text-decoration:underline; color:#22aee8;}
+
+
+/* 繁星 ANDROID */
+.fanxing_android_head{ position:relative; width:960px; height:395px; background:url('../images/android_header_bg.jpg?201411191143') no-repeat 0 0;}
+.fanxing_android_head{background:url("http://image.fanxing.kugou.com/fxstatic/images/apk/kugou_fx_bg.jpg") 0 0 no-repeat;}
+.fanxing_android_head h1{ color:#323232; font-size:32px;}
+.fanxing_android_head a{ color:#3cb9eb; text-decoration:none;}
+
+.fanxing_android_head_focus{ position:absolute; overflow:hidden; width:147px; height:260px; top:40px; left:152px;}
+.fanxing_android_head_focus img{ float:left;}
+
+.fanxing_android_feature{ width:401px; margin-left:23px;}
+.fanxing_android_feature_right{ margin:0 0 45px 523px; height:69px;}
+.fanxing_android_head{ position:relative; width:960px; height:395px;background:url('../images/apk/download_android.jpg?201408260234') no-repeat 0 0;}
+.fanxing_android_head h1{ color:#323232; font-size:32px;}
+.fanxing_android_head a{ color:#3cb9eb; text-decoration:none;}
+.fanxing_android_feature span{ margin-right:20px; display:block; width:69px; height:69px; background-image:url("http://image.fanxing.kugou.com/fxstatic/images/apk/kugou_fx_ico.png"); background-repeat:no-repeat;}
+.fanxing_android_feature h3{ font-size:18px; color:#484848; font-weight:normal;}
+.fanxing_android_feature p{color:#828282; line-height:20px;}
+.fanxing_android_feature_partner{background-position:0 0;}
+.fanxing_android_feature_music{background-position:-138px 0;}
+.fanxing_android_feature_lib{background-position:-69px 0;}
+.fanxing_android_feature_interface{background-position:-207px 0;}
+.fanxing_android_head_install_ways{ margin-top:52px; color:#7b7b7b; font-size:14px; line-height:33px;}
+.fanxing_android_head_install_ways a{ display:inline-block; text-indent:-9999px; background-image:url('../images/android_iphone_sprite.png?201408260234'); background-repeat:no-repeat;}
+/* 繁星 ANDROID END */
+
+/* 
+繁星 Iphone
+@酷狗收音机样式
+@create_time:2014_01_09_20_02_35;
+@createer:wrg;
+*/ 
+.fanxing_iphone_head{ position:relative; width:960px; height:395px; background:url('../images/apk/download_iphone.jpg?201408260234') no-repeat 0 0;}
+.fanxing_iphone_head h1{ color:#323232; font-size:32px;}
+.fanxing_iphone_head a{ color:#3cb9eb; text-decoration:none;}
+
+.fanxing_iphone_head_focus{ position:absolute; overflow:hidden; width:136px; height:240px; top:56px; left:161px;}
+.fanxing_iphone_head_focus img{ float:left;}
+
+.fanxing_iphone_feature{ width:401px; margin-left:23px;}
+.fanxing_iphone_feature_right{ margin:0 0 45px 523px; height:69px;}}
+.fanxing_iphone_head h1{ color:#323232; font-size:32px;}
+.fanxing_iphone_head .fanxing_head_content{ position:relative; margin-left:485px; padding-top:50px;}
+.fanxing_iphone_head a{ color:#3cb9eb; text-decoration:none;}
+.fanxing_iphone_feature span{ margin-right:20px; display:block; width:69px; height:69px; background-image:url("http://image.fanxing.kugou.com/fxstatic/images/apk/kugou_fx_ico.png"); background-repeat:no-repeat;}
+.fanxing_iphone_feature h3{ font-size:18px; color:#484848; font-weight:normal;}
+.fanxing_iphone_feature p{color:#828282; line-height:20px;}
+.fanxing_iphone_feature_partner{background-position:0 0;}
+.fanxing_iphone_feature_music{background-position:-138px 0;}
+.fanxing_iphone_feature_lib{background-position:-69px 0;}
+.fanxing_iphone_feature_interface{background-position:-207px 0;}
+.fanxing_iphone_head_install_ways{ margin-top:52px; color:#7b7b7b; font-size:14px; line-height:33px;}
+.fanxing_iphone_head_install_ways a{ display:inline-block; text-indent:-9999px; background-image:url('../images/android_iphone_sprite.png?201408260234'); background-repeat:no-repeat;}
+.fanxing_iphone_head .iphone_head_down{ margin-top:19px; text-indent:-9999px; width:169px; height:56px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat 0 0; display:block;}
+.fanxing_iphone_head .iphone_head_down:hover{ background-position:-174px 0;}
+.fanxing_iphone_head .iphone_head_appstore{ margin-top:10px; text-indent:-9999px; width:169px; height:56px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat 0 -455px; display:block;}
+.fanxing_iphone_head .iphone_head_appstore:hover{ background-position:-175px -455px;}
+.fanxing_iphone_head .iphone_changelog_box{ position:absolute; top:310px; left:76px; z-index:10; display:none;}
+.fanxing_iphone_head .iphone_changelog_box_top{ font-size:0px; width:275px; height:17px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat 0 -141px; display:block;}
+.fanxing_iphone_head .iphone_changelog_box_bottom{ font-size:0px; width:275px; height:6px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat 0 -158px; display:block;}
+.fanxing_iphone_head .iphone_changelog_box_content{ padding-left:20px; width:275px; background:url('../images/android_changelog_box.png') repeat-y 0 0;}
+.fanxing_iphone_head .iphone_changelog_detail{ color:#6b6b6b; line-height:20px; padding-bottom:8px; width:240px;}
+.fanxing_iphone_head .fanxing_head_focus_controll{width: 50px;margin: 10px 0px 0px 200px;}
+.fanxing_iphone_head .fanxing_head_focus_controll span{ display:inline-block; width:9px; height:9px; background:url('../images/android_iphone_sprite.png?201408260234') no-repeat -362px 0; margin:0 3px;}
+.fanxing_iphone_head .fanxing_head_focus_controll span.current{ background-position:-348px 0;}
+/* 繁星 Iphone END */
+
+/* OLD RADIO */
+/*radio*/
+.radio .banner{ background:url(../images/banner2.jpg?v=20131101) no-repeat; height:507px; position:relative; margin-top:6px;border-bottom:2px solid #e2e2e2}
+.radio_download_btn{ position:absolute; width:169px; height:56px; text-indent:-9999px; top:413px; left:300px; outline:0; background:url('../images/radio_sprite.png') no-repeat 0 0;}
+.radio_download_btn:hover{ background-position:0 -62px;}
+.radio_download_mobile_btn{ position:absolute; width:169px; height:56px; text-indent:-9999px; top:413px; left:492px; outline:0; background:url('../images/radio_sprite.png') no-repeat -181px 0;}
+/*
+@酷狗收音机样式
+@create_time:2014_01_09_11_02_35;
+@createer:wrg;
+*/
+.radion_wrap_bg{width: 100%;background:url(../images/radio_wrap_bg.jpg?v=2014_02_24_06_08_49) no-repeat center top;margin:40px auto 0;}
+.radio_wrap{width: 960px;margin:0 auto;background:url(../images/radio_bg.jpg?v=2014_02_24_06_08_49) no-repeat center top; font-family:"微软雅黑";overflow: hidden;}
+.radio_wrap a{text-decoration: none}
+.radio_wrap .radio_info{width: 960px;height:457px;margin: 0 auto;position: relative;}
+.radio_wrap .radio_info .radio_pic_scroll{
+	width: 165px;
+	height: 294px;
+	position: absolute;
+	left:155px;
+	top:66px;
+	overflow: hidden;
+	border-right: 1px solid #dde1e9;
+	*top:66px;
+}
+.radio_wrap .all_bg_layer{display:block;width: 686px;height: 80px;background: url(../images/radio_all_bg.png?v=2014_02_24_06_08_49?v=2014_02_24_06_08_49) no-repeat center top;position: absolute;_background:none;
+ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://download.kugou.com/static/images/radio_all_bg.png?v=2014_02_24_06_08_49', sizingMethod='crop'); }
+.radio_wrap .radio_info h2{font-size: 30px;width: 120px;margin-bottom: 20px;}
+.radio_wrap .radio_info .radio_pic_index{
+	height: 20px;
+	position: absolute;
+	top:433px;
+	*top:363px;
+	left:195px;
+}
+.radio_wrap .radio_info .radio_pic_index li{float: left;width: 9px;height: 9px;margin-left: 6px;background: url(../images/button_all.png) no-repeat -685px -10px;cursor:pointer;overflow: hidden;}
+.radio_wrap .radio_info .radio_pic_index li.current{background-position: -685px 0px;}
+.radio_wrap .app_down{margin-left: 490px;margin-top: 30px;overflow: hidden;}
+.radio_wrap .app_down{
+	position: absolute;
+	margin-left: 480px;
+	margin-top: 200px;
+	width: 360px;
+	height: 240px;
+	/* background: url(../images/shouyinjibg.png?v=2015_06_26_17_08_49) no-repeat center top; */
+}
+.radio_wrap .app_down a{width: 169px;height: 58px;display: block;text-indent: -999px;}
+.radio_wrap .app_down a.iphone_btn{
+	margin-top: 40px;
+	margin-bottom: 10px;
+	background: url(http://download.kugou.com/static/images/btn_code.png) no-repeat;
+	background-position: 0 0;
+}
+.radio_wrap .app_down a.iphone_btn:hover{
+	/* background: url(../images/button_all.png) no-repeat -171px 0; */
+}
+.radio_wrap .app_down a.android_btn{
+	background: url(http://download.kugou.com/static/images/btn_code.png) no-repeat;
+	background-position: 0 -58px;
+}
+.radio_wrap .app_down a.android_btn:hover{
+	/* background: url(../images/button_all.png) no-repeat -510px 0; */
+}
+.radio_wrap .app_down .down_btn{
+	position: absolute;
+	/* margin-top: 43px;
+	   margin-left: 227px; */
+}
+.radio_wrap .down_code {
+	position: absolute;
+	margin-top: 43px;
+    margin-left: 227px;
+    width: 115px;
+    height: 115px;
+    /* background: url(http://download.kugou.com/static/images/fm_code.jpg) no-repeat; */
+}
+.radio_wrap .down_code span{color:#000;font-size: 12px;display:block;margin-bottom: 10px;font-weight: bold;}
+.radio_wrap .radio_intro_list{width: 960px;height:230px;margin: 0 auto;}
+.radio_wrap .radio_intro{width: 450px;float:left;margin:auto auto 30px 20px;}
+.radio_wrap .radio_intro .radio_intro_pic{width: 80px;height: 80px;display: block;position: relative;overflow: hidden;margin-right: 20px}
+.radio_wrap .radio_intro_list .intro_pic_1 i{top:0;left:-81px;}
+.radio_wrap .radio_intro_list .intro_pic_2 i{top:0;left:-162px;}
+.radio_wrap .radio_intro_list .intro_pic_3 i{top:0;left:-243px;}
+.radio_wrap .radio_intro_list .intro_pic_4 i{top:0;left:-324px;}
+.radio_wrap .radio_intro h3{font-size: 18px;color:#484848;font-weight: normal;}
+.radio_wrap .radio_intro p{width: 310px;text-align: left;color:#828282;font-size: 12px;display: inline-block;}
+
+/*
+@酷小狗样式
+@create_time:2014_01_09_11_01_10 
+@createer:wrg;
+*/
+.dog_wrap_bg{width: 100%;background:url(../images/dog_wrap_bg.jpg?v=2014_02_24_06_08_49) no-repeat center top;}
+.dog_wrap{width: 960px;background:url(../images/dog_bg.jpg?v=2014_02_24_06_08_49) no-repeat center top; font-family:"微软雅黑";overflow: hidden;position: relative;margin: 0 auto;}
+.dog_wrap a{text-decoration: none}
+.dog_wrap .dog_info{width: 960px;height:457px;margin: 42px auto 0px auto;}
+.dog_wrap .dog_info .dog_pic_scroll{width: 148px;height: 250px;position: absolute;left:147px;top:41px;overflow: hidden;}
+.dog_wrap .all_bg_layer{display:block;width: 980px;height: 121px;background: url(../images/dog_all_bg.png?v=2014_02_24_06_08_49?v=2014_02_24_06_08_49) no-repeat center top;position: absolute;_background:none;
+ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://download.kugou.com/static/images/dog_all_bg.png?v=2014_02_24_06_08_49', sizingMethod='crop');}
+.dog_wrap .dog_info h2{font-size: 30px;width: 220px;margin-bottom: 20px;}
+.dog_wrap .dog_info .app_info{width: 166px;height: 70px;float: left;margin-top:20px;}
+.dog_wrap .dog_info .app_info span{width: 166px;height: 20px;font-size: 12px;color:#a7a7a7;display: block;}
+.dog_wrap .dog_info .dog_pic_index{height: 20px;position: absolute;top:347px;left:180px;}
+.dog_wrap .dog_info .dog_pic_index li{float: left;width: 9px;height: 9px;margin-left: 6px;background: url(../images/button_all.png) no-repeat -685px -10px;cursor:pointer;overflow: hidden;}
+.dog_wrap .dog_info .dog_pic_index li.current{background-position: -685px 0px;}
+.dog_wrap .app_down{margin-left: 480px;margin-top: 20px;width: 385px;height: 240px;}
+.dog_wrap .app_down a{width: 169px;height: 54px;display: block;text-indent: -999px;}
+.dog_wrap .app_down a.iphone_btn{background: url(../images/button_all.png) no-repeat -1px 0;margin-bottom: 15px;}
+.dog_wrap .app_down a.iphone_btn:hover{background: url(../images/button_all.png) no-repeat -171px 0;}
+.dog_wrap .app_down a.android_btn{background: url(../images/button_all.png) no-repeat -341px 0;}
+.dog_wrap .app_down a.android_btn:hover{background: url(../images/button_all.png) no-repeat -510px 0;}
+.dog_wrap .down_code{width: 110px;position: absolute;right: 0px;margin-top: -26px;}
+.dog_wrap .down_code em{font-size: 12px;color:#000;margin: 0px 6px 9px 0;font-style: normal;display:block;font-weight: bold;}
+.dog_wrap .down_code span{color:#83858d;font-size: 14px;display:block;}
+.dog_wrap .dog_intro_list{width: 960px;height:230px;margin: 0 auto;}
+.dog_wrap .dog_intro{width: 450px;float:left;margin:auto auto 30px 20px;}
+.dog_wrap .dog_intro .dog_intro_pic{width: 80px;height: 81px;display: block;position: relative;overflow: hidden;margin-right: 20px}
+.dog_wrap .dog_intro_list .intro_pic_4 i{top:0;left:-648px;}
+.dog_wrap .dog_intro_list .intro_pic_3 i{top:0;left:-731px;}
+.dog_wrap .dog_intro_list .intro_pic_2 i{top:0;left:-814px;}
+.dog_wrap .dog_intro_list .intro_pic_1 i{top:0;left:-897px;}
+.dog_wrap .dog_intro h3{font-size: 18px;color:#484848;font-weight: normal;margin-top: 12px;}
+.dog_wrap .dog_intro p{width: 310px;text-align: left;color:#828282;font-size: 12px;display: inline-block;}
+
+/*
+@说吧样式
+@create_time:2014_01_09_03_42_48 
+@createer:wrg;
+*/
+.shuoba_wrap_bg{width: 100%;background:url(../images/shuoba_wrap_bg.jpg?v=2014_02_24_06_08_49) no-repeat center top;}
+.shuoba_wrap{width: 960px;margin:0 auto;background:url(../images/shuoba_bg.jpg?v=2014_02_24_06_08_49) no-repeat center top; font-family:"微软雅黑";overflow: hidden;}
+.shuoba_wrap a{text-decoration: none}
+.shuoba_wrap .shuoba_info{width: 960px;height:457px;margin: 42px auto 0px auto;position: relative;overflow: hidden;}
+.shuoba_wrap .shuoba_info .shuoba_pic_scroll{width: 147px;height: 219px;position: absolute;left:152px;top:27px;overflow: hidden;}
+.shuoba_wrap .all_bg_layer{display:block;width: 800px;height: 83px;background: url(../images/shuoba_all_bg.png?v=2014_02_24_06_08_49?v=2014_02_24_06_08_49) no-repeat center top;position: absolute;_background:none;
+ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://download.kugou.com/static/images/shuoba_all_bg.png?v=2014_02_24_06_08_49', sizingMethod='crop');}
+.shuoba_wrap .shuoba_info h2{font-size: 30px;width: 100px;margin-bottom: 20px;}
+.shuoba_wrap .shuoba_info .shuoba_pic_index{height: 20px;position: absolute;top:323px;left:180px;}
+.shuoba_wrap .shuoba_info .shuoba_pic_index li{float: left;width: 9px;height: 9px;margin-left: 6px;background: url(../images/button_all.png) no-repeat -685px -10px;cursor:pointer;overflow: hidden;}
+.shuoba_wrap .shuoba_info .shuoba_pic_index li.current{background-position: -685px 0px;}
+.shuoba_wrap .app_down{margin-left: 480px;margin-top: 20px;width: 385px;height: 240px;}
+.shuoba_wrap .app_down a{width: 169px;height: 54px;display: block;text-indent: -999px;}
+.shuoba_wrap .app_down a.iphone_btn{background: url(../images/button_all.png) no-repeat -1px 0;margin-bottom: 15px;}
+.shuoba_wrap .app_down a.iphone_btn:hover{background: url(../images/button_all.png) no-repeat -171px 0;}
+.shuoba_wrap .app_down a.android_btn{background: url(../images/button_all.png) no-repeat -341px 0;}
+.shuoba_wrap .app_down a.android_btn:hover{background: url(../images/button_all.png) no-repeat -510px 0;}
+.shuoba_wrap .down_code{width: 110px;margin-top:26px;overflow: hidden;position: absolute;right: 0px;}
+.shuoba_wrap .down_code span{display: block;float: left;color:#000;font-size: 12px;margin: 0px 6px 9px 0;font-weight:bold;}
+.shuoba_wrap .shuoba_intro_list{width: 960px;height:130px;margin: 0 auto;}
+.shuoba_wrap .shuoba_intro{width: 450px;float:left;margin:auto auto 30px 20px;}
+.shuoba_wrap .shuoba_intro .shuoba_intro_pic{width: 80px;height: 81px;display: block;position: relative;overflow: hidden;margin-right: 20px}
+.shuoba_wrap .shuoba_intro_list .intro_pic_1 i{top:0;left:-589px;}
+.shuoba_wrap .shuoba_intro_list .intro_pic_2 i{top:0;left:-680px;}
+.shuoba_wrap .shuoba_intro h3{font-size: 18px;color:#484848;font-weight: normal;}
+.shuoba_wrap .shuoba_intro p{width: 310px;text-align: left;color:#828282;font-size: 12px;display: inline-block;}
+
+/*
+@酷狗铃音样式
+@create_time:2014_01_09_04_21_33 
+@createer:wrg;
+*/
+.mbring_wrap_bg{width: 100%;background:url(../images/mobilering_wrap_bg.jpg?v=2014_02_24_06_08_49) no-repeat center top;margin:40px auto 0;}
+.mbring_wrap{width: 960px;margin:0 auto;background:url(../images/mobilering_bg.jpg?v=2014_02_24_06_08_49) no-repeat center top; font-family:"微软雅黑";overflow: hidden;margin-top: 3px;}
+.mbring_wrap .mbring_info{width: 960px;height:457px;margin: 42px auto 0px auto;position: relative;overflow: hidden;}
+.mbring_wrap .mbring_info .ring_pic_scroll{width: 148px;height: 251px;position: absolute;left:147px;top:41px;overflow: hidden;}
+.mbring_wrap .all_bg_layer{display:block;width: 800px;height: 200px;background: url(../images/mobilering_all_bg.png?v=2014_02_24_06_08_49?v=2014_02_24_06_08_49) no-repeat center top;position: absolute;_background:none;
+ _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://download.kugou.com/static/images/mobilering_all_bg.png?v=2014_02_24_06_08_49', sizingMethod='crop');}
+.mbring_wrap .mbring_info h2{font-size: 30px;width: 130px;margin-bottom: 20px;}
+.mbring_wrap .mbring_info .app_info{width: 166px;height: 70px;float: left;margin-top:20px;}
+.mbring_wrap .mbring_info .app_info span{width: 166px;height: 20px;font-size: 12px;color:#a7a7a7;display: block;}
+.mbring_wrap .mbring_info .ring_pic_index{height: 20px;position: absolute;top:345px;left:180px;}
+.mbring_wrap .mbring_info .ring_pic_index li{float: left;width: 9px;height: 9px;margin-left: 6px;background: url(../images/button_all.png) no-repeat -685px -10px;cursor:pointer;overflow:hidden;}
+.mbring_wrap .mbring_info .ring_pic_index li.current{background-position: -685px 0px;}
+.mbring_wrap .app_down{margin-left: 480px;margin-top: 20px;width: 385px;height: 240px;}
+.mbring_wrap .app_down a{width: 169px;height: 54px;display: block;text-indent: -999px;}
+.mbring_wrap .app_down a.android_btn{background: url(../images/button_all.png) no-repeat -341px 0;}
+.mbring_wrap .app_down a.android_btn:hover{background: url(../images/button_all.png) no-repeat -510px 0;}
+.mbring_wrap .app_down{margin-left: 480px;margin-top: 40px;width: 200px;}
+.mbring_wrap .app_down a{display:block;width: 162px;height: 54px;overflow: hidden;position: relative;float: left;text-decoration: none;}
+.mbring_wrap .app_down a i{left: 0px;top:0px;}
+.mbring_wrap .app_down a span{width:162px;height:54px;line-height:54px;display:block;font-size:17px;color:#fff;text-align:center;left: 0px;top:0px;position: absolute;}
+.mbring_wrap .down_code{width: 110px;margin-top:26px;overflow: hidden;position: absolute;right: 0px;}
+.mbring_wrap .down_code em{font-size: 12px;color:#000;font-style: normal;display:block;margin: 0px 6px 9px 0;font-weight: bold;}
+.mbring_wrap .mbring_intro_list{width: 960px;height:230px;margin: 0 auto;}
+.mbring_wrap .mbring_intro{width: 450px;float:left;margin:auto auto 30px 20px;}
+.mbring_wrap .mbring_intro .mbring_intro_pic{width: 80px;height: 81px;display: block;position: relative;overflow: hidden;margin-right: 20px}
+.mbring_wrap .mbring_intro_list .intro_pic_1 i{top:0;left:-408px;}
+.mbring_wrap .mbring_intro_list .intro_pic_2 i{top:0;left:-490px;}
+.mbring_wrap .mbring_intro_list .intro_pic_3 i{top:0;left:-572px;}
+.mbring_wrap .mbring_intro_list .intro_pic_4 i{top:0;left:-654px;}
+.mbring_wrap .mbring_intro h3{margin-top:12px;font-size: 18px;color:#484848;font-weight: normal;}
+.mbring_wrap .mbring_intro p{width: 310px;text-align: left;color:#828282;font-size: 12px;display: inline-block;}
+
+.rfet{ padding-top:15px;}
+.rfet strong{ font-size:14px; color:#323232; padding:0 0 0 20px}
+.rfet ul{ padding-top:15px;}
+.rfet li strong{ font-size:14px; color:#353535; font-weight:bold; display:block; padding:0 0 8px 0}
+.rfet li{ background:url(../images/radio.jpg) no-repeat; color:#868686; letter-spacing:1px; line-height:20px}
+.rfet .l1{background-position:25px 0; padding:10px 120px 0 395px; height:263px; margin-bottom:60px;}
+.rfet .l2{background-position:450px -284px; height:220px; padding:40px 520px 0 45px; margin-bottom:70px;}
+.rfet .l3{background-position:25px -547px; height:300px; padding:20px 80px 0 430px;}
+/* radio end */
+
+/* 新增投票部分 */
+.vote_version{display:none;width: 958px;background: #fcfcfc;border: 1px solid #eaeaea;margin: 20px auto 0 auto;padding: 28px 0px;}
+.vote_version .tuijian_product_download{position: absolute;top:8px;right: 0px;}
+.vote_version .vote_part{width: 610px;overflow: hidden;}
+.vote_version .vote_part label input{line-height: 20px;margin-right: 5px;}
+.vote_version .vote_part h3{font-size: 17px;color:#7f7f7f;margin-left: 30px;font-weight: normal;margin-bottom: 12px;}
+.vote_version .vote_part label{width: 170px;_width: 160px;height:20px;line-height:20px;overflow: hidden;margin:10px 0px 10px 30px;font-size: 13px;display: block;float:left;color:#666666;}
+.vote_version .vote_part .submit_info{height: 44px;line-height: 44px;}
+.vote_version .vote_part .submit_btn{width: 146px;height: 44px;line-height: 44px;vertical-align:middle;display: inline-block;background: url(../images/vote_sprite.jpg) no-repeat center top;}
+.vote_version .vote_part .submit_btn:hover{background-position:center -44px;}
+.vote_version .vote_part .vote_sum{font-size:14px;color:#5eb434;height:44px;line-height: 44px;vertical-align:middle;margin-left: 18px;}
+.vote_version .vote_part .sublimt_info{width: 500px;height: 44px;line-height: 44px;vertical-align:middle;overflow: hidden;}
+.vote_version .version_part{width: 315px;padding-left: 30px;border-left:1px solid #d6d6d6;}
+.vote_version .version_part h3{font-size: 17px;color:#7f7f7f;font-weight: normal;margin-bottom: 12px;}
+.vote_version .version_part .old_version{width: 275px;height: 50px;position: relative;margin: 16px 0px;color:#909090;}
+.vote_version .version_part .old_version h4{font-size: 15px;color:#4c4c4c;font-weight: normal;}
+.vote_version .version_part .first_version{border-bottom:1px dashed #bdbdbd;}
+
+
+/*郭升泽 增加*/
+.android_feature_right{margin: 0 0 45px 500px;}
+.iphone_head_focus{ position:absolute; overflow:hidden; width:138px; height:243px; top:59px; left:164px;}
+.iphone_head{background:url(../images/iPhone_header_bg_2_two.jpg) no-repeat 0 0;}
+.android_feature{width: 450px;}
+.android_feature_left{margin-left: 0px;}
+.android_feature h3{font-size: 16px;}
+.android_feature .feature_title_bg{display: block;height: 22px; float: left;margin-right: 5px;}
+.android_feature .partner_title_bg{width: 110px;background-position: -366px -161px;}
+.android_feature .music_title_bg{width: 102px;background-position: -486px -163px;}
+.android_feature .lib_title_bg{width: 102px;background-position: -371px -200px;}
+.android_feature .interface_title_bg{width: 102px;background-position: -483px -202px;}
+ 
+.android_content .android_feature_partner{background-position: -2px -61px;}
+.android_content .android_feature_music{background-position: -75px -60px;}
+.android_content .android_feature_lib{background-position: -148px -59px;}
+.android_content .android_feature_interface{background-position: -222px -60px;}
+
+/*STORY #13916 更新官网产品中心手机端图片和文案*/
+.android_feature  { width: 460px;}
+.android_feature span.and_ios_mtr { background:url(../images/android_ios_new.png) no-repeat; margin-right: 30px;}
+.android_feature .android_ios_fr{ float: left; width: 358px;}
+.android_feature h3 { width: 100%;overflow: hidden; white-space: nowrap;text-overflow: ellipsis; color: #333; margin-bottom: 6px;}
+.android_feature h3 i { font-style: normal; margin-right: 15px;}
+.android_feature .android_ios_fr p { color: #999;font-size: 13px}
+.android_feature span.android_ios_listen{ background-position: -71px 0px;}
+.android_feature span.android_ios_chat{ background-position: -142px 0px;}
+.android_feature span.android_ios_newlook{ background-position: -213px 0px;}
+.android_feature span.android_ios_tv{ background-position: 0px -71px;}
+.android_feature span.android_ios_sound{ background-position: -71px -71px;}
+.android_ios_version_con {color:#73a0ea ;}
+.android_ios_listen_con {color:#8f6bca ;}
+.android_ios_chat_con {color:#e59d4c ;}
+.android_ios_newlook_con {color:#44c375 ;}
+.fandroid_ios_tv_con {color:#07c0da ;}
+.android_ios_sound_con {color: #c97872;}

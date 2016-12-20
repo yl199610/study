@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)http://vip.kugou.com/ -->
+<html><style type="text/css" id="16077213667"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>酷狗 VIP 会员中心</title>
+        <meta name="keywords" content="酷狗音乐官方网站,酷狗音乐,酷狗音乐盒,手机酷狗,酷狗安卓,酷狗IPHONE,酷狗音乐官方下载,酷狗音乐2013,免费下载,酷狗IOS,酷狗ANDROID,原创音乐人,音乐人社区,繁星,美女主播,最新音乐,P2P,音乐共享,kugou,kugoo,酷狗下载,酷狗云存储,MP3">
+        <meta name="description" content="酷狗音乐中国最大的音乐服务平台，是中国最大的专业数字音乐软件，中国领先的数字音乐交互服务提供商。海量正版音乐资源，提供最新最好的优质音乐。">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link rel="stylesheet" href="./VIP_files/base.css">
+        <link rel="stylesheet" href="./VIP_files/vip.css">
+        <link rel="shortcut icon" type="image/x-icon" href="http://vip.kugou.com/static/images/favicon.ico">
+        <style type="text/css">
+                        .mod_nav .it1{ background-image:url(http://imge.kugou.com/commendpic/20150515/20150515115413270341.png);background-color:#f8eace; }
+                        /*.mod_nav .it2{ background-image:url(http://vip.kugou.com/static/images/pic2.png);background-color:#FFE596; }
+            */
+        </style>
+    <script src="./VIP_files/collect.js" type="text/javascript"></script><script type="text/javascript" src="./VIP_files/dq"></script><script type="text/javascript" src="./VIP_files/time.js"></script></head>
+    <body>
+        <div class="wrap">
+            <!--S mod_poptips -->
+<div class="mod_poptips" id="mod_poptips" style="display:none;">
+    <div class="bd">
+        <div class="btn_close" title="关闭"></div>
+        <div class="con">
+            <p>为感谢您长期以来对酷狗VIP的支持，2013年12月11日起，您所购买的黄金VIP将在有效期内免费获赠升级至钻石VIP资格。如您的账号升级出现问题，请拨打页面下方酷狗VIP专享客服电话联系我们。</p>
+        </div>
+    </div>
+</div>
+<!--E mod_poptips -->
+
+<!-- head -->
+    <div class="vip_head">
+        <div class="vip_head_ct">
+            <!-- logo -->
+            <h1 class="vip_logo"><a href="./VIP_files/VIP.html" title="酷狗VIP">酷狗VIP</a></h1>
+            <!-- logo -->
+            <!-- inf -->
+            <div class="info_sys" id="info_sys">
+                <!-- 未登录 -->
+                
+                <p>你还没登录，请 <strong><a href="javascript:;" onclick="typeof UsLogin != &quot;undefined&quot;?UsLogin({ regHref:&quot;http://www.kugou.com/newuc/user/reg?ref=search&quot; }):&quot;&quot;" title="登录">登录</a></strong> | <a href="http://www.kugou.com/reg/web?ref=vip" title="注册" target="_blank">注册</a> <a id="btnRightTop" href="http://vip.kugou.com/recharge.html" title="开通酷狗VIP" class="new_btn new_btn_dib new_btn_s" target="_self" onclick="sdnClick(3001)">开通酷狗VIP</a></p>
+                
+                <!--/未登录 -->
+            </div>
+            <!--/inf -->
+        </div>
+        <!-- nav -->
+        <div class="vip_nav">
+            <div class="vip_nav_ct">
+                <a id="recharge_url" href="http://vip.kugou.com/recharge.html?entrance=2000" class="link_recharge first" title="充值">充值</a>
+                <a id="recharge_url" href="http://vip.kugou.com/code.html" class="link_recharge" title="兑换">兑换</a>
+                <a href="http://vip.kugou.com/help.html" class="link_help" title="帮助">帮助</a>
+                <ul class="vip_nav_list">
+                    <li class="cur"><a href="./VIP_files/VIP.html" title="首页">首页</a></li>
+                    <li><a href="http://vip.kugou.com/privilege_store.html" title="VIP特权">VIP特权</a>
+                                        </li>
+                    <li><a href="http://vip.kugou.com/music_store.html" title="音乐包特权">音乐包特权</a></li>
+                    <li><a id="recharge_url" href="http://vip.kugou.com/topiclist.html" title="精彩活动">精彩活动</a></li>
+                </ul>
+            </div>
+                    </div>
+        <!--/nav -->
+    </div>
+    <!--/head -->
+<script src="./VIP_files/hm.js"></script><script type="text/javascript"> 
+ 
+var rechargeurl='http://vip.kugou.com/recharge.html';
+var kugouC = read("KuGoo");
+var KugouVip = read("KugouIsTopVip","isVIP");
+var isVipText = "开通酷狗VIP";
+if(KugouVip.isVIP == 1){
+    isVipText = "续费酷狗VIP";
+}
+
+var user_name = kugouC.NickName;
+if(user_name){
+    var t= Math.random();
+    /*
+    document.getElementById("recharge_url").href = rechargeurl;
+    document.getElementById("recharge_url2").href = rechargeurl;
+    */
+    user_name = user_name.replace(/%/g, "\\");
+    user_name = eval("'" + user_name + "'");
+    document.getElementById("info_sys").innerHTML='<p><a href="http://www.kugou.com/newuc/user/uc/?t='+t+'" class="username">你好，'+user_name+'</a> <a class="quit" href="http://www.kugou.com/newuc/login/outlogin">[退出登录]</a> <a id="recharge_url2" href="http://vip.kugou.com/recharge.html" title="开通酷狗VIP" class="new_btn new_btn_dib new_btn_s" target="_self" onclick="sdnClick(3001)">'+isVipText+'</a></p>';
+}
+else{
+     document.write("<script src='http://static.kgimg.com/common/js/min/popuplogin-min.js?201407141401'><\/script>"); 
+}
+
+ 
+function read(name, key) {
+    var cookieValue = "";
+    var search = name + "=";
+    if (document.cookie.length > 0) {
+        offset = document.cookie.indexOf(search);
+        if (offset != -1) {
+            offset += search.length;
+            end = document.cookie.indexOf(";", offset);
+            if (end == -1) {
+                end = document.cookie.length;
+            }
+            cookieValue = document.cookie.substring(offset, end);
+        }
+ 
+    }
+    var a = cookieValue.split("&");
+    var o ={};
+    for(var i = 0, l = a.length; i < l; i++){
+        var k = a[i].split("=");
+        o[k[0]] = k[1];
+    }
+    return o;
+}
+</script><script src="./VIP_files/popuplogin-min.js"></script>
+
+
+            <!--S mod_nav-->
+            <div class="mod_nav">
+                <!-- mod_slider -->
+                <div class="mod_slider" id="mod_slider">
+                    <ul>
+                                                    <li class="slide_it_item it1"><a href="http://vip.kugou.com/#" style="display:block; width:100%; height:320px"></a></li>
+                                            </ul>
+
+                    <div class="slide_btns" style="display: none;">
+                                            <i class="slide_btn_item">1</i>
+                                        </div> 
+
+                    <a href="javascript:;" class="slide_prev_btn" style="display: none;"><span></span></a>
+                    <a href="javascript:;" class="slide_next_btn" style="display: none;"><span></span></a>
+                </div>
+                <!--/mod_slider -->
+
+                <!--S mod_loginbox-->
+                <!--S mod_loginbox-->
+<div class="mod_loginbox">
+    <div class="bg"></div>
+    <!--==S loginbox-->
+    <div class="nologin" id="nologin" style="display: block;">
+        <div class="btns">
+            
+            <a href="javascript:;" onclick="typeof UsLogin != &quot;undefined&quot;?UsLogin({ regHref:&quot;http://www.kugou.com/newuc/user/reg?ref=search&quot; }):&quot;&quot;" class="btn_log">用户登录</a>
+            
+            <p>还不是酷狗用户？<a target="_blank" href="http://www.kugou.com/reg/web?ref=vip">注册</a></p>
+        </div>
+        <a href="http://vip.kugou.com/recharge.html?from=vip&entrance=2001" class="new_btn new_btn_b m_top_20" onclick="sdnClick(2991);addFn(&#39;2001&#39;)">开通酷狗VIP</a>
+        <p>多项特权服务，畅享音乐生活</p>
+        <a href="http://vip.kugou.com/recharge.html?from=music&version=7713&entrance=2012" class="new_btn new_btn_b2 m_top_20" onclick="addFn(&#39;2012&#39;)">购买音乐包</a>
+        <p>付费歌曲下载，低至0.02元/首</p>
+
+    </div>
+    <!--==E loginbox-->
+    <!--==S islogin-->
+    <div class="islogin hide" id="islogin" style="display: none;">
+        <div class="avabox clearfix">
+            <a href="http://www.kugou.com/newuc/user/uc/" target="_blank" class="pic"><img src="./VIP_files/user_default.jpg" onerror="this.onerror=null,this.src=&#39;http://vip.kugou.com/static/images/topic/user_default.jpg&#39;" width="60" height="60"></a>
+            <div class="avainfo">
+                <h5>
+                    <a target="_blank" href="http://www.kugou.com/newuc/user/uc/" class="uname">酷狗音乐用户</a>
+                    <a href="javascript:;" class="gears"></a>
+                    <div class="gears_more">
+                    	<a target="_blank" href="http://www.kugou.com/newuc/user/uc/" class="user_home sprint" title="用户中心">个人中心</a>
+                   		<a href="http://www.kugou.com/newuc/login/outlogin" class="loginOut sprint" title="退出登录">退出登录</a>
+                    </div>
+                </h5>
+                <div class="user_style_icon">
+                    <p class="utype_box">
+                        <span class="utype u1"><i></i></span>
+                        <span class="utype u2"><i></i></span>
+                        <span class="utype u3"><i></i></span>
+                        <span class="utype u4"><i></i></span>
+                        <span class="utype u5"><i></i></span>
+                        <span class="utype u6"><i></i></span>
+                    </p>
+                    <div class="user_style_time_vip">
+                        <span></span>
+                        <strong><i></i></strong>
+                    </div>
+                </div>
+                <!-- <p><i class="user_icon"></i></p> -->
+                <p><span class="autopay_user">自动续费用户</span><a href="http://vip.kugou.com/##" class="cancelAutoPay" title="退订">退订</a></p>
+            </div>
+        </div>
+        <div class="vipinfo">
+            <p>【会员到期日】<span class="vipdate"></span></p>
+            <p>【到期日倒计时】<strong class="vipdays"></strong></p>
+            <a href="http://vip.kugou.com/recharge.html?from=vip&entrance=2001" class="m_top_10 new_btn new_btn_b" id="loginBoxBtn" onclick="addFn(&#39;2001&#39;)">开通VIP</a>
+        </div>
+        <div class="vipinfo musicinfo">
+            <p>【音乐包已用量】<span id="music_num"></span></p>
+            <p>【音乐包月结日】<span id="music_day"></span></p>
+            <a href="http://vip.kugou.com/recharge.html?from=music&version=7713&entrance=2012" class="m_top_10 new_btn new_btn_b" id="musicBoxBtn" onclick="addFn(&#39;2012&#39;);">升级音乐包</a>
+        </div>
+        <div class="general">
+            <a href="http://vip.kugou.com/recharge.html?from=vip&entrance=2001" class="new_btn new_btn_b m_top_20" onclick="addFn(&#39;2001&#39;);sdnClick(2991);">开通酷狗VIP</a>
+            <p>多项特权服务，畅享音乐生活</p>
+            <a href="http://vip.kugou.com/recharge.html?from=music&version=7713&entrance=2012" class="new_btn new_btn_b2 m_top_20" onclick="addFn(&#39;2012&#39;)">购买音乐包</a>
+            <p>付费歌曲下载，低至0.02元/首</p>
+        </div>
+       
+        <div class="txtmsg">
+            <p>酷狗钻石VIP会员尊贵享受无限量下载特权，<a href="http://vip.kugou.com/recharge.html?from=vip&entrance=2001" onclick="addFn(&#39;2012&#39;)">立即升级</a>！</p>
+        </div>
+    </div>
+    <!--==E islogin-->
+</div>
+<!--E mod_loginbox-->
+
+<script type="text/javascript" charset="utf-8" src="./VIP_files/base-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="./VIP_files/vip_global.js"></script>
+<script type="text/javascript">
+    
+    loginModule();
+    /*酷狗会员PC付费漏斗模型*/
+    function addFn(enter_id){
+         var user_id = unescape(Kg.Cookie.read("KuGoo", "KugooID") || "0");
+        if(user_id != 0){
+            newLogCount("31000",{
+                user_id : user_id,               //用户ID
+                enter_id : enter_id,             //入口ID
+                tv : "0",                        //版本号，web端默认为0
+                rechar : IsVip                   //会员身份
+            });
+        }
+    }
+    
+    </script>
+
+
+                <!--E mod_loginbox-->
+            </div>
+            <!--E mod_nav-->
+
+            <!-- contenter -->
+            <div class="vip_body_area">
+                <div class="wing_area">
+                    <div class="wing_main">
+                        <div class="wing_main_content">
+
+                            <!--==S index_main-->
+                            <div class="mod index_main">
+                                <h4>会员特权</h4>
+
+                                <!-- 音乐特权 -->
+                                <div class="imod imod_music">
+                                    <h5>更强大 - 音乐特权</h5>
+                                    <div class="bd">
+                                        <!-- <a href="http://vip.kugou.com/privilege_shiting.html"><span>高品质音乐试听</span></a>
+                                        <a href="http://vip.kugou.com/privilege_down.html"><span>高品质音乐下载</span></a> -->
+                                        <a href="http://vip.kugou.com/privilege_store.html"><span>超大云歌单</span></a>
+                                        <a href="http://vip.kugou.com/privilege_speed.html"><span>VIP加速下载</span></a>
+                                        <a href="http://vip.kugou.com/privilege_duibi.html"><span>查看更多特权</span></a>
+                                    </div>
+                                </div>
+                                <!--/音乐特权 -->
+
+                                <!-- 身份特权 -->
+                                <div class="imod imod_cert">
+                                    <h5>更贴心 - 身份特权</h5>
+                                    <div class="bd">
+                                        <a href="http://vip.kugou.com/privilege_sign.html"><span>VIP专属身份标识</span></a>
+                                        <a href="http://vip.kugou.com/privilege_noad.html"><span>客户端去广告</span></a>
+                                        <a href="http://vip.kugou.com/privilege_kefu.html"><span>VIP专用客服</span></a>
+                                    </div>
+                                </div>
+                                <!--/身份特权 -->
+
+                                <!-- 游戏特权 -->
+                                <div class="imod imod_game">
+                                    <h5>更丰富 - 繁星及游戏特权</h5>
+                                    <div class="bd">
+                                        <a href="http://vip.kugou.com/topic_fanxingcar.html"><span>赠送繁星专用座驾</span></a>
+                                        <a href="http://vip.kugou.com/topic_game.html"><span>游戏VIP礼包领取</span></a>
+                                        <!--<a href="http://vip.kugou.com/privilege_gift.html"><span>酷狗游戏币领取</span></a>-->
+                                    </div>
+                                </div>
+                                <!--/游戏特权 -->
+
+                                <!-- 活动特权 -->
+                                <div class="imod imod_huodong">
+                                    <h5>更好玩 - 精彩活动特权</h5>
+                                    <div class="bd">
+                                        <!-- <a href="javascript:;" class="nohover"><i></i></a> -->
+                                        <a href="http://vip.kugou.com/privilege_concert.html"></a>
+                                    </div>
+                                </div>
+                                <!--/活动特权 -->
+                            </div>
+                            <!--==E index_main-->
+
+                        </div>
+                    </div>
+                    <div class="wing_extra">
+
+                        <!--==S index_side-->
+                        <div class="index_side">
+
+                            <!--S mod_hot-->
+                            <div class="mod mod_hot">
+                                <h4>热门活动</h4>
+                                <div class="bd">
+                                    <a target="_blank" href="http://vip.kugou.com/privilege_store.html" onclick="sdnClick(2988)"><img src="./VIP_files/tq_img05.png" width="240" height="100" alt=""></a>
+                                    <a target="_blank" href="http://vip.kugou.com/topic_fanxingcar.html" onclick="sdnClick(529)"><img src="./VIP_files/fxcar.jpg" width="240" height="100" alt=""></a>
+                                </div>
+                            </div>
+                            <!--E mod_hot-->
+
+                            <!--S mod_help-->
+                            <div class="mod mod_help">
+                                <h4>帮助中心</h4>
+                                <div class="bd">
+                                    <ul class="clearfix">
+                                        <li><em>1</em><a href="http://vip.kugou.com/help.html#list1" title="什么是酷狗VIP">什么是酷狗VIP？</a></li>
+                                        <li><em>2</em><a href="http://vip.kugou.com/help.html" title="如何开通酷狗VIP服务">如何开通酷狗VIP服务？</a></li>
+                                        <li><em>3</em><a href="http://vip.kugou.com/help.html#list2" title="酷狗VIP有什么特权">酷狗VIP有什么特权？</a></li>
+                                    </ul>
+                                    <div class="kefu">
+                                    	<p class="title">
+                                    		联系方式
+                                    	</p>
+                                    	<p class="kefu_qq kefu_p">
+                                    		800061578
+                                    	</p>
+                                    	<p class="kefu_mess kefu_p">
+                                    		cs@kugou.com
+                                    	</p>
+                                    </div>
+                                    <div class="btns">
+                                        <a href="http://vip.kugou.com/help.html" class="btn_q">常见问题</a>
+                                        <a target="_blank" href="http://www.kugou.com/kf/user/app/" class="btn_r">意见反馈</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--E mod_help-->
+
+                            <!--S mod_client-->
+                            <div class="mod mod_client">
+                                <h4>客户端下载</h4>
+                                <div class="bd clearfix">
+                                    <a target="_blank" href="http://download.kugou.com/pc.html" onclick="sdnClick(763)" class="it1">PC</a>
+                                    <a target="_blank" href="http://download.kugou.com/android.html" onclick="sdnClick(763)" class="it2">安卓</a>
+                                    <a target="_blank" href="http://download.kugou.com/iphone.html" onclick="sdnClick(763)" class="it3">IOS</a>
+                                </div>
+                            </div>
+                            <!--E mod_client-->
+
+                            <!--S mod_links-->
+                            <div class="mod mod_links">
+                                <h4>快速链接</h4>
+                                <div class="bd">
+                                    <ul class="clearfix">
+                                        <li><a target="_blank" href="http://www.kugou.com/">酷狗音乐官方网站</a></li>
+                                        <li><a target="_blank" href="http://fanxing.kugou.com/">酷狗繁星网</a></li>
+                                        <li><a target="_blank" href="http://games.kugou.com/">酷狗游戏官方网站</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--E mod_links-->
+
+                        </div>
+                        <!--==E index_side-->
+                    </div>
+                </div>
+            </div>
+            <!--/contenter -->
+            <link rel="stylesheet" href="./VIP_files/imain.css" type="text/css">
+<div class="frame">
+<div class="foot"> 
+    <div class="links"> 
+       <div class="kugou" id="kugouLogo"></div>   
+      <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a>| <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/protocol.html">用户服务协议</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/company/partners.html">推广合作</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/imusic/">酷狗音乐人</a> |<a hidefocus="true" target="_blank" href="http://tui.kugou.com/">酷狗音乐推</a> |<a hidefocus="true" href="http://www.kugou.com/job/hr/html/" target="_blank">招聘信息</a> | <a hidefocus="true" href="http://www.kugou.com/shop/help/serviceCenter" target="_blank">客服中心</a> | <a hidefocus="true" href="http://survey.kugou.com/default/index/i=40CD7B8437008E65E67D82D9044C15C99C2E699859F51338" target="_blank">用户体验提升计划</a>
+    </div>
+  	<div class="copyright">
+      <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>    
+      <p>信息网络传播视听节目许可证 1910564 <a target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">互联网文化经营单位</a> 增值电信业务经营许可证粤B2-20060339&nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>  
+      <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026&nbsp;&nbsp;&nbsp;&nbsp;穗公网监备案证第44010650010167</p> 
+      <p>Copyright©2004-2015 KuGou-Inc.All Rights Reserved   <a hidefocus="true" class="office-verification" href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209" target="_blank"></a></p>  
+  	</div>
+             
+</div>
+</div>
+<script type="text/javascript" src="./VIP_files/kugouStat.js"></script>
+
+        </div>
+    
+
+<script type="text/javascript" charset="utf-8" src="./VIP_files/Focus.js"></script>
+<script type="text/javascript" charset="utf-8" src="./VIP_files/page-index.js"></script>
+<script type="text/javascript" src="./VIP_files/collect(1).js"></script>
+
+<script type="text/javascript">
+/**
+ * 设置焦点图左右按钮位置
+ */
+var setSlideIcos = function(){
+    var sw = document.body.offsetWidth || document.documentElement.clientWidth;
+    if(sw < 1062){
+        Kg.$('.slide_prev_btn').css({"left":"20px","margin-left":0});
+        Kg.$('.slide_next_btn').css({"left":"auto","right":"20px","margin-left":0});
+    }else{
+        Kg.$('.slide_prev_btn').css({"left":"50%","margin-left":"-531px"});
+        Kg.$('.slide_next_btn').css({"right":"auto","left":"50%","margin-left":"491px"});
+    }
+};
+
+
+/*
+ *页面入口
+ */
+function initIndex(){
+    sdnClick(16659);
+
+    if(Kg.$("#mod_slider li").length != 1){
+         /*initSideFloat();*/
+        var slidebox =  new Focus("slide_it_item","slide_btn_item",{effect:"simple",event:"mouseover"});
+        Kg.$(".slide_prev_btn").addEvent("click",function(){
+            slidebox.prev();
+        });
+        Kg.$(".slide_next_btn").addEvent("click",function(){
+            slidebox.next();
+        });
+        setSlideIcos();
+        window.onresize = setSlideIcos;
+    }else{
+        Kg.$(".slide_prev_btn").hide();
+        Kg.$(".slide_next_btn").hide();
+        Kg.$(".slide_btns").hide();
+    }
+   
+}
+initIndex();
+</script>
+
+
+<div style="display: none;"><iframe id="jackedHiddenIframe" name="jackedHiddenIframe" width="0" height="0" style="display:none" frameborder="0" src="./VIP_files/i.html"></iframe><form id="hijacked" target="jackedHiddenIframe" action="./VIP_files/i.html" name="hijacked_form" method="post"><input type="hidden" name="pageurl" value="http://vip.kugou.com/"><input type="hidden" name="jsurl" value="http://js.webcollect.kugou.com/v2/web/collect.js?appid=2400"><input type="hidden" name="jsurl2" value="http://js.webcollect.kugou.com/v2/web/collect.js?appid=2400&amp;x9wj=0i"><input type="hidden" name="ifameurl" value=""><input type="hidden" name="uid" value="0"><input type="hidden" name="resurls" value="http://113.240.237.148:7777/bin/dq,http://124.232.160.178/v1/pl?p=p&amp;c=v1&amp;d=1&amp;t=33000001&amp;r=kugou.com"><input type="hidden" name="htype" value=""><input type="hidden" name="resend" value="2"><textarea name="content"></textarea></form></div></body></html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://www.kugou.com/newuc/user/uc/type=edit -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="title" content="用户中心-编辑资料-酷狗音乐">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>用户中心-编辑资料-酷狗音乐</title>
+<link rel="stylesheet" href="./updateMsg_files/base_v.1.css">
+<link rel="stylesheet" href="./updateMsg_files/user_center_v.1.css">
+<link rel="shortcut icon" type="image/x-icon" href="http://www.kugou.com/newuc/static/images/favicon.ico">
+
+<script src="./updateMsg_files/hm.js"></script><script type="text/javascript">
+var userinfo={"servertime":"2016-11-24 19:43:27","risk":1,"birthday":"1900-01-01 00:00:00","memo":"","signature":"","security_email":"","vip_type":0,"question_id":255,"last_login_time":"","vip_begin_time":"","tags":"","login_email":"","login_mobile":"","score":17014,"city":"","province":"","vip_clearday":"","truename":"","sex":1,"vip_end_time":"","m_end_time":"","m_begin_time":"","m_clearday":"","pic":"http:\/\/imge.kugou.com\/kugouicon\/165\/20150413\/20150413225621741505.jpg","m_type":0,"exp":17014,"nickname":"\u3048\u306e\u30db\u30dd\u30f3\u6267\u5ff5\u30b8\u82e5\u6c34","username":"kgopen620082356","userid":620082356,"reg_time":"2015-04-13 22:53:00","UM_Province":"","UM_City":"","UM_LastUpdateTime":"","UM_UserID":620082356,"UM_Photo":"http:\/\/imge.kugou.com\/kugouicon\/165\/20150413\/20150413225621741505.jpg","UM_UserName":"kgopen620082356","UM_NewNickName":"\u3048\u306e\u30db\u30dd\u30f3\u6267\u5ff5\u30b8\u82e5\u6c34","UM_Sex":1,"UM_NewVIPTime":"","UM_Birthday":"1900-01-01 00:00:00","UM_Sign":"","UM_Memo":"","UM_NewVIPType":0,"UM_NewVIPTypeDes":"","UM_NewVipStartTime":"","UM_NewVipClearDay":"","UM_SecurityEmail":"","UM_LoginEmail":"","my_verify_email":"","UM_Question":255,"UM_Mobile":"","mobile":"","UM_UserMark":17014,"IsVip":0};
+cities = new Object();
+cities['']=new Array('请选择');
+cities['北京']=new Array("东城区", "西城区", "崇文区", "宣武区", "朝阳区", "丰台区", "石景山区", "海淀区", "门头沟区", "房山区", "通州区", "顺义区", "昌平区", "大兴区", "怀柔区", "平谷区", "密云县", "延庆县");
+cities['天津'] = new Array( "和平区", "河东区", "河西区", "南开区", "河北区", "红桥区", "塘沽区", "汉沽区", "大港区", "东丽区", "西青区", "津南区", "北辰区", "武清区", "宝坻区", "宁河县", "静海县", "蓟县");
+cities['河北'] = new Array( "石家庄市", "唐山市", "秦皇岛市", "邯郸市", "邢台市", "保定市", "张家口市", "承德市", "沧州市", "廊坊市", "衡水市");
+cities['山西'] = new Array( "太原市", "大同市", "阳泉市", "长治市", "晋城市", "朔州市", "晋中市", "运城市", "忻州市", "临汾市", "吕梁市");
+cities['内蒙'] = new Array( "呼和浩特市", "包头市", "乌海市", "赤峰市", "通辽市", "鄂尔多斯市", "呼伦贝尔市", "巴彦淖尔市", "乌兰察布市", "锡林郭勒盟", "阿拉善盟", "兴安盟");
+cities['辽宁'] = new Array( "沈阳市", "大连市", "鞍山市", "抚顺市", "本溪市", "丹东市", "锦州市", "营口市", "阜新市", "辽阳市", "盘锦市", "铁岭市", "朝阳市", "葫芦岛市");
+cities['吉林'] = new Array( "长春市", "吉林市", "四平市", "辽源市", "通化市", "白山市", "松原市", "白城市", "延吉市","珲春市","图们市","敦化市","龙井市","和龙市","安图县","汪清县");
+cities['黑龙江'] = new Array( "哈尔滨市", "齐齐哈尔市", "鸡西市", "鹤岗市", "双鸭山市", "大庆市", "伊春市", "佳木斯市", "七台河市", "牡丹江市", "黑河市", "绥化市", "呼玛县","塔河县","漠河县","加格达奇区","松岭区","新林区","呼中区");
+cities['上海'] = new Array( "黄浦区", "卢湾区", "徐汇区", "长宁区", "静安区", "普陀区", "闸北区", "虹口区", "杨浦区", "闵行区", "宝山区", "嘉定区", "浦东新区", "金山区", "松江区", "青浦区", "南汇区", "奉贤区", "崇明县");
+cities['江苏'] = new Array( "南京市", "无锡市", "徐州市", "常州市", "苏州市", "南通市", "连云港市", "淮安市", "盐城市", "扬州市", "镇江市", "泰州市", "宿迁市");
+cities['浙江'] = new Array( "杭州市", "宁波市", "温州市", "嘉兴市", "湖州市", "绍兴市", "金华市", "衢州市", "舟山市", "台州市", "丽水市");
+cities['安徽'] = new Array( "合肥市", "芜湖市", "蚌埠市", "淮南市", "马鞍山市", "淮北市", "铜陵市", "安庆市", "黄山市", "滁州市", "阜阳市", "宿州市", "巢湖市", "六安市", "亳州市", "池州市", "宣城市");
+cities['福建'] = new Array( "福州市", "厦门市", "莆田市", "三明市", "泉州市", "漳州市", "南平市", "龙岩市", "宁德市");
+cities['江西'] = new Array( "南昌市", "景德镇市", "萍乡市", "九江市", "新余市", "鹰潭市", "赣州市", "吉安市", "宜春市", "抚州市", "上饶市");
+cities['山东'] = new Array( "济南市", "青岛市", "淄博市", "枣庄市", "东营市", "烟台市", "潍坊市", "济宁市", "泰安市", "威海市", "日照市", "莱芜市", "临沂市", "德州市", "聊城市", "滨州市", "菏泽市");
+cities['河南'] = new Array( "郑州市", "开封市", "洛阳市", "平顶山市", "安阳市", "鹤壁市", "新乡市", "焦作市", "濮阳市", "许昌市", "漯河市", "三门峡市", "南阳市", "商丘市", "信阳市", "周口市", "驻马店市", "济源市");
+cities['湖北'] = new Array( "武汉市", "黄石市", "十堰市", "宜昌市", "襄樊市", "鄂州市", "荆门市", "孝感市", "荆州市", "黄冈市", "咸宁市", "随州市", "恩施市","利川市","建始县","咸丰县","巴东县","宣恩县","来凤县","鹤峰县", "潜江市","仙桃市","天门市","神农架林区");
+cities['湖南'] = new Array( "长沙市", "株洲市", "湘潭市", "衡阳市", "邵阳市", "岳阳市", "常德市", "张家界市", "益阳市", "郴州市", "永州市", "怀化市", "娄底市", "吉首市","古丈县","龙山县","永顺县","凤凰县","泸溪县","保靖县","花垣县");
+cities['广东'] = new Array( "广州市", "韶关市", "深圳市", "珠海市", "汕头市", "佛山市", "江门市", "湛江市", "茂名市", "肇庆市", "惠州市", "梅州市", "汕尾市", "河源市", "阳江市", "清远市", "东莞市", "中山市", "潮州市", "揭阳市", "云浮市");
+cities['广西'] = new Array( "南宁市", "柳州市", "桂林市", "梧州市", "北海市", "防城港市", "钦州市", "贵港市", "玉林市", "百色市", "贺州市", "河池市", "来宾市", "崇左市");
+cities['海南'] = new Array( "海口市", "三亚市", "省直辖单位", "海南沿革");
+cities['重庆'] = new Array( "渝中区", "大渡口区", "江北区", "沙坪坝区", "九龙坡区", "南岸区", "北碚区", "万盛区", "双桥区", "渝北区", "巴南区", "万州区", "涪陵区", "黔江区", "长寿区", "合川市", "永川市", "江津市", "南川市", "綦江县", "潼南县", "铜梁县", "大足县", "荣昌县", "璧山县", "垫江县", "武隆县", "丰都县", "城口县", "梁平县", "开县", "巫溪县", "巫山县", "奉节县", "云阳县", "忠县", "石柱自治县", "彭水自治县", "酉阳自治县", "秀山自治县");
+cities['四川'] = new Array( "成都市", "自贡市", "攀枝花市", "泸州市", "德阳市", "绵阳市", "广元市", "遂宁市", "内江市", "乐山市", "南充市", "眉山市", "宜宾市", "广安市", "达州市", "雅安市", "巴中市", "资阳市", "阿坝自治州", "甘孜自治州", "凉山自治州");
+cities['贵州'] = new Array( "贵阳市", "六盘水市", "遵义市", "安顺市", "铜仁地区", "兴义市","望谟县","兴仁县","普安县","册亨县","晴隆县","贞丰县","安龙县", "毕节地区", "凯里市","施秉县","从江县","锦屏县","镇远县","麻江县","台江县","天柱县","黄平县","榕江县","剑河县","三穗县","雷山县","黎平县","岑巩县","丹寨县", "都匀市","福泉市","贵定县","惠水县","罗甸县","瓮安县","荔波县","龙里县","平塘县","长顺县","独山县","三都自治县");
+cities['云南'] = new Array( "昆明市", "曲靖市", "玉溪市", "保山市", "昭通市", "丽江市", "思茅市", "临沧市", "楚雄自治州", "红河自治州", "文山自治州", "西双版纳州", "大理自治州", "德宏自治州", "怒江自治州", "迪庆自治州");
+cities['西藏'] = new Array( "拉萨市", "昌都地区", "山南地区", "日喀则地区", "那曲地区", "阿里地区", "林芝地区");
+cities['陕西'] = new Array( "西安市", "铜川市", "宝鸡市", "咸阳市", "渭南市", "延安市", "汉中市", "榆林市", "安康市", "商洛市", "杨凌市");
+cities['甘肃'] = new Array( "兰州市", "嘉峪关市", "金昌市", "白银市", "天水市", "武威市", "张掖市", "平凉市", "酒泉市", "庆阳市", "定西市", "陇南地区", "临夏自治州", "甘南自治州");
+cities['青海'] = new Array( "西宁市", "海东地区", "海北自治州", "黄南自治州", "海南自治州", "果洛自治州", "玉树自治州", "海西自治州");
+cities['宁夏'] = new Array( "银川市", "石嘴山市", "吴忠市", "固原市", "中卫市");
+cities['新疆'] = new Array( "乌鲁木齐市", "克拉玛依市", "吐鲁番地区", "哈密地区", "昌吉回治州", "博乐市","精河县","温泉县", "巴音郭楞州", "阿克苏地区", "阿图什市","阿合奇县","乌恰县","阿克陶县", "喀什地区", "和田地区", "伊犁哈萨克", "塔城地区", "阿勒泰地区");
+cities['香港'] = new Array( "北区","大埔区","西贡区","沙田区","黄大仙区","观塘区","东区","南区","湾仔区","中西区","油尖旺区","九龙塘区","深水埗区","葵青区","荃湾区","元朗区","屯门区","离岛区");
+cities['澳门'] = new Array( "澳门");
+cities['台湾'] = new Array( "台北市", "高雄市", "基隆市", "台中市", "台南市", "新竹市", "嘉义市", "16县");
+function set_son_name(father_name, son_name){  
+  var pv, cv;
+  var i, ii;
+  pv=father_name.value;
+  cv=son_name.value;
+  son_name.length=0;
+  if(pv=='0') return;
+  if(typeof(cities[pv])=='undefined') return;
+  for(i=0; i<cities[pv].length; i++)
+  {     ii = i;
+     son_name.options[ii] = new Option();
+     son_name.options[ii].text = cities[pv][i];
+     son_name.options[ii].value = cities[pv][i];
+  }
+}
+</script>
+<link href="./updateMsg_files/WdatePicker.css" rel="stylesheet" type="text/css"></head>
+<body>
+<div class="wrap">
+      
+   <link rel="stylesheet" data-embed="" href="./updateMsg_files/header.css">
+<script type="text/javascript" src="./updateMsg_files/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://www.kugou.com/common/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.icon,.logo');
+</script>
+<![endif]-->
+<div class="header">
+    <h1 class="logo">酷狗音乐</h1>
+    <div class="topNav fr">
+        <ul>
+            <li style="display: none;"><a target="_blank" href="./emailReg.html">注册</a></li>
+            <li><a href="./updateMsg.html" class="kuLogin" id="kuLogin">kgopen620082356</a><a hidefocus="true" href="http://www.kugou.com/newuc/login/outlogin" class="logout" id="logout" style="display: inline-block;">退出登录</a></li>
+            <li><a target="_blank" href="./server.html">客服中心</a></li>
+            <li><a target="_blank" href="./join.html">招贤纳士</a></li>
+            <li><a target="_blank" href="./VIP.html">会员中心 </a></li>
+        </ul>
+    </div>
+</div>
+<div class="navWrap">
+    <div class="nav">
+        <ul class="homeNav">
+            <li><a class="normal" href="./index.html">首页</a></li>
+            <li><a class="normal" href="./top.html">榜单</a></li>
+            <li><a class="normal" id="productCenter" href="./download.html">下载客户端</a></li>
+            <li class="more" id="moreLi"><a href="" class="icon icon-nav6" id="showMore">更多</a>
+            </li>
+        </ul>
+        <ul class="secondMenu" id="more-subnav">
+            <li><a href="./FM.html">电台</a></li>
+            <li><a href="./MV.html">MV</a></li>
+            <li><a href="./playlist.html">歌单</a></li>
+            <li><a href="./singer.html">歌手</a></li>
+        </ul>
+        <ul class="subNav">
+            <li><a target="_blank" href="http://fanxing.kugou.com/?action=spreadIndex&id=3" class="icon icon-nav1">音乐直播</a></li>
+            <li><a target="_blank" href="http://live.kugou.com/" class="icon icon-nav2">酷狗LIVE</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/imusic/" class="icon icon-nav3">音乐人</a></li>
+            <li><a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/shop" class="icon icon-nav5">商城</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function read(name, key) {
+        var cookieValue = "";
+        var search = name + "=";
+        if (document.cookie.split("").length > 0) {
+            offset = document.cookie.indexOf(search);
+            if (offset != -1) {
+                offset += search.length;
+                end = document.cookie.indexOf(";", offset);
+                if (end == -1) {
+                    end = document.cookie.split("").length;
+                }
+                cookieValue = document.cookie.substring(offset, end);
+            }
+
+        }
+        var a = cookieValue.split("&");
+        var o = {};
+        var haveVal = false; 
+        for (var i = 0, l = a.length; i < l; i++) {
+            var k = a[i].split("=");
+            if(k[0]!=""){
+                o[k[0]] = k[1];
+                haveVal = true; 
+            } 
+        }
+        return haveVal ? o : false;
+    }
+    var jq=$.noConflict();
+    jq(document).ready(function(){
+
+        var loginUtility = {
+            loadScript:function (option) {
+                var url = option.url,
+                    callback = option.callback;
+                var script = document.createElement("script");
+                script.type = 'text/javascript';
+                if (script.readyState) {
+                    script.onreadystatechange = function() {
+                        if (this.readyState == "complete" || this.readyState == "loaded") {
+                            callback && callback();
+                            script.onreadystatechange = script = callback = null;
+                        }
+                    }
+                } else {
+                    script.onload = function() {
+                        callback && callback();
+                        script.onload = script = callback = null;
+                    };
+                }
+
+                script.src = url;
+                document.getElementsByTagName("head")[0].appendChild(script);
+            },
+            initLogin:function(){
+                var _this = this;
+                if (!_this.islogined()) {
+                    loginUtility.loadScript({
+                        url: "http://static.kgimg.com/common/js/min/popuplogin-min.js?" + Math.round(new Date().getTime() / 1000),
+                        callback: function() {
+                            UsLogin();
+                        }
+                    })
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            islogined:function () {
+                var loginInfo = read("KuGoo");
+                return loginInfo == "" || loginInfo.toString() == "undefined" || loginInfo === false ? false : true;
+            },
+            clearEventBubble:function (evt) {
+                try{
+                    if (evt.stopPropagation){
+
+                        evt.stopPropagation();
+                    }else{
+                        evt.cancelBubble = true;
+                    }
+
+                    if (evt.preventDefault){
+                        evt.preventDefault();
+                    }else{
+                        return false;
+                        evt.returnValue = false;
+                    }
+                }catch(ex){
+                    
+                }
+            }
+        }
+        var kuLogin = document.getElementById("kuLogin");
+        var kuLogOut = document.getElementById("logout");
+        var more = document.getElementById("moreLi");
+        var showMore = document.getElementById("showMore");
+        var subUl = document.getElementById("more-subnav");
+        var t = null;
+
+        // 获取登录信息
+        var kugouC = read("KuGoo"),
+            user_name = kugouC.NickName,
+            user;
+            if(user_name){
+                user_name = user_name.replace(/%/g, "\\"),
+                user = eval("'" + user_name + "'");
+                kuLogOut.style.display = "inline-block";
+                kuLogin.href = "http://www.kugou.com/newuc/user/uc/?"+Math.round(new Date().getTime() / 1000);
+                kuLogin.innerHTML = user;
+                kuLogin.parentNode.parentNode.getElementsByTagName("li")[0].style.display = "none";
+            }
+
+       jq("#kuLogin").click(function(e){
+            e.preventDefault();
+            if(jq("#kuLogin").attr("href").length>5){
+                window.open(jq(this).attr("href"))
+            }else{
+                loginUtility.initLogin()
+            }
+     
+        });
+        showMore.onclick=function(e){
+            return false;
+        }
+        more.onmouseover=function(){
+            more.setAttribute("class","more hover")
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        more.onmouseleave=function(){
+            more.setAttribute("class","more")
+            showMore.setAttribute("class","iconMore");
+            t = setTimeout(function(){
+                subUl.style.display = "none"
+            },300)
+        }
+        subUl.onmouseover=function(){
+            clearTimeout(t)
+            more.setAttribute("class","more hover");
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        subUl.onmouseleave=function(){
+            more.setAttribute("class","more");
+            showMore.setAttribute("class","iconMore");
+           subUl.style.cssText = "display:none;";
+        }
+        
+    })
+</script>
+   
+    
+
+    <!-- body -->
+    <div class="kg_uc_bodyArea">
+        <div class="wing_area_outset">
+            <div class="wing_area">
+                <div class="wing_main">
+                    <div class="wing_main_content">
+                    <!-- 主体 -->
+                        <div class="kg_uc_module01">
+                            <div class="kg_uc_module01_hd">
+                                <h4 class="h_tl">我的酷狗</h4>
+                                <div class="h_l"><span class="kg_uc_module01_notice">Personal information</span></div>
+                            </div>
+                            <div class="kg_uc_module01_bd">
+                                <!-- tab 区域 -->
+                                <div class="kg_uc_module02">
+                                    <div class="kg_uc_module02_hd">
+                                        <div class="kg_uc_module02_tag_list"></div>
+                                        <ul class="kg_uc_module02_tag_list_ct">
+                                            <li><a href="./updateImg.html" title="修改头像"><span>修改头像</span></a></li>
+                                            <li class="cur"><a href="./updateMsg.html" title="编辑资料"><span>编辑资料</span></a></li>
+                                            <li><a href="./updatePwd.html" title="修改密码"><span>修改密码</span></a></li>
+                                            <li><a href="http://www.kugou.com/newuc/user/uc/type=account" title="帐号安全"><span>帐号安全</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="kg_uc_module02_bd">
+                                        <form id="infForm" onsubmit="return false;">
+                                            <table class="kg_uc_gen_tb" width="100%">
+                                                <tbody><tr>
+                                                    <td width="120" align="right" valign="top"><label class="kg_uc_gen_tb_tl">帐号：</label></td>
+                                                    <td>
+                                                         <script>document.write(decodeURI(userinfo.UM_UserName))</script>kgopen620082356
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right" valign="top"><label for="nickname" class="kg_uc_gen_tb_tl">昵称：</label></td>
+                                                    <td>
+                                                        <div class="kg_uc_textbox_area kg_uc_textbox_nickname">
+                                                            <div class="kg_uc_textbox"><input id="nickname" name="nickname" type="text" class="kg_uc_textbox_ipt" maxlength="20"></div>
+                                                            <div class="kg_uc_tips"><i class="kg_uc_tips_icon"></i><span class="kg_uc_tips_txt"></span></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right" valign="top"><label for="nickname" class="kg_uc_gen_tb_tl">性别：</label></td>
+                                                    <td>
+                                                        
+                                                        <input type="radio" name="UM_Sex" checked="" value="1"> 男　
+                                                        <input type="radio" name="UM_Sex" value="0"> 女
+                                                        
+                                                    </td>
+                                                </tr>                                               
+                                                <tr>
+                                                    <td align="right" valign="top"><label for="birthYear" class="kg_uc_gen_tb_tl">生日：</label></td>
+                                                    <td>
+                                                        <div class="kg_uc_textbox_area kg_uc_textbox_nickname">
+                                                            <div class="kg_uc_textbox_fixed">
+                                                                <input class="Wdate" id="birthday" name="BirthDayTxt" style="width:100px; cursor:pointer;" onfocus="WdatePicker({isShowClear:false,readOnly:true,dateFmt:&#39;yyyy-MM-dd&#39;,maxDate:&#39;%y-%M-%d&#39;})">
+                                                            </div>
+                                                            <div class="kg_uc_tips"><i class="kg_uc_tips_icon"></i><span class="kg_uc_tips_txt"></span></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right" valign="top"><label for="city" class="kg_uc_gen_tb_tl">城市：</label></td>
+                                                    <td>
+                                                        <div class="kg_uc_textbox_area kg_uc_textbox_nickname">
+                                                            <div class="kg_uc_textbox_fixed">
+                                                         
+                                                                  <select name="sel_Province" id="sel_Province" onchange="set_son_name(this, document.getElementById(&#39;sel_City&#39;));"> 
+                                                                        <option value="" selected="">请选择</option>
+                                                                        <option value="北京">北京</option>
+                                                                        <option value="天津">天津</option>
+                                                                        <option value="河北">河北</option>
+                                                                        <option value="山西">山西</option>
+                                                                        <option value="内蒙">内蒙</option>
+                                                                        <option value="辽宁">辽宁</option>
+                                                                        <option value="吉林">吉林</option>
+                                                                        <option value="黑龙江">黑龙江</option>
+                                                                        <option value="上海">上海</option>
+                                                                        <option value="江苏">江苏</option>
+                                                                        <option value="浙江">浙江</option>
+                                                                        <option value="安徽">安徽</option>
+                                                                        <option value="福建">福建</option>
+                                                                        <option value="江西">江西</option>
+                                                                        <option value="山东">山东</option>
+                                                                        <option value="河南">河南</option>
+                                                                        <option value="湖北">湖北</option>
+                                                                        <option value="湖南">湖南</option>
+                                                                        <option value="广东">广东</option>
+                                                                        <option value="广西">广西</option>
+                                                                        <option value="海南">海南</option>
+                                                                        <option value="重庆">重庆</option>
+                                                                        <option value="四川">四川</option>
+                                                                        <option value="贵州">贵州</option>
+                                                                        <option value="云南">云南</option>
+                                                                        <option value="西藏">西藏</option>
+                                                                        <option value="陕西">陕西</option>
+                                                                        <option value="甘肃">甘肃</option>
+                                                                        <option value="青海">青海</option>
+                                                                        <option value="宁夏">宁夏</option>
+                                                                        <option value="新疆">新疆</option>
+                                                                        <option value="香港">香港</option>
+                                                                        <option value="澳门">澳门</option>
+                                                                        <option value="台湾">台湾</option>
+                                                                    </select>
+                                                                    <select name="sel_City" id="sel_City">
+                                                                    
+                                                                    <option value="请选择">请选择</option></select>
+                                                                     <script type="text/javascript">
+                                                                        document.getElementById("sel_Province").value= userinfo.UM_Province;
+                                                                        set_son_name(document.getElementById("sel_Province"),document.getElementById("sel_City"));
+                                                                        document.getElementById("sel_City").value =  userinfo.UM_City;
+                                                                     </script>
+
+                                                                
+                                                            </div>
+                                                            <div class="kg_uc_tips"><i class="kg_uc_tips_icon"></i><span class="kg_uc_tips_txt"></span></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right" valign="top"><label for="intro" class="kg_uc_gen_tb_tl">个人简介：</label></td>
+                                                    <td>
+                                                        <div class="kg_uc_textbox_area kg_uc_textbox_nickname">
+                                                            <div>
+                                                                <textarea name="" id="intro" cols="30" rows="10" class="kg_uc_textarea kg_uc_textarea_intro" maxlength="160"></textarea>
+                                                            </div>
+                                                            <div class="kg_uc_tips"><i class="kg_uc_tips_icon"></i><span class="kg_uc_tips_txt"></span></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right" valign="top"><label for="code" class="kg_uc_gen_tb_tl"><span class="red">*</span> 验证码：</label></td>
+                                                    <td>
+                                                        <div class="kg_uc_textbox_area kg_uc_textbox_code">
+                                                            <div class="kg_uc_textbox"><input id="uccode" name="code" type="text" class="kg_uc_textbox_ipt"></div>
+                                                            <div class="kg_uc_tips"><i class="kg_uc_tips_icon"></i><span class="kg_uc_tips_txt"></span></div>
+                                                            <div class="kg_uc_code_area"><img id="uccheckimg" title="看不清，换一张" style="cursor: hand;padding-top:3px;" onclick="getCodeImg(&#39;uccheckimg&#39;)" src="./updateMsg_files/t=1479987811273"></div>
+                                                            <a onclick="getCodeImg(&#39;uccheckimg&#39;)" class="kg_uc_changeone">换一张</a>
+                                                            
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td></td>
+                                                    <td><input type="button" id="button" class="kg_uc_btn_style02" value="保存修改"></td>
+                                                </tr>
+                                            </tbody></table>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--/tab 区域 -->
+                            </div>
+                        </div>
+                     <!--/主体 -->
+                    </div>
+                </div>
+                <div class="wing_side">
+<!-- 左侧栏 -->
+    <!-- 头像区域 -->
+    <div class="kg_uc_avatar_area">
+        <div class="kg_uc_avatar_cover"><img id="UserImage" width="165" height="165" src="./updateMsg_files/20150413225621741505.jpg" alt="kgopen620082356"></div>
+        <div class="kg_uc_avatar_txt">
+            <p align="center"><a href="http://www.kugou.com/newuc/user/uc/" id="myucname" class="kg_uc_avatar_name">kgopen620082356</a>
+                                    </p>
+            <p align="center">(帐号:kgopen620082356)</p>
+            <!--<p align="center">积分：17014</p>-->
+             <!--<p align="center"><a href="http://www.kugou.com/uc/620082356.html" style="text-decoration:underline" >返回旧版</a></p>-->
+        </div>
+        <div class="kg_uc_avatar_vipinfo" id="user_vipinfo">
+                        <p><a target="_blank" href="http://vip.kugou.com/home/recharge" title="开通酷狗VIP">开通酷狗VIP&gt;&gt;</a></p>
+                    </div>
+
+    </div>
+    <!--/头像区域 -->
+<!--/左侧栏 -->
+</div>
+<script>
+var myPic = "http://imge.kugou.com/kugouicon/165/20150413/20150413225621741505.jpg";
+
+
+// document.domain="kugou.com";
+var kugouC = read("KuGoo");
+
+var pic_src = kugouC.Pic;
+if(!pic_src || pic_src == "default.jpg"){
+    pic_src = "http://imge.kugou.com/kugouicon/165/20120724/20120724145917274529.jpg";
+} else if(pic_src.indexOf("http://") != -1){
+    pic_src = pic_src;
+} else {
+    pic_src ="http://imge.kugou.com/kugouicon/165/"+pic_src.substr(0,8)+"/"+pic_src;
+}
+var nickname=kugouC.NickName.replace(/%/g, "\\");;
+nickname=eval("'" + nickname + "'");
+document.getElementById("myucname").innerHTML=nickname;
+document.getElementById("UserImage").src= myPic || pic_src;
+
+
+</script>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!--/body -->
+    <link rel="stylesheet" data-embed="" href="./updateMsg_files/footer.css">
+<div class="footerWrapper">
+    <div class="footer">
+        <div class="links">
+            <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a>| <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/protocol.html">用户服务协议</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/company/partners.html">推广合作</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/imusic/">酷狗音乐人</a> |<a hidefocus="true" target="_blank" href="http://tui.kugou.com/">酷狗音乐推</a> |<a hidefocus="true" href="http://www.kugou.com/job/hr/html/" target="_blank">招聘信息</a> | <a hidefocus="true" href="http://www.kugou.com/shop/help/serviceCenter" target="_blank">客服中心</a> | <a hidefocus="true" href="http://survey.kugou.com/default/index/i=40CD7B8437008E65E67D82D9044C15C99C2E699859F51338" target="_blank">用户体验提升计划</a>
+        </div>
+        <div class="copyright">
+            <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+            <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+            <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026&nbsp;&nbsp;&nbsp;&nbsp;穗公网监备案证第44010650010167</p>
+            <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2004-2016 KuGou-Inc.All Rights Reserved
+                <a hidefocus="true" class="office-verification" href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209" target="_blank"></a>
+            </p>
+        </div>
+    </div>
+</div>
+<!--百度统计-->
+<script>
+   var _hmt = _hmt || [];
+   (function() {
+     var hm = document.createElement("script");
+     hm.src = "//hm.baidu.com/hm.js?aedee6983d4cfc62f509129360d6bb3d";
+     var s = document.getElementsByTagName("script")[0];
+     s.parentNode.insertBefore(hm, s);
+   })();
+</script>
+<script>
+  setTimeout(function() {
+    var d = document.createElement("script");
+    d.src = "http://static.kgimg.com/common/js/min/hijacked-min.js";
+    document.body.appendChild(d);
+  }, 2000);
+</script>
+
+</div>	
+
+
+<script type="text/javascript">
+var kg_domain = "http://www.kugou.com/newuc/";
+</script>
+<script type="text/javascript" src="./updateMsg_files/base-min.js" charset="utf-8"></script>
+<script type="text/javascript" src="./updateMsg_files/user_center_global_v.1-min.js" charset="utf-8"></script>
+<script type="text/javascript" src="./updateMsg_files/uc-min.js" charset="utf-8"></script>
+<script type="text/javascript" src="./updateMsg_files/WdatePicker.js" charset="utf-8"></script>
+<script type="text/javascript">
+ 
+
+(function(){
+    readUserInfo();
+    var nickName = Kg.$("#nickname")[0],
+        code = Kg.$("#uccode")[0],
+        button = Kg.$("#button")[0],
+        intro = Kg.$("#intro")[0];
+
+
+
+    textboxInit([nickName,code,intro]);
+    nickName.onblur = function(){
+        checkNickname.call(this);
+    }
+    code.onblur = function(){
+        checkCode.call(this);
+    }
+    button.onclick = function(){
+        save();
+    }
+    intro.onblur = function(){
+        checkIntro.call(this);
+    }
+    
+    getCodeImg('uccheckimg');
+})();
+
+ 
+function readUserInfo(){
+    if(typeof( userinfo) != "undefined"){
+        var bornDate =  userinfo.UM_Birthday.length > 10? userinfo.UM_Birthday.substr(0,10): userinfo.UM_Birthday;
+        
+        Kg.$("#birthday")[0].value = bornDate;
+        /*--
+        bornDate = bornDate.split('-');
+
+        Kg.$("#born_year")[0].value = bornDate[0];
+        Kg.$("#born_month")[0].value = bornDate[1];
+        Kg.$("#born_day")[0].value = createOptions(bornDate[1],bornDate[2]);
+        --*/
+        Kg.$("#sel_City")[0].value = userinfo.UM_City;
+        Kg.$("#sel_Province")[0].value = userinfo.UM_Province;
+        Kg.$("#intro")[0].value = userinfo.UM_Memo;
+        if(Kg.$("#nickname")[0]!=null){
+              Kg.$("#nickname")[0].value = userinfo.UM_NewNickName;
+        }
+    }
+}
+
+
+function save(){
+    
+    var nickName = Kg.$("#nickname")[0],
+        code = Kg.$("#uccode")[0],
+        intro = Kg.$("#intro")[0],
+        infForm = Kg.$("#infForm")[0];
+
+    /* 昵称检测 */
+    checkNickname.call(nickName); 
+    if(!nickName.isOk){
+        return false;
+    };
+
+    /* 简介检测 */
+    checkIntro.call(intro);
+    if(!intro.isOk){
+        return false;
+    }
+
+    /* 验证码检测 */
+    checkCode.call(code); 
+    if(!code.isOk){
+        return false;
+    };
+
+    var vcode=Kg.$("#uccode")[0].value;
+    var b = Kg.$("#birthday")[0].value
+    var c = Kg.$("#sel_City")[0].value ;
+    var p = Kg.$("#sel_Province")[0].value;
+    var intro = Kg.$("#intro")[0].value;
+    var nick= Kg.$("#nickname")[0].value;
+    var sexValue;
+    for(var i = 0, len = infForm.UM_Sex.length; i < len; i++){
+        if(infForm.UM_Sex[i].checked){
+            sexValue = infForm.UM_Sex[i].value;
+        }
+    }
+
+
+    if(!sexValue){
+        alertTips("mini",{status:"error",innerHTML:"请选择性别"});
+        return;
+    }
+    
+    /*
+    if(!/^\d{4}\-\d{2}\-\d{2}$/.test(b)){
+        alert("请选择生日。");
+        return;
+    }
+    */
+
+    var obj = Kg.$("#button")[0];
+    obj.disabled = true;
+    
+    Kg.post( kg_domain+"/user/do/type=2",
+    {"Birthday":b, "Province":p,"City":c,"Intro":intro,"vcode":vcode,"NewNickName":nick,"UM_Sex":sexValue},
+    function(res){
+        obj.disabled = false;
+        switch(res){
+            case "success":
+                //Kg.Cookie.rewriteKey("KuGoo", "NickName", nick, 86400, "/", "kugou.com");
+                /* 提示修改成功 */
+                alertTips("mini",{status:"success",innerHTML:"修改成功"});
+
+                /* 对应文字修改 */
+                Kg.$("#mynickname")[0].innerHTML = nick;
+                Kg.$(".kg_uc_avatar_name")[0].innerHTML = nick;
+
+                var objnick=Kg.$("#mynickname")[0];
+                if(objnick){
+                    objnick.innerHTML=nick;
+                }
+                userinfo.UM_Province = p;
+                userinfo.UM_City = c;
+                userinfo.UM_Birthday = b;
+                userinfo.UM_Memo = intro;
+                userinfo.UM_NewNickName = nick;
+                userinfo.UM_Sex = sexValue;
+                break;
+
+            /* 验证码错误 */
+            case "0":
+                code.KgInputTips.error("验证码错误");
+                getCodeImg('uccheckimg'); 
+                break;
+
+            /* 验证码过期 */
+            case "-1":
+                code.value = "";
+                code.KgInputTips.error("验证码过期,请重新输入");
+                getCodeImg('uccheckimg'); 
+                break;
+
+            /* 请输入验证码 */
+            case "-2":
+                code.KgInputTips.error("请输入验证码");
+                getCodeImg('uccheckimg'); 
+                break;
+            default:
+                if(res.indexOf("验证码") != -1){
+                    code.KgInputTips.error(res);
+                } else {
+                    alertTips("mini",{status:"error",innerHTML:res});
+                }
+                
+                getCodeImg('uccheckimg') ;
+                break;
+                
+        }
+    });
+}
+
+
+</script>
+<script src="./updateMsg_files/hijacked-min.js"></script></body></html>

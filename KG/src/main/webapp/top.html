@@ -1,0 +1,1136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0038)http://www.kugou.com/yy/html/rank.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>酷音乐流行风向标_排行榜_乐库频道_酷狗网</title>
+<meta name="keywords" content="酷狗2013正式版, 歌手,明星,音乐,在线音乐,在线听歌,听歌,新专辑,港台,日本,韩国,欧美,英国">
+<meta name="description" content="酷狗官方网站是中国最新最全的在线正版音乐网站,提供最新的在线音乐服务、免费音乐下载、最新的音乐播放器下载。">
+<link rel="stylesheet" href="./top_files/main.css" type="text/css">
+<link rel="stylesheet" href="./top_files/pc_temp_v2.css" type="text/css">
+<link rel="stylesheet" href="./top_files/rank.css" type="text/css">
+<script src="./top_files/hm.js"></script><script src="./top_files/base-min.js"></script>
+<script type="text/javascript" src="./top_files/playsong-min.js"></script>
+<script type="text/javascript" src="./top_files/page-min.js"></script></head>
+<body>
+<link rel="stylesheet" data-embed="" href="./top_files/header.css">
+<script type="text/javascript" src="./top_files/jquery.min.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="http://www.kugou.com/common/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.icon,.logo');
+</script>
+<![endif]-->
+<div class="header">
+    <h1 class="logo">酷狗音乐</h1>
+    <div class="topNav fr">
+        <ul>
+            <li><a target="_blank" href="./emailReg.html">注册</a></li>
+            <li><a href="" class="kuLogin" id="kuLogin">登录</a><a hidefocus="true" href="http://www.kugou.com/newuc/login/outlogin" class="logout" id="logout">退出登录</a></li>
+            <li><a target="_blank" href="./server.html">客服中心</a></li>
+            <li><a target="_blank" href="./join.html">招贤纳士</a></li>
+            <li><a target="_blank" href="http://vip.kugou.com/">会员中心 </a></li>
+        </ul>
+    </div>
+</div>
+<div class="navWrap">
+    <div class="nav">
+        <ul class="homeNav">
+            <li><a class="normal" href="./index.html">首页</a></li>
+            <li><a class="normal active" href="./top.html">榜单</a></li>
+            <li><a class="normal" id="productCenter" href="./download.html">下载客户端</a></li>
+            <li class="more" id="moreLi"><a href="http://www.kugou.com/yy/html/rank.html#" class="icon icon-nav6" id="showMore">更多</a>
+            </li>
+        </ul>
+        <ul class="secondMenu" id="more-subnav">
+			<li><a href="./FM.html">电台</a></li>
+            <li><a href="./MV.html">MV</a></li>
+            <li><a href="./playlist.html">歌单</a></li>
+            <li><a href="./singer.html">歌手</a></li>
+        </ul>
+        <ul class="subNav">
+            <li><a target="_blank" href="http://fanxing.kugou.com/?action=spreadIndex&id=3" class="icon icon-nav1">音乐直播</a></li>
+            <li><a target="_blank" href="http://live.kugou.com/" class="icon icon-nav2">酷狗LIVE</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/imusic/" class="icon icon-nav3">音乐人</a></li>
+            <li><a target="_blank" href="http://games.kugou.com/?f=7" class="icon icon-nav4">游戏</a></li>
+            <li><a target="_blank" href="http://www.kugou.com/shop" class="icon icon-nav5">商城</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    function read(name, key) {
+        var cookieValue = "";
+        var search = name + "=";
+        if (document.cookie.split("").length > 0) {
+            offset = document.cookie.indexOf(search);
+            if (offset != -1) {
+                offset += search.length;
+                end = document.cookie.indexOf(";", offset);
+                if (end == -1) {
+                    end = document.cookie.split("").length;
+                }
+                cookieValue = document.cookie.substring(offset, end);
+            }
+
+        }
+        var a = cookieValue.split("&");
+        var o = {};
+        var haveVal = false; 
+        for (var i = 0, l = a.length; i < l; i++) {
+            var k = a[i].split("=");
+            if(k[0]!=""){
+                o[k[0]] = k[1];
+                haveVal = true; 
+            } 
+        }
+        return haveVal ? o : false;
+    }
+    var jq=$.noConflict();
+    jq(document).ready(function(){
+
+        var loginUtility = {
+            loadScript:function (option) {
+                var url = option.url,
+                    callback = option.callback;
+                var script = document.createElement("script");
+                script.type = 'text/javascript';
+                if (script.readyState) {
+                    script.onreadystatechange = function() {
+                        if (this.readyState == "complete" || this.readyState == "loaded") {
+                            callback && callback();
+                            script.onreadystatechange = script = callback = null;
+                        }
+                    }
+                } else {
+                    script.onload = function() {
+                        callback && callback();
+                        script.onload = script = callback = null;
+                    };
+                }
+
+                script.src = url;
+                document.getElementsByTagName("head")[0].appendChild(script);
+            },
+            initLogin:function(){
+                var _this = this;
+                if (!_this.islogined()) {
+                    loginUtility.loadScript({
+                        url: "http://static.kgimg.com/common/js/min/popuplogin-min.js?" + Math.round(new Date().getTime() / 1000),
+                        callback: function() {
+                            UsLogin();
+                        }
+                    })
+                    return false;
+                } else {
+                    return true;
+                }
+            },
+            islogined:function () {
+                var loginInfo = read("KuGoo");
+                return loginInfo == "" || loginInfo.toString() == "undefined" || loginInfo === false ? false : true;
+            },
+            clearEventBubble:function (evt) {
+                try{
+                    if (evt.stopPropagation){
+
+                        evt.stopPropagation();
+                    }else{
+                        evt.cancelBubble = true;
+                    }
+
+                    if (evt.preventDefault){
+                        evt.preventDefault();
+                    }else{
+                        return false;
+                        evt.returnValue = false;
+                    }
+                }catch(ex){
+                    
+                }
+            }
+        }
+        var kuLogin = document.getElementById("kuLogin");
+        var kuLogOut = document.getElementById("logout");
+        var more = document.getElementById("moreLi");
+        var showMore = document.getElementById("showMore");
+        var subUl = document.getElementById("more-subnav");
+        var t = null;
+
+        // 获取登录信息
+        var kugouC = read("KuGoo"),
+            user_name = kugouC.NickName,
+            user;
+            if(user_name){
+                user_name = user_name.replace(/%/g, "\\"),
+                user = eval("'" + user_name + "'");
+                kuLogOut.style.display = "inline-block";
+                kuLogin.href = "http://www.kugou.com/newuc/user/uc/?"+Math.round(new Date().getTime() / 1000);
+                kuLogin.innerHTML = user;
+                kuLogin.parentNode.parentNode.getElementsByTagName("li")[0].style.display = "none";
+            }
+
+       jq("#kuLogin").click(function(e){
+            e.preventDefault();
+            if(jq("#kuLogin").attr("href").length>5){
+                window.open(jq(this).attr("href"))
+            }else{
+                loginUtility.initLogin()
+            }
+     
+        });
+        showMore.onclick=function(e){
+            return false;
+        }
+        more.onmouseover=function(){
+            more.setAttribute("class","more hover")
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        more.onmouseleave=function(){
+            more.setAttribute("class","more")
+            showMore.setAttribute("class","iconMore");
+            t = setTimeout(function(){
+                subUl.style.display = "none"
+            },300)
+        }
+        subUl.onmouseover=function(){
+            clearTimeout(t)
+            more.setAttribute("class","more hover");
+            showMore.setAttribute("class","iconMore hover");
+            subUl.style.cssText = "display:block;";
+        }
+
+        subUl.onmouseleave=function(){
+            more.setAttribute("class","more");
+            showMore.setAttribute("class","iconMore");
+           subUl.style.cssText = "display:none;";
+        }
+        
+    })
+</script>
+																																																																							<div class="pc_temp_wrap pc_temp_2col_critical">
+	<div class="pc_temp_main">
+		<!-- 侧栏 -->
+		<div class="pc_temp_side">
+			<!-- 热门榜单 -->
+			<div class="pc_rank_sidebar pc_rank_sidebar_first ">
+				<h3 data-index="0">
+					<a href="javascript:;" hidefocus="true" title="热门榜单">
+						热门榜单 <i class="pc_temp_arrow"></i>
+					</a>
+				</h3>
+				<ul>
+					<li>
+						<a title="酷音乐流行风向标" class="current" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-22943.html" onclick="sdnClick(0)">
+							<span style="background-image:url(http://www.kugou.com/yy/static/images/ku.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://www.kugou.com/yy/static/images/ku.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							酷音乐流行风向标
+						</a>
+					</li>
+								    							<li>
+						<a title="酷狗飙升榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-6666.html" onclick="sdnClick(12012)">
+							<span style="background-image:url(http://imge.kugou.com/temppic/20130807/20130807185439172736.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/temppic/20130807/20130807185439172736.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							酷狗飙升榜
+													</a>
+					</li>			    							<li>
+						<a title="酷狗TOP500" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-8888.html" onclick="sdnClick(12013)">
+							<span style="background-image:url(http://imge.kugou.com/temppic/20130807/20130807185450567609.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/temppic/20130807/20130807185450567609.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							酷狗TOP500
+													</a>
+					</li>			    							<li>
+						<a title="网络红歌榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-23784.html" onclick="sdnClick()">
+							<span style="background-image:url(http://www2.kugou.com/k8/static/images/wlhg.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://www2.kugou.com/k8/static/images/wlhg.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							网络红歌榜
+													</a>
+					</li>			    							<li>
+						<a title="DJ热歌榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24971.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20160119/20160119110054378246.jpg);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20160119/20160119110054378246.jpg&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							DJ热歌榜
+													</a>
+					</li>			    							<li>
+						<a title="华语新歌榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-27.html" onclick="sdnClick(12014)">
+							<span style="background-image:url(http://imge.kugou.com/temppic/20130807/20130807184914908217.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/temppic/20130807/20130807184914908217.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							华语新歌榜
+													</a>
+					</li>			    							<li>
+						<a title="欧美新歌榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28.html" onclick="sdnClick(12015)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222142404906327.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20151222/20151222142404906327.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							欧美新歌榜
+													</a>
+					</li>			    							<li>
+						<a title="韩国新歌榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24045.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20160412/20160412184815439777.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20160412/20160412184815439777.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							韩国新歌榜
+													</a>
+					</li>			    							<li>
+						<a title="日本新歌榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24047.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20151008/20151008190401233496.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20151008/20151008190401233496.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							日本新歌榜
+													</a>
+					</li>			    							<li>
+						<a title="梦想的声音榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-29082.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20161104/20161104140327617651.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20161104/20161104140327617651.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							梦想的声音榜
+													</a>
+					</li>			    							<li>
+						<a title="蒙面唱将猜猜猜榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28801.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20160913/20160913114432449458.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20160913/20160913114432449458.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							蒙面唱将猜猜猜榜
+													</a>
+					</li>			    							<li>
+						<a title="原创音乐榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28653.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20160912/20160912141731629726.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20160912/20160912141731629726.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							原创音乐榜
+													</a>
+					</li>			    							<li>
+						<a title="粤语新歌榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-22050.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/temppic/20140730/20140730093845344657.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/temppic/20140730/20140730093845344657.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							粤语新歌榜
+													</a>
+					</li>			    							<li>
+						<a title="酷狗分享榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-21101.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/temppic/20131025/20131025103853305845.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/temppic/20131025/20131025103853305845.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							酷狗分享榜
+													</a>
+					</li>			    							<li>
+						<a title="5sing音乐榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-22603.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20160504/20160504171514518791.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20160504/20160504171514518791.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							5sing音乐榜
+													</a>
+					</li>			    							<li>
+						<a title="繁星音乐榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-21335.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/temppic/20140109/20140109170934390969.png);_background-image:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/temppic/20140109/20140109170934390969.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							繁星音乐榜
+													</a>
+					</li>				</ul>
+			</div>
+			<!-- 特色音乐榜 -->
+			<div class="pc_rank_sidebar ">
+				<h3 data-index="1">
+					<a href="javascript:;" hidefocus="true" title="特色音乐榜">
+						特色音乐榜<i class="pc_temp_arrow"></i>
+					</a>
+				</h3>
+				<ul>																												<li>
+						<a title="听歌识曲" id="28378" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28378.html" onclick="sdnClick(40342)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20160714/20160714174501763205.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20160714/20160714174501763205.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							听歌识曲
+						</a>
+					</li>																												<li>
+						<a title="校园歌曲榜" id="28061" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28061.html" onclick="sdnClick(40025)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20160530/20160530183222163172.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20160530/20160530183222163172.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							校园歌曲榜
+						</a>
+					</li>																												<li>
+						<a title="中文DJ" id="70" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-70.html" onclick="sdnClick(12034)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222142859452169.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20151222/20151222142859452169.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							中文DJ
+						</a>
+					</li>																												<li>
+						<a title="洗脑神曲" id="24574" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24574.html" onclick="sdnClick(36538)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20160108/20160108180453655920.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20160108/20160108180453655920.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							洗脑神曲
+						</a>
+					</li>																												<li>
+						<a title="百大DJ" id="24306" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24306.html" onclick="sdnClick(36270)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222143059932587.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20151222/20151222143059932587.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							百大DJ
+						</a>
+					</li>																												<li>
+						<a title="伤感网络情歌" id="28542" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28542.html" onclick="sdnClick(40506)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20160805/20160805174132122112.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20160805/20160805174132122112.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							伤感网络情歌
+						</a>
+					</li>																												<li>
+						<a title="车载音乐" id="88" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-88.html" onclick="sdnClick(12052)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222142931437919.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20151222/20151222142931437919.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							车载音乐
+						</a>
+					</li>																												<li>
+						<a title="KTV" id="24307" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-24307.html" onclick="sdnClick(36271)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222142813590494.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20151222/20151222142813590494.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							KTV
+						</a>
+					</li>																												<li>
+						<a title="影视金曲" id="22096" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-22096.html" onclick="sdnClick(34060)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222143034989298.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20151222/20151222143034989298.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							影视金曲
+						</a>
+					</li>																												<li>
+						<a title="纯音乐" id="28475" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-28475.html" onclick="sdnClick(40439)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20160728/20160728182722980092.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20160728/20160728182722980092.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							纯音乐
+						</a>
+					</li>				</ul>
+			</div>
+			<!-- 全球榜 -->
+			<div class="pc_rank_sidebar">
+				<h3 data-index="2">
+					<a href="javascript:;" hidefocus="true" title="全球榜">
+						全球榜 <i class="pc_temp_arrow"></i>
+					</a>
+				</h3>
+				<ul class="clear_fix">									<li>
+						<a title="美国BillBoard榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-4681.html" onclick="sdnClick(12022)">
+							<span style="background-image:url(http://imge.kugou.com/temppic/20130807/20130807192258314669.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/temppic/20130807/20130807192258314669.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							 美国BillBoard榜 						</a>
+					</li>									<li>
+						<a title="英国单曲榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-4680.html" onclick="sdnClick(12023)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20161013/20161013180833243081.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20161013/20161013180833243081.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							 英国单曲榜 						</a>
+					</li>									<li>
+						<a title="日本公信榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-4673.html" onclick="sdnClick(12026)">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222142442217161.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20151222/20151222142442217161.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							 日本公信榜 						</a>
+					</li>									<li>
+						<a title="韩国M-net音乐榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-4672.html" onclick="sdnClick(12027)">
+							<span style="background-image:url(http://imge.kugou.com/temppic/20130807/20130807193303334739.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/temppic/20130807/20130807193303334739.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							 韩国M-net音乐榜 						</a>
+					</li>									<li>
+						<a title="中国TOP排行榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-22163.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/temppic/20140827/20140827151250799981.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/temppic/20140827/20140827151250799981.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							 中国TOP排行榜 						</a>
+					</li>									<li>
+						<a title="中文音乐榜上榜" hidefocus="true" href="http://www.kugou.com/yy/rank/home/1-21609.html" onclick="sdnClick()">
+							<span style="background-image:url(http://imge.kugou.com/stdmusic/20151222/20151222142653865151.png);_background-image:none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&#39;http://imge.kugou.com/stdmusic/20151222/20151222142653865151.png&#39;, sizingMethod=&#39;crop&#39;);"></span>
+							 中文音乐榜上榜 						</a>
+					</li>				</ul>
+			</div>
+		</div>
+		<div class="pc_temp_content">
+			<div class="pc_temp_container">
+				<div class="pc_rank_title clear_fix">
+					<div id="pc_temp_title" class="pc_temp_title">
+						<h3>酷音乐流行风向标</h3>
+												<span class="rank_update">2016-11-20 更新</span>
+												<a href="javascript:;" class="pc_temp_btn_s02 pc_temp_bicon_play" title="播放全部" data-active="play" data-index="" hidefocus="true"><span><i class="t2"></i>播放全部</span></a>
+
+					</div>
+				</div>
+				<div id="rankWrap">
+					<div class="pc_temp_songhead clear_fix">					
+						
+						<span class="pc_temp_btn_check pc_temp_btn_checked checkedAll"></span>全选
+					</div>
+					<div class="pc_temp_songlist ">
+						<ul>
+														<li class=" " title="张惠妹 - 春天里(Live)" data-index="0">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="0"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											<strong>1</strong>
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="0" class="pc_temp_songname" title="张惠妹 - 春天里(Live)" hidefocus="true">张惠妹 - 春天里(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="0" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											4:20
+									</span>
+								</span>
+							</li>
+														<li class=" " title="林俊杰 - 你是我的唯一(Live)" data-index="1">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="1"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											<strong>2</strong>
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="1" class="pc_temp_songname" title="林俊杰 - 你是我的唯一(Live)" hidefocus="true">林俊杰 - 你是我的唯一(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="1" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											5:09
+									</span>
+								</span>
+							</li>
+														<li class=" " title="赵骏 - 只对你说(Live)" data-index="2">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="2"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											<strong>3</strong>
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="2" class="pc_temp_songname" title="赵骏 - 只对你说(Live)" hidefocus="true">赵骏 - 只对你说(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="2" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:20
+									</span>
+								</span>
+							</li>
+														<li class=" " title="萧敬腾 - 我真的受伤了(Live)" data-index="3">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="3"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											4
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="3" class="pc_temp_songname" title="萧敬腾 - 我真的受伤了(Live)" hidefocus="true">萧敬腾 - 我真的受伤了(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="3" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											5:36
+									</span>
+								</span>
+							</li>
+														<li class=" " title="赵骏 - 吻我吧(Live)" data-index="4">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="4"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											5
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="4" class="pc_temp_songname" title="赵骏 - 吻我吧(Live)" hidefocus="true">赵骏 - 吻我吧(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="4" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:25
+									</span>
+								</span>
+							</li>
+														<li class=" " title="羽·泉 - 冬天里的一把火(Live)" data-index="5">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="5"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											6
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="5" class="pc_temp_songname" title="羽·泉 - 冬天里的一把火(Live)" hidefocus="true">羽·泉 - 冬天里的一把火(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="5" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:22
+									</span>
+								</span>
+							</li>
+														<li class=" " title="董俊 - 归园田居(Live)" data-index="6">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="6"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											7
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="6" class="pc_temp_songname" title="董俊 - 归园田居(Live)" hidefocus="true">董俊 - 归园田居(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="6" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:36
+									</span>
+								</span>
+							</li>
+														<li class=" " title="赵骏 - 一帘幽梦(Live)" data-index="7">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="7"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											8
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="7" class="pc_temp_songname" title="赵骏 - 一帘幽梦(Live)" hidefocus="true">赵骏 - 一帘幽梦(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="7" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:44
+									</span>
+								</span>
+							</li>
+														<li class=" " title="Alan Walker - Faded" data-index="8">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="8"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											9
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="8" class="pc_temp_songname" title="Alan Walker - Faded" hidefocus="true">Alan Walker - Faded</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="8" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:33
+									</span>
+								</span>
+							</li>
+														<li class=" " title="庄心妍 - 有种离开叫舍不得" data-index="9">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="9"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											10
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="9" class="pc_temp_songname" title="庄心妍 - 有种离开叫舍不得" hidefocus="true">庄心妍 - 有种离开叫舍不得</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="9" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											4:09
+									</span>
+								</span>
+							</li>
+														<li class=" " title="唐古 - 我的城市没有家" data-index="10">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="10"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											11
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="10" class="pc_temp_songname" title="唐古 - 我的城市没有家" hidefocus="true">唐古 - 我的城市没有家</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="10" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											4:37
+									</span>
+								</span>
+							</li>
+														<li class=" " title="本兮 - 3号0807" data-index="11">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="11"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											12
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="11" class="pc_temp_songname" title="本兮 - 3号0807" hidefocus="true">本兮 - 3号0807</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="11" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:18
+									</span>
+								</span>
+							</li>
+														<li class=" " title="华晨宇 - 我的滑板鞋2016" data-index="12">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="12"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											13
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="12" class="pc_temp_songname" title="华晨宇 - 我的滑板鞋2016" hidefocus="true">华晨宇 - 我的滑板鞋2016</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="12" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:55
+									</span>
+								</span>
+							</li>
+														<li class=" " title="最后一只恐龙 - 新不了情(Live)" data-index="13">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="13"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											14
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="13" class="pc_temp_songname" title="最后一只恐龙 - 新不了情(Live)" hidefocus="true">最后一只恐龙 - 新不了情(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="13" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											4:30
+									</span>
+								</span>
+							</li>
+														<li class=" " title="花粉过敏的花房姑娘 - 忽然之间(Live)" data-index="14">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="14"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											15
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="14" class="pc_temp_songname" title="花粉过敏的花房姑娘 - 忽然之间(Live)" hidefocus="true">花粉过敏的花房姑娘 - 忽然之间(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="14" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											4:40
+									</span>
+								</span>
+							</li>
+														<li class=" " title="快要崩溃的一哥、花粉过敏的花房姑娘 - 野百合也有春天(Live)" data-index="15">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="15"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											16
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="15" class="pc_temp_songname" title="快要崩溃的一哥、花粉过敏的花房姑娘 - 野百合也有春天(Live)" hidefocus="true">快要崩溃的一哥、花粉过敏的花房姑娘 - 野百合也有春天(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="15" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											4:22
+									</span>
+								</span>
+							</li>
+														<li class=" " title="张碧晨 - 自饰者" data-index="16">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="16"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											17
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="16" class="pc_temp_songname" title="张碧晨 - 自饰者" hidefocus="true">张碧晨 - 自饰者</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="16" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:36
+									</span>
+								</span>
+							</li>
+														<li class=" " title="快要崩溃的一哥 - 玫瑰香(Live)" data-index="17">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="17"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											18
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="17" class="pc_temp_songname" title="快要崩溃的一哥 - 玫瑰香(Live)" hidefocus="true">快要崩溃的一哥 - 玫瑰香(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="17" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:37
+									</span>
+								</span>
+							</li>
+														<li class=" " title="感觉自己萌萌哒 - 那么骄傲(Live)" data-index="18">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="18"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											19
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="18" class="pc_temp_songname" title="感觉自己萌萌哒 - 那么骄傲(Live)" hidefocus="true">感觉自己萌萌哒 - 那么骄傲(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="18" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:53
+									</span>
+								</span>
+							</li>
+														<li class=" " title="崔子格 - 你在就好【你是我的眼片尾曲】" data-index="19">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="19"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											20
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="19" class="pc_temp_songname" title="崔子格 - 你在就好【你是我的眼片尾曲】" hidefocus="true">崔子格 - 你在就好【你是我的眼片尾曲】</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="19" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											3:34
+									</span>
+								</span>
+							</li>
+														<li class=" " title="A-Lin - 天若有情【锦绣未央主题曲】" data-index="20">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="20"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											21
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="20" class="pc_temp_songname" title="A-Lin - 天若有情【锦绣未央主题曲】" hidefocus="true">A-Lin - 天若有情【锦绣未央主题曲】</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="20" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											4:17
+									</span>
+								</span>
+							</li>
+														<li class=" " title="林俊杰 - 我怀念的(Live)" data-index="21">
+								<span class="pc_temp_btn_check pc_temp_btn_checked" data-index="21"></span>
+								<span class="pc_temp_coverlayer"></span>
+								<span class="pc_temp_num">
+																											22
+																	</span>
+																<a href="javascript:;" data-active="playDwn" data-index="21" class="pc_temp_songname" title="林俊杰 - 我怀念的(Live)" hidefocus="true">林俊杰 - 我怀念的(Live)</a>
+								<span class="pc_temp_tips_r">
+																		<a href="javascript:;" data-active="play" data-index="21" class="pc_temp_btn_listen" title="播放" hidefocus="true">播放</a>
+									<span class="pc_temp_time">
+																											5:12
+									</span>
+								</span>
+							</li>
+													</ul>
+					</div>
+				</div>
+				<div class="fans_login"></div>
+				<div class="pc_temp_nvg"><span id="mypage"><a style="visibility:hidden" id="page_first" title="首页" class="direct btnPage" href="javascript:void(0)" onclick="GotoNext(1,22);return false;">首页</a><span style="visibility:hidden" class="PrePageSpan"><a id="page_pre_" href="javascript:void(0)" title="上一页" class="direct btnPage" return="" false;"="">上一页</a></span><span id="page_1" class="current">1</span><a id="page_2" href="javascript:void(0)" onclick="GotoNext(2,22);return false;">2</a><a id="page_3" href="javascript:void(0)" onclick="GotoNext(3,22);return false;">3</a><a id="page_4" href="javascript:void(0)" onclick="GotoNext(4,22);return false;">4</a><a id="page_5" href="javascript:void(0)" onclick="GotoNext(5,22);return false;">5</a><span class="NextPageSpan" style="border:0px;padding:0px;"><a id="page_next_2" href="javascript:void(0)" title="下一页" class="direct btnPage" onclick="GotoNext(2,22);return false;">下一页</a></span><a id="page_last_5" title="尾页" href="javascript:void(0)" class="direct btnPage" onclick="GotoNext(5,22);return false;">尾页</a></span></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--排行榜-->
+<!--脚步-->
+<link rel="stylesheet" data-embed="" href="./top_files/footer.css">
+<div class="footerWrapper">
+    <div class="footer">
+        <div class="links">
+            <a hidefocus="true" href="http://www.kugou.com/about/aboutus.html" target="_blank">关于酷狗</a> | <a hidefocus="true" href="http://www.kugou.com/about/adservice.html" target="_blank">广告服务</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/copyRightGuide.html">版权指引</a>| <a hidefocus="true" target="_blank" href="http://www.kugou.com/about/protocol.html">用户服务协议</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/company/partners.html">推广合作</a> | <a hidefocus="true" target="_blank" href="http://www.kugou.com/imusic/">酷狗音乐人</a> |<a hidefocus="true" target="_blank" href="http://tui.kugou.com/">酷狗音乐推</a> |<a hidefocus="true" href="http://www.kugou.com/job/hr/html/" target="_blank">招聘信息</a> | <a hidefocus="true" href="http://www.kugou.com/shop/help/serviceCenter" target="_blank">客服中心</a> | <a hidefocus="true" href="http://survey.kugou.com/default/index/i=40CD7B8437008E65E67D82D9044C15C99C2E699859F51338" target="_blank">用户体验提升计划</a>
+        </div>
+        <div class="copyright">
+            <p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com</p>
+            <p>信息网络传播视听节目许可证 1910564 增值电信业务经营许可证粤B2-20060339 &nbsp;&nbsp;&nbsp;<a hidefocus="true" target="_blank" href="http://www.miitbeian.gov.cn/">粤ICP备09017694号-2</a><span class="footerIcon"><a target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/E64D2439A71544C7B995FC0A53D8F965">&nbsp;&nbsp;&nbsp;&nbsp;</a></span></p>
+            <p>广播电视节目制作经营许可证（粤）字第01270号&nbsp;&nbsp;&nbsp;&nbsp;营业性演出许可证穗天演440106026&nbsp;&nbsp;&nbsp;&nbsp;穗公网监备案证第44010650010167</p>
+            <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2004-2016 KuGou-Inc.All Rights Reserved
+                <a hidefocus="true" class="office-verification" href="http://netadreg.gzaic.gov.cn/ntmm/WebSear/WebLogoPub.aspx?logo=440106106022006022000209" target="_blank"></a>
+            </p>
+        </div>
+    </div>
+</div>
+<!--百度统计-->
+<script>
+   var _hmt = _hmt || [];
+   (function() {
+     var hm = document.createElement("script");
+     hm.src = "//hm.baidu.com/hm.js?aedee6983d4cfc62f509129360d6bb3d";
+     var s = document.getElementsByTagName("script")[0];
+     s.parentNode.insertBefore(hm, s);
+   })();
+</script>
+<script>
+  setTimeout(function() {
+    var d = document.createElement("script");
+    d.src = "http://static.kgimg.com/common/js/min/hijacked-min.js";
+    document.body.appendChild(d);
+  }, 2000);
+</script>
+<script src="./top_files/base_v2-min.js"></script>
+<script type="text/javascript" src="./top_files/playsong-min.js"></script>
+<script type="text/javascript">
+var global = {
+	// 域名
+	kg_domain : "http://www.kugou.com/yy",
+	jscssdate: "201505211743",
+	page: '1', // 当期页
+	pagesize: '22', // 页条数
+	total: '100' // 总数
+};
+// 列表数据
+global.features = [{"Hash":"5F6A5F35D9FC16EEF85C4E284D2E28ED","FileName":"\u5f20\u60e0\u59b9 - \u6625\u5929\u91cc(Live)","timeLen":260},{"Hash":"12EDB222CB441906CCCFAD164FC556E2","FileName":"\u6797\u4fca\u6770 - \u4f60\u662f\u6211\u7684\u552f\u4e00(Live)","timeLen":309},{"Hash":"61FC5F8453BAB98A368CA8F6A853553F","FileName":"\u8d75\u9a8f - \u53ea\u5bf9\u4f60\u8bf4(Live)","timeLen":200},{"Hash":"06434DD27F5F8B04691F808EA8CE43D1","FileName":"\u8427\u656c\u817e - \u6211\u771f\u7684\u53d7\u4f24\u4e86(Live)","timeLen":336},{"Hash":"42E8CC0B5DE75CE14D1D3E53B3DA1ACD","FileName":"\u8d75\u9a8f - \u543b\u6211\u5427(Live)","timeLen":205},{"Hash":"5A5643BDBDF81E93B548B1DE00222F01","FileName":"\u7fbd\u00b7\u6cc9 - \u51ac\u5929\u91cc\u7684\u4e00\u628a\u706b(Live)","timeLen":202},{"Hash":"9A28AB0861C0BE35733C1223BA6B6118","FileName":"\u8463\u4fca - \u5f52\u56ed\u7530\u5c45(Live)","timeLen":216},{"Hash":"4ED229E46ACE91B1CEC24A66271BA629","FileName":"\u8d75\u9a8f - \u4e00\u5e18\u5e7d\u68a6(Live)","timeLen":224},{"Hash":"5DD8F4B0FB68415472136D961232421B","FileName":"Alan Walker - Faded","timeLen":213},{"Hash":"362946E1A09009D8E430C4BD5245ED0E","FileName":"\u5e84\u5fc3\u598d - \u6709\u79cd\u79bb\u5f00\u53eb\u820d\u4e0d\u5f97","timeLen":249},{"Hash":"6D43403063B2824518DF43D2569CBA8D","FileName":"\u5510\u53e4 - \u6211\u7684\u57ce\u5e02\u6ca1\u6709\u5bb6","timeLen":277},{"Hash":"356FF8C6214B44BC0250700EF6D19640","FileName":"\u672c\u516e - 3\u53f70807","timeLen":198},{"Hash":"8D6C5EFEB211F11FBA781DEE086F8949","FileName":"\u534e\u6668\u5b87 - \u6211\u7684\u6ed1\u677f\u978b2016","timeLen":235},{"Hash":"AD7C9CB870F6027FC1394CB2E4618C93","FileName":"\u6700\u540e\u4e00\u53ea\u6050\u9f99 - \u65b0\u4e0d\u4e86\u60c5(Live)","timeLen":270},{"Hash":"EE7D0A2A5D92E44F70FB1A618A7B8B2C","FileName":"\u82b1\u7c89\u8fc7\u654f\u7684\u82b1\u623f\u59d1\u5a18 - \u5ffd\u7136\u4e4b\u95f4(Live)","timeLen":280},{"Hash":"50BBF9F0B59F0F4B6CAE5A28F385DCE3","FileName":"\u5feb\u8981\u5d29\u6e83\u7684\u4e00\u54e5\u3001\u82b1\u7c89\u8fc7\u654f\u7684\u82b1\u623f\u59d1\u5a18 - \u91ce\u767e\u5408\u4e5f\u6709\u6625\u5929(Live)","timeLen":262},{"Hash":"AC633992761B8331FB5BC84B3D907DF0","FileName":"\u5f20\u78a7\u6668 - \u81ea\u9970\u8005","timeLen":216},{"Hash":"4967DF55017CB650E755BE01E711E3E9","FileName":"\u5feb\u8981\u5d29\u6e83\u7684\u4e00\u54e5 - \u73ab\u7470\u9999(Live)","timeLen":217},{"Hash":"D6BF230443DBFEEE32C453993A840638","FileName":"\u611f\u89c9\u81ea\u5df1\u840c\u840c\u54d2 - \u90a3\u4e48\u9a84\u50b2(Live)","timeLen":233},{"Hash":"32487F0CBC8ACDC6616633537FA6A431","FileName":"\u5d14\u5b50\u683c - \u4f60\u5728\u5c31\u597d\u3010\u4f60\u662f\u6211\u7684\u773c\u7247\u5c3e\u66f2\u3011","timeLen":214},{"Hash":"109E051ECFC07890A3ADC975A765B66E","FileName":"A-Lin - \u5929\u82e5\u6709\u60c5\u3010\u9526\u7ee3\u672a\u592e\u4e3b\u9898\u66f2\u3011","timeLen":257},{"Hash":"571AED82C90C7F7C0E9DDE4F354225CA","FileName":"\u6797\u4fca\u6770 - \u6211\u6000\u5ff5\u7684(Live)","timeLen":312}];
+
+//侧栏操作
+function sideBar(bool) {
+	this.sideMove = false;
+	this.sideBarList = [];
+	this.sideBool = bool || false;
+}
+sideBar.prototype = {
+	constructor: sideBar,
+	move: function(touch, index, callback,fn) {
+		if (this.sideMove) {
+			return false;
+		}
+		var target = Kg.$(touch).next(),
+			height = target[0].offsetHeight,
+			start = this.sideBarList[index] || height,
+			end = 0,
+			_this = this;
+		_this.sideBarList[index] = start;
+		_this.sideMove = true;
+		if (Kg.$(touch).parent().hasClass("pc_rank_sidebar_collapse")) {
+			start = 0, end = _this.sideBarList[index];
+			if(_this.sideBool){
+				Kg.$(touch).next().css("position","static");
+			}
+		}
+		if (end > start) {
+			Kg.$(touch).parent().addClass("pc_rank_sidebar_fix");
+		}
+		_this.slide(target[0], "height", start, end, function(dom) {
+			Kg.$(dom).parent().removeClass("pc_rank_sidebar_fix");
+			Kg.$(dom).parent().toggleClass("pc_rank_sidebar_collapse");
+			callback && callback();
+			_this.sideMove = false;
+		},fn);
+	},
+	slide: function(el, style, start, end, callback,fn) {
+		var prefix = "px",
+			speed = 0.2,
+			time = 30,
+			dom = el,
+			el = el.style;
+		var timer = setInterval(function() {
+			if (start > end) {
+				start -= Math.ceil((start - end) * speed);
+				el[style] = start + prefix;
+				if (start <= end) {
+					clearInterval(timer);
+					callback && callback(dom)
+				}
+			} else {
+				start += Math.ceil((end - start) * speed);
+				el[style] = start + prefix;
+				if (start >= end) {
+					clearInterval(timer);
+					callback && callback(dom)
+				}
+			}
+			fn && fn();
+		}, time);
+		return timer;
+	}
+};
+//加载器
+function jLoader(urls, callback) {
+	urls.splice !== Array.prototype.splice && (urls = [urls]);
+	var build = function(url, callback) {
+		var s = document.createElement("script");
+		s.type = "text/javascript";
+		s.src = url;
+		document.getElementsByTagName("head")[0].appendChild(s);
+		if (typeof callback != "function") {
+			return;
+		}
+		if (s.readyState) {
+			if (/loaded|complete/.test(s.readyState)) {
+				callback();
+			} else {
+				s.onreadystatechange = function() {
+					if (/loaded|complete/.test(s.readyState)) {
+						this.onreadystatechange = null;
+						callback();
+					}
+				}
+			}
+		} else {
+			s.onload = function() {
+				callback();
+			}
+		}
+	},i, len;
+	!function() {
+		if (urls.length > 0) {
+			build(urls.splice(0, 1), arguments.callee);
+		} else {
+			typeof callback == "function" && callback();
+		}
+	}();
+}
+//加载资源
+function loadJS(flag, url, fn) {
+ 	if (flag == "undefined") {
+		setTimeout(function() {
+			jLoader([url + "?" + global.jscssdate], function() {
+				fn && fn();
+			});
+		}, 0);
+ 	} else {
+ 		fn && fn();
+ 	}
+ }
+ //修复ie6
+ function fixIe6() {
+ 	if (Kg.UA.Ie6) {
+ 		if (Kg.$(".pc_temp_songlist").length > 0) {
+ 			Kg.$(".pc_temp_songlist li").addEvent("mouseover", function() {
+ 				Kg.$(this).addClass("fixIe6_songlist");
+ 			}).addEvent("mouseleave", function() {
+ 				Kg.$(this).removeClass("fixIe6_songlist");
+ 			});
+ 		}
+ 		if (Kg.$(".pc_temp_btn_splay").length > 0) {
+ 			Kg.$(".pc_temp_btn_splay").addEvent("mouseover", function() {
+ 				Kg.$(this).addClass("fixIe6_splay");
+ 			}).addEvent("mouseleave", function() {
+ 				Kg.$(this).removeClass("fixIe6_splay");
+ 			});
+ 		}
+ 		//修复ie6 max-width
+ 		fixmaxWidth = function(o) {
+ 			var arr;
+ 			if (o) {
+ 				arr = o;
+ 			} else {
+ 				arr = Kg.$(".pc_temp_songlist").length > 0 ? Kg.$(".pc_temp_songlist li") : [];
+ 				fixmaxWidth.obj = new Array();
+ 			}
+ 			for (var i = 0; i < arr.length; i++) {
+ 				var v = arr[i];
+ 				!o && (fixmaxWidth.obj.push(v));
+ 				var n = Kg.$(v).find(".pc_temp_songname")[0],
+ 					ow = v.offsetWidth,
+ 					sw;
+ 				if (!v.getAttribute("sw")) {
+ 					sw = n.scrollWidth;
+ 					v.setAttribute("sw", sw);
+ 				} else {
+ 					sw = v.getAttribute("sw");
+ 				}
+ 				if (sw > ow * 0.60) {
+ 					n.style.width = ow * 0.60 + "px";
+ 				} else {
+ 					n.style.width = sw + "px";
+ 				}
+ 			}
+ 		}
+ 		setTimeout(function() {
+ 			fixmaxWidth();
+ 		}, 1);
+ 	}
+ }
+//歌曲信息操作
+var pcSongList = {
+	//单选操作
+	check: function(chk, all, opt) {
+		var chk = Kg.$(chk),
+			all = Kg.$(all),
+			opt = opt || {},
+			chk_class = opt.chk_class || "pc_temp_btn_check",
+			chked_class = opt.chked_class || "pc_temp_btn_checked";
+		if (chk.hasClass(chked_class)) {
+			chk.removeClass(chked_class);
+			all.removeClass(chked_class);
+		} else {
+			chk.addClass(chked_class);
+			if (Kg.$A(Kg.$("." + chk_class)).length - 1 == Kg.$A(Kg.$("." + chked_class)).length) {
+				all.addClass(chked_class);
+			}
+		}
+	},
+	//全选操作
+	checkall : function(obj,opt){
+		var opt = opt || {},
+			chk_class = opt.chk_class || "pc_temp_btn_check",
+			chked_class = opt.chked_class || "pc_temp_btn_checked",
+			checked = Kg.$(obj).hasClass(chked_class);
+		Kg.$("." + chk_class).removeClass(chked_class);
+		if (!checked) {
+			Kg.$("." + chk_class).addClass(chked_class);
+		}
+	},
+	//播放前检查
+	checkplay: function(index,all,opt) {
+		var opt = opt || {},
+			all = Kg.$(all),
+			chk_class = opt.chk_class || "pc_temp_btn_check",
+			chked_class = opt.chked_class || "pc_temp_btn_checked";
+		var _indexArr = [];
+		if (index == '') {
+			if (all.hasClass(chked_class)) {
+				_indexArr = null;
+			} else {
+				var arr = Kg.$A(Kg.$("." + chked_class));
+				for (var i in arr) {
+					_indexArr.push(arr[i].getAttribute("data-index"));
+				}
+			}
+		} else {
+			_indexArr = [index];
+		}
+		if (_indexArr && _indexArr.length == 0) {
+			loadJS(typeof DialogBox, "http://static.kgimg.com/common/js/min/dialogBox-min.js", (function() {
+				new DialogBox({
+					title: "提示",
+					html: "请选择歌曲",
+					status: 'warn',
+					button: ['确认'],
+					pid: Kg.$(".pc_temp_wrap")[0].scrollHeight == Kg.$(".pc_temp_wrap")[0].clientHeight?"":Kg.$(".pc_temp_wrap")[0],
+					width: 185,
+					callback: function(index) {
+						if (index == 0) {
+							this.Hide();
+						}
+					}
+				}).Show();
+			}));
+			return false;
+		}
+		return _indexArr;
+	}
+};
+//播放歌曲
+function optSong(active, index, ele) {
+	var indexArr = pcSongList.checkplay(index, ".checkedAll");
+	if (indexArr === false) {
+		return false;
+	}
+	var arr = indexArr == null ? global.features : indexArr,
+		data = [];
+	for(var i in arr){
+		data.push(global.features[(indexArr == null?i:arr[i])]);
+	}
+	try {
+		KgWebSuperCall.playSongs(Kg.JSON.stringify(data), 'yueku_musicrank');
+	} catch (exp) {}
+}
+// 换页
+function GotoNext(page) {
+	if (location.href.match(/rank.html/)) {
+		location.href = global.kg_domain + "/rank/home/"+ page +"-22943.html";
+	} else {
+		location.href = location.href.replace(/\/\d+\-/g, "/" + page + "-");
+	}
+}
+function init(){
+	fixIe6();
+	sdnClick(12011);
+	Kg.$(".homeNav li a").eq(1).addClass("active");
+	//侧栏操作
+	var s1 = new sideBar(true);
+	Kg.$(".pc_rank_sidebar h3").addEvent("click", function() {
+		s1.move.call(s1, this, this.getAttribute("data-index"), null);
+	});
+	Kg.$("img").addEvent("click", function() {
+		var link2 = this.getAttribute("_href");
+		if (link2) {
+			window.open(link2);
+		}
+	});
+	// 播放全部操作
+	Kg.$("#pc_temp_title .pc_temp_bicon_play").addEvent('click', function () {
+		var index = this.getAttribute("data-index");
+		var active = this.getAttribute("data-active");
+		if (active != 'nolive') {
+			optSong(active, index, this);
+		}
+		if (active == "play" && index == "") {
+			sdnClick(12187);
+		} else if ((active == "playDwn" || active == "play") && index != "") {
+			sdnClick(12164);
+		}
+		return false;
+	})
+	// 勾选框操作
+	if (Kg.$(".pc_temp_songlist").length > 0) {
+		Kg.$(".pc_temp_songlist ul .pc_temp_btn_check").addEvent("click", function(e) {
+			Kg.stopEvent(e);
+			pcSongList.check(this, ".checkedAll");
+			return false;
+		});
+		Kg.$(".pc_temp_songhead .checkedAll").addEvent("click", function(e) {
+			Kg.stopEvent(e);
+			pcSongList.checkall(this);
+			return false;
+		});
+	}
+	// 歌曲列表事件操作
+	Kg.$("#rankWrap a").addEvent("click", function(e) {
+		var index = this.getAttribute("data-index");
+		var active = this.getAttribute("data-active");
+		if (active != 'nolive') {
+			optSong(active, index, this);
+		}
+		if (active == "play" && index == "") {
+			sdnClick(12187);
+		} else if ((active == "playDwn" || active == "play") && index != "") {
+			sdnClick(12164);
+		}
+		return false;
+	});
+
+	// 歌曲列表事件操作
+	Kg.$("#rankWrap li").addEvent("click", function(event) {
+		var currentTarget = event.srcElement ? event.srcElement : event.target;
+		window.event? window.event.cancelBubble = true : event.stopPropagation();
+		event && event.preventDefault ? event.preventDefault(): window.event.returnValue = false;
+		var index = this.getAttribute("data-index");
+		var active = "play";
+		if(	currentTarget.getAttribute("data-active") == 'nolive' ){
+
+			if(currentTarget.getAttribute("href") != ""){
+				window.open(currentTarget.getAttribute("href"))
+			}else{
+				window.open("http://5sing.kugou.com/index.html")
+			}
+		}else{
+			optSong(active, index, this);
+		}
+
+		if (active == "play" && index == "") {
+			sdnClick(12187);
+		}
+		
+	});
+	Kg.$(document).addEvent("click", function() {
+		Kg.$(".pc_temp_more_check").removeClass("pc_temp_more_check");
+	});
+	if (Kg.UA.Ie6) {
+		Kg.$(window).addEvent("resize", function() {
+			fixmaxWidth(fixmaxWidth.obj);
+		});
+	}
+	//分页
+	if (parseInt(global.total) > parseInt(global.pagesize)) {
+		loadJS(typeof Page, "http://static.kgimg.com/common/js/min/page-min.js", function() {
+			Kg.$(".pc_temp_nvg").html(new Page(global.page, global.total, 5, global.pagesize).GetText());
+		});
+	}
+}
+init();
+
+</script>
+
+
+<script src="./top_files/hijacked-min.js"></script></body></html>

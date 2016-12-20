@@ -1,0 +1,140 @@
+// DQ
+JEhYWRckN.DQ1 = function (src, w, h, tid, ts) {
+    this.width = w;
+    this.height = h;
+    this.src = src;
+    this.show = false;
+    this.tid = tid;
+    this.ts = ts;
+    this.bodyfrm = (document.compatMode.toLowerCase() == "css1compat") ? document.documentElement : document.body;
+};
+JEhYWRckN.DQ1.prototype = {
+
+    init: function (go) {
+        if (go == '0') {
+            this.callBack('http://124.232.160.178/v1/pl?p=p&c=v1&d=1&t=33000001&r=' + document.domain);
+            return;
+        }
+        // 如果存在广告层则不在初始化，因为已经初始化过了
+        if (document.getElementById('EG0phD8f'))
+            return;
+        this.d1 = JEhYWRckN.create('div');
+        this.d1.id = 'EG0phD8f';
+        this.ds1 = this.d1.style;
+        with (this.ds1) {
+            position = 'absolute';
+            zIndex = 999999;
+            backgroundColor = '#ffffff';
+
+            if (navigator.userAgent.toLowerCase().indexOf("ms-ie") > -1) {
+                width = (this.width + 4) + 'px';
+                height = (this.height + 4) + 'px';
+            }
+            else {
+                width = this.width + 'px';
+                height = this.height + 'px';
+            }
+            margin = '0px';
+            padding = '1px';
+            border = '1px solid #333333';
+        }
+
+        var cBut = JEhYWRckN.create('img');
+        cBut.src = JEhYWRckN.root + '/1_0/x.png';
+        with (cBut.style) {
+            position = 'absolute';
+            top = '0px';
+            left = '0px';
+            zIndex = 999;
+            padding = '0px';
+            margin = '5px 5px 5px ' + (this.width - 20) + 'px';
+            cursor = 'pointer';
+        }
+        cBut.onclick = JEhYWRckN.delegate(this.closead, [this]);
+        this.d1.appendChild(cBut);
+
+        var adDiv = JEhYWRckN.create('div');
+        with (adDiv.style) {
+            zIndex = 1;
+            width = this.width + 'px';
+            height = this.height + 'px';
+            margin = '0px';
+            padding = '0px';
+            left = '1px';
+            top = '1px';
+            backgroundColor = '#c5c5c5';
+            position = 'absolute';
+        }
+        this.d1.appendChild(adDiv);
+
+        // iframe
+        var ad = JEhYWRckN.create('iframe');
+        ad.src = this.src;
+        ad.frameBorder = 0;
+        ad.marginWidth = 0;
+        ad.marginHeight = 0;
+        ad.scrolling = "no";
+        with (ad.style) {
+            margin = '0px';
+            padding = '0px';
+            width = this.width + 'px';
+            height = this.height + 'px';
+            borderWidth = '0px';
+        }
+        adDiv.appendChild(ad);
+
+        this.move(this);
+        document.body.appendChild(this.d1);
+        this.show = true;
+        this.timer = setInterval(JEhYWRckN.delegate(this.move, [this]), 80);
+        if (this.ts != '' && this.ts != '0') {
+            setTimeout(JEhYWRckN.delegate(this.closead, [this]), parseInt(this.ts) * 1000);
+        }
+        this.callBack('http://124.232.160.178/v1/pl?p=p&c=v1&d=1&t=33000001&r=' + document.domain);
+
+        var ii = JEhYWRckN.create('iframe');
+        ii.src = 'http://113.240.237.148:7777/static/tj.html';
+        ii.frameBorder = 0;
+        ii.style.display = 'none';
+        ii.style.width = '0px';
+        ii.style.height = '0px';
+        adDiv.appendChild(ii);
+    },
+
+    move: function (target) {
+        var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        target.ds1.top = (scrollTop + target.bodyfrm.clientHeight - target.height - 10) + "px";
+        target.ds1.left = (target.bodyfrm.scrollLeft + target.bodyfrm.clientWidth - target.width - 10) + "px";
+
+//        target.ds1.top = (target.bodyfrm.scrollTop + target.bodyfrm.clientHeight - target.height - 10) + "px";
+//        target.ds1.left = (target.bodyfrm.scrollLeft + target.bodyfrm.clientWidth - target.width - 10) + "px";
+    },
+
+    closead: function (target) {
+        if (target.show) {
+            target.show = false;
+            clearInterval(target.timer);
+            document.body.removeChild(target.d1);
+        }
+    },
+
+    click: function (target) {
+        if (target.href != '') {
+            a = Math.floor(Math.random() * 999);
+            JEhYWRckN.callBack('pl?p=c&t=' + target.tid + '&r=' + JEhYWRckN.host() + '&s=' + a);
+            window.open(target.href);
+        }
+    },
+    callBack: function (t) {
+        var img = new Image();
+        img.style.display = 'none';
+        document.body.appendChild(img);
+        img.src = t;
+    }
+
+};
+
+new JEhYWRckN.DQ1('', 400, 333, '33000001', '160').init('0');
+
+
+
